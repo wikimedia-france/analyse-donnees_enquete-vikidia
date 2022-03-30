@@ -1,0 +1,67 @@
+---
+title: "**Exploration des données de l'enquête**"
+output: 
+    html_document:
+        theme: paper
+        toc: yes
+        toc_float: yes
+        toc_depth: 6
+        code_folding: hide
+---
+
+<style>
+body {
+text-align: justify
+}
+</style> 
+
+
+
+
+
+```{r setup, include=FALSE}
+# Settings summarytools
+library(summarytools)
+st_options(plain.ascii = FALSE,               # This is very handy in all Rmd documents
+           style = "rmarkdown",               # This too
+           footnote = NA,                    # Avoids footnotes which would clutter the results
+           subtitle.emphasis = FALSE
+         # This is a setting to experiment with - according to the theme used, it might improve the headings layout
+)
+      
+# General settings     
+knitr::opts_chunk$set(
+	eval = TRUE,
+	fig.align = "center",
+	fig.show = "hold",
+	message = FALSE,
+	error = FALSE,
+	warning = FALSE,
+	collapse = TRUE,
+	out.width = "100%",
+    results = 'asis'
+)
+```
+
+<br>
+
+[![logo_datactivist](https://nextcloud.datactivist.coop/s/o53wzfMNnFosQni/preview)](https://datactivist.coop/fr/){width=25%}
+
+```{r}
+# Librairies
+library(tidyverse)
+library(summarytools)
+
+
+# Import
+enquete_vikidia <- read_delim("enquete_sur_la_communaute_vikidienne.tsv", 
+    delim = "\t", escape_double = FALSE, 
+    trim_ws = TRUE, skip = 2)
+
+
+# Noms des colonnes
+names <- as.data.frame(names(enquete_vikidia))
+
+# Stats générales
+summarytools::dfSummary(enquete_vikidia, style = "grid", graph.magnif = 0.75, valid.col = FALSE, tmp.img.dir = "/tmp", max.tbl.height = 800, headings=FALSE, method = "render")
+```
