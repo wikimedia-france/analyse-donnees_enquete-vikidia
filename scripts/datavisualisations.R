@@ -486,16 +486,16 @@ ver <- contributeurs %>% filter(!is.na(`Vérificateur d'IP`)) %>% select(36:42) 
 nuk <- contributeurs %>% filter(!is.na(`Nuker`)) %>% select(36:42) %>% summarise_all(funs(sum(!is.na(.)))) %>% rename(Autre = `Autre...42`) %>% 
   t() %>% as.data.frame() %>% rownames_to_column() %>% mutate(outil = "Nuker")
 plu <- contributeurs %>% filter(!is.na(`Plus maintenant`)) %>% select(36:42) %>% summarise_all(funs(sum(!is.na(.)))) %>% rename(Autre = `Autre...42`) %>% 
-  t() %>% as.data.frame() %>% rownames_to_column() %>% mutate(outil = "Plus maintenant")
+  t() %>% as.data.frame() %>% rownames_to_column() %>% mutate(outil = "Ancien responsable")
     # merge
 table <- rbind(pat, adm, bur, ver, nuk, plu) %>% rename(`Types de contributions` = rowname)
 
   # Plot
 ggplot(table, aes(x = outil, y = V1)) +
   geom_col(aes(color = `Types de contributions`, fill = `Types de contributions`), position = position_dodge(0.8), width = 0.7) +
-  scale_color_manual(values = c("#82888d","#82888d","#82888d","#82888d","#82888d","#82888d","#82888d"))+
+  scale_color_manual(values = c("#3a25ff","#3a25ff","#d40356","#d40356","#82888d","#82888d","#fffd33"))+
   scale_fill_manual(values = c("#3a25ff", "#eeeaff", "#d40356", "#fdf3f8", "#82888d", "#f6f6f6", "#fffd33")) +
-  labs(x = "Outils", y = "Nombre de réponses", "Nombre d'utilisations", title = "Contributions apportées à Vikidia selon les outils utilisés") +
+  labs(x = "Responsabilités", y = "Nombre de réponses", "Nombre d'utilisations", title = "Contributions apportées à Vikidia selon les responsabilités") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
@@ -554,7 +554,7 @@ non <- as.data.frame(table(non$`Selon vous, comment Vikidia est-elle perçue par
 arr <- enquete_vikidia %>% filter(!is.na(`Il m'arrive de parler de mes découvertes sur l'encyclopédie`))
 arr <- as.data.frame(table(arr$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Il m'arrive d'en parler")
 rec <- enquete_vikidia %>% filter(!is.na(`Je recommande le site à mes proches`))
-rec <- as.data.frame(table(rec$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Je recommande à mes proches")
+rec <- as.data.frame(table(rec$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Recommande aux proches")
     # merge
 table <- rbind(non, arr, rec)
 
@@ -566,6 +566,7 @@ ggplot(table, aes(fill = Var1, values = Freq)) +
   scale_y_continuous(labels = function(x) x * 10,
                      expand = c(0,0)) +
   scale_fill_manual(values = c("#fdf3f8", "#eeeaff", "#82888d", "#3a25ff", "#fffd33", "#d40356")) +
+  #scale_color_manual(values = c("#3a25ff", "#3a25ff", "#82888d", "#3a25ff", "#fffd33", "#d40356")) +
   coord_equal() +
   labs(
     title = "Niveau de popularité de l'encyclopédie selon que le répondant en parle autour de lui",
@@ -610,7 +611,7 @@ ggballoonplot(table, x = "Var1", y = "raisons", size = "Freq",
     low = "#eeeaff", 
     high = "#3a25ff", 
     midpoint = .02
-  ) + theme(legend.position = 'none',
+  ) + theme(
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21))
 
@@ -688,7 +689,7 @@ ggplot(table, aes(x = is_contrib)) +
   geom_bar(aes(y = total), width = 0.3, stat = "identity", fill = c("#eeeaff", "#f6f6f6"), col = c("#3a25ff", "#82888d"), size = 3) +
   geom_bar(aes(y = Freq), width = 0.3, stat = "identity", fill = c("#3a25ff", "#82888d"), col = c("#3a25ff", "#82888d")) +
   geom_text(aes(x = is_contrib, y = 70), label = paste(table$percent, "%"),
-            colour = "black", size = 8, fontface = "bold") +
+            colour = c("#f6f6f6","#eeeaff"), size = 8, fontface = "bold") +
   coord_flip() + labs(title = "Intégration à la communauté selon la contribution", y = "Nombre de répondants", x = "") +
   theme_classic() +
   theme(text = element_text(family = "Montserrat", size = 12),
