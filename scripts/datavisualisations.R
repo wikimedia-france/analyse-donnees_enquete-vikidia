@@ -752,13 +752,82 @@ table %>% mutate(rowname = fct_reorder(rowname, desc(V1))) %>%
 ### 1)
 
 
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(`Êtes vous ...`) %>% select(63:68) %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% 
+  mutate_at(vars(`La qualité des articles`, `L'accessibilité des sujets traités`, `La qualité et la pertinence des illustrations`, `La diversité des sujets traités`, `La qualité synthaxique et typographique`, `Le projet Vikidia en général`), ~ str_replace_all(., c("Très bonne" = "5", "Plutôt bonne" = "4", "Moyenne" = "3", "Plutôt mauvaise" = "2", "Très mauvaise" = "1")))
+table[,2:7] <- lapply(table[,2:7], as.numeric)
+table <- table %>% ungroup() %>% summarise_all(funs(mean(.))) %>% select(-1)
+table <- rbind(rep(5,5) , rep(1,5) , table)
+
+  # Plot
+library(fmsb)
+radarchart(table, axistype=1 , 
+    pcol="#3a25ff", plwd=3, 
+    cglcol="grey", cglty=1, axislabcol="grey", caxislabels=seq(1, 5 ,1), cglwd=0.8,
+    vlabels = c("La qualité des articles", 
+                "L'accessibilité des sujets traités                    ", 
+                "La qualité et la pertinence des illustrations                                             ", 
+                "La diversité des sujets traités", 
+                "                                     La qualité synthaxique et typographique", 
+                "                  Le projet Vikidia en général"),
+    vlcex=1.2,
+    title = "Évaluation de la satisfaction sur différents sujets", 
+    font.main = 2, family = "Montserrat", cex.main = 2,)
+legend(1,0,
+       legend=c("1 : Très mauvaise",
+                "5 : Très bonne"),
+       text.col = "#666666", text.font = 3,
+       col="white", 
+       lty=c(1,1), bty="n")
+
+
+
+### 2)
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(activite) %>% select(60) %>% na.omit() %>% 
+  mutate(`Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?` = str_replace_all(`Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`, c("Les articles de Vikidia sont tout à fait fiables" = "5", "Les articles de Vikidia sont plutôt fiables" = "4", "Les informations trouvées sur Vikidia ne sont pas toujours fiables" = "3", "Les informations trouvées sur Vikidia sont à prendre avec précaution" = "2", "Je me méfie des informations que je trouve sur Vikidia" = "1"))) %>% rename(Moy = `Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`)
+table$Moy <- as.numeric(table$Moy)
+table <- table %>% group_by(activite) %>% summarise_all(funs(mean(.))) %>% ungroup() %>% arrange(desc(Moy))
+
+  # Plot
+table %>% mutate(activite = fct_reorder(activite, Moy)) %>% 
+  ggplot(aes(x=activite, y=Moy))+
+    geom_segment(aes(xend=activite, yend=0)) +
+    geom_point( size=4, color="#3a25ff") +
+    coord_flip() +
+    ylab("Nombre de répondants") + xlab("") + ggtitle("Évaluation de la fiabilité des articles selon l'activité") +
+    lims(y = c(0, 5)) +
+    theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        axis.title.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks.y = element_blank())
 
 
 
 
+### 3)
 
 
 
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(is_contrib,`Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`) %>% summarise(Freq = n()) %>% rename(`Niveau de confiance` = `Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`) %>% 
+  mutate(is_contrib = str_replace_all(is_contrib, c("0" = "Non contributeur", "1" = "Contributeur")))
+  # Plot
+ggplot(table, aes(x = is_contrib, y = Freq)) +
+  geom_col(aes(color = `Niveau de confiance`, fill = `Niveau de confiance`), position = position_dodge(0.8), width = 0.7) +
+  scale_color_manual(values = c("#82888d","#82888d","#82888d","#82888d","#82888d","#82888d","#82888d"))+
+  scale_fill_manual(values = c("#3a25ff", "#eeeaff", "#d40356", "#fdf3f8", "#82888d", "#f6f6f6", "#fffd33")) +
+  labs(x = "", y = "Nombre de répondants", title = "Évaluation de la fiabilité des articles selon la contribution") +
+  theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21))
 
 
 
