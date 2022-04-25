@@ -3,7 +3,7 @@
 
 
 # Librairies
-packages = c("tidyverse", "wordcloud2", "tm","textstem", "lemon", "echarts4r", "echarts4r.assets", "extrafont", "ggraph", "igraph")
+packages = c("tidyverse", "wordcloud2", "tm","textstem", "lemon", "echarts4r", "echarts4r.assets", "extrafont", "ggraph", "igraph", "flexdashboard", "waffle", "hrbrthemes", "ggpubr")
 package.check <- lapply(
   packages,
   FUN = function(x) {
@@ -471,6 +471,9 @@ table %>% mutate(rowname = fct_reorder(rowname, V1)) %>%
 # -------------- Quels sont les types de contribution ?
 
 
+
+### 1)
+
   # Table de fréquences des réponses
 pat <- contributeurs %>% filter(!is.na(`Patrouilleur`)) %>% select(36:42) %>% summarise_all(funs(sum(!is.na(.)))) %>% rename(Autre = `Autre...42`) %>% 
   t() %>% as.data.frame() %>% rownames_to_column() %>% mutate(outil = "Patrouilleur")
@@ -500,14 +503,118 @@ ggplot(table, aes(x = outil, y = V1)) +
 
 
 
+### 2)
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(is_contrib, `Avez-vous déjà fait un don à Vikidia ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% group_by(is_contrib) %>% 
+  mutate(percent = round(Freq / sum(Freq) *100, 0)) %>% ungroup()
+  rename(Sexe = `Êtes vous ...`)
+num <- table[2,]$percent
+
+  # Plot
+gauge(table[2,]$percent, min = 0, max = 100, symbol = '%', label = "Non contributeurs", gaugeSectors(colors = '#82888d'))
+gauge(table[4,]$percent, min = 0, max = 100, symbol = '%', label = "Contributeurs", gaugeSectors(colors = '#3a25ff'))
+
+
 
 # -------------- Comment arrive-t-on dans la communauté ?
+
+
+
+  # Table de fréquences des réponses
+table <- contributeurs %>% select(14:19) %>% summarise_all(funs(sum(!is.na(.)))) %>% 
+  t() %>% as.data.frame() %>% rownames_to_column()
+table$rowname <- table$rowname %>% str_replace_all(c("Autre...19" = "Autre",
+                                                     "Par hasard et au gré de vos navigations sur Internet" = "Par hasard et sur Internet"))
+
+  # Plot
+table %>% mutate(rowname = fct_reorder(rowname, V1)) %>% 
+  ggplot(aes(x=rowname, y=V1))+
+    geom_bar(stat="identity", fill="#3a25ff", width=.6) +
+    coord_flip() +
+    ylab("Nombre de réponses") + xlab("") + ggtitle("Canaux par lesquels les répondants ont connu Vikidia") +
+    theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        axis.title.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks.y = element_blank())
 
 
 # -------------- Pourquoi arrive-t-on dans la communauté ?
 
 
+  # Table de fréquences des réponses
+non <- enquete_vikidia %>% filter(!is.na(`Non`))
+non <- as.data.frame(table(non$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Je n'en parle pas")
+arr <- enquete_vikidia %>% filter(!is.na(`Il m'arrive de parler de mes découvertes sur l'encyclopédie`))
+arr <- as.data.frame(table(arr$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Il m'arrive d'en parler")
+rec <- enquete_vikidia %>% filter(!is.na(`Je recommande le site à mes proches`))
+rec <- as.data.frame(table(rec$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Je recommande à mes proches")
+    # merge
+table <- rbind(non, arr, rec)
+
+  # Plot
+ggplot(table, aes(fill = Var1, values = Freq)) +
+  geom_waffle(color = "white", size = .25, n_rows = 10, flip = TRUE) +
+  facet_wrap(~partage, nrow = 1, strip.position = "bottom") +
+  scale_x_discrete() +
+  scale_y_continuous(labels = function(x) x * 10,
+                     expand = c(0,0)) +
+  scale_fill_manual(values = c("#fdf3f8", "#eeeaff", "#82888d", "#3a25ff", "#fffd33", "#d40356")) +
+  coord_equal() +
+  labs(
+    title = "Niveau de popularité de l'encyclopédie selon que le répondant en parle autour de lui",
+    x = "Niveau de communication de l'outil",
+    y = "Nombre de répondants",
+  ) +
+  theme_minimal(base_family = "Montserrat") +
+  theme(panel.grid = element_blank(), axis.ticks.y = element_line(),
+        legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21)) +
+  guides(fill = guide_legend(reverse = T, title = "Perception estimée de Vikidia par le grand public"))
+
+
+
 # -------------- Pourquoi reste-t-on dans la communauté ?
+
+
+  # Table de fréquences des réponses
+filtre <- enquete_vikidia %>% filter(!is.na(`Les articles y sont plus faciles à comprendre`), `Êtes vous ...` != "préfère ne pas le dire")
+fac <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Articles faciles à comprendre")
+filtre <- enquete_vikidia %>% filter(!is.na(`Vikidia est plus adaptée à mon niveau/âge`), `Êtes vous ...` != "préfère ne pas le dire")
+age <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Plus adapté au niveau/âge")
+filtre <- enquete_vikidia %>% filter(!is.na(`Je préfère l'ambiance au sein de la communauté vikidienne`), `Êtes vous ...` != "préfère ne pas le dire")
+amb <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Préfère l'ambiance")
+filtre <- enquete_vikidia %>% filter(!is.na(`La communauté vikidienne est de plus petite taille`), `Êtes vous ...` != "préfère ne pas le dire")
+tai <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Plus petite communauté")
+filtre <- enquete_vikidia %>% filter(!is.na(`Je consulte peu Vikidia, je suis surtout contributeur`), `Êtes vous ...` != "préfère ne pas le dire")
+con <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Consulte peu, contribue pincipalement")
+filtre <- enquete_vikidia %>% filter(!is.na(`Je préfère Wikipédia`), `Êtes vous ...` != "préfère ne pas le dire")
+wik <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Préfère Wikipédia")
+filtre <- enquete_vikidia %>% filter(!is.na(`Autre...57`), `Êtes vous ...` != "préfère ne pas le dire")
+aut <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Autre")
+    # merge
+table <- rbind(fac,age,amb,tai,con,wik,aut)
+
+  # Plot
+ggballoonplot(table, x = "Var1", y = "raisons", size = "Freq",
+              fill = "Freq", facet.by = "Var2",
+              ggtheme = theme_bw()) + labs(title = "Motivations pour utiliser Vikidia plutôt que Wikipédia") +
+  scale_fill_gradient2(
+    low = "#eeeaff", 
+    high = "#3a25ff", 
+    midpoint = .02
+  ) + theme(legend.position = 'none',
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21))
+
+
 
 
 # -------------- Quelles sont les alternatives à Vikidia ?
@@ -516,12 +623,144 @@ ggplot(table, aes(x = outil, y = V1)) +
 # -------------- Ce qui questionne
 
 
+### 1)
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(`Quel âge avez-vous ?`, `Trouvez-vous les articles de Vikidia accessibles ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% rename(`Évaluation des articles` = `Trouvez-vous les articles de Vikidia accessibles ?`)
+
+  # Plot
+ggplot(table, aes(x = `Quel âge avez-vous ?`, y = Freq)) +
+  geom_col(aes(color = `Évaluation des articles`, fill = `Évaluation des articles`), position = "stack", width = 0.7) +
+  scale_color_manual(values = c("white","white","white","white","white","white","white","white"))+
+  scale_fill_manual(values = c("#3a25ff", "#eeeaff", "#fffd33", "#d40356", "#82888d", "#f6f6f6")) +
+  labs(x = "Âge", y = "Nombre de répondants", title = "Évaluation de l'accessibilité des articles selon l'âge") +
+  theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21))
+
+
+
+### 2)
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(`Comment évaluez vous votre participation aux canaux de discussion ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% arrange(Freq)
+
+  # Plot
+par(family = 'Monsterrat')
+pie(table$Freq, labels = table$`Comment évaluez vous votre participation aux canaux de discussion ?`, border="white", col = c("#82888d", "#eeeaff", "#fffd33", "#f6f6f6", "#d40356", "#3a25ff"), main = "Participation aux canaux de discussion", cex.main = 2)
+
+
+
+
+
+### 3)
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(`Que pensez-vous des pages d'aide ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% arrange(Freq)
+
+  # Plot
+par(family = 'Monsterrat')
+pie(table$Freq, labels = table$`Que pensez-vous des pages d'aide ?`, border="white", col = c("#82888d", "#eeeaff", "#fffd33", "#f6f6f6", "#d40356", "#3a25ff"), main = "Avis sur les pages d'aide", cex.main = 2)
+
+
+
 # -------------- Comment se sent-on au sein de la communauté ?
+
+
+
+### 1)
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(is_contrib, `Vous sentez-vous suffisamment intégré à la communauté vikidienne ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% arrange(Freq) %>% 
+  group_by(is_contrib) %>% mutate(total = sum(Freq), percent = round(Freq / total *100, 0)) %>% 
+  filter(`Vous sentez-vous suffisamment intégré à la communauté vikidienne ?` == "Oui") %>% ungroup() %>% 
+  mutate(is_contrib = str_replace_all(is_contrib, c("1" = "Contributeur", "0" = "Non contributeur")))
+
+  # Plot
+ggplot(table, aes(x = is_contrib)) + 
+  geom_bar(aes(y = total), width = 0.3, stat = "identity", fill = c("#eeeaff", "#f6f6f6"), col = c("#3a25ff", "#82888d"), size = 3) +
+  geom_bar(aes(y = Freq), width = 0.3, stat = "identity", fill = c("#3a25ff", "#82888d"), col = c("#3a25ff", "#82888d")) +
+  geom_text(aes(x = is_contrib, y = 70), label = paste(table$percent, "%"),
+            colour = "black", size = 8, fontface = "bold") +
+  coord_flip() + labs(title = "Intégration à la communauté selon la contribution", y = "Nombre de répondants", x = "") +
+  theme_classic() +
+  theme(text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21))
+   
+
+
+### 2)
+
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(`Comment avez-vous jugé votre accueil sur Vikidia ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% arrange(desc(Freq))
+
+  # Plot
+table %>% mutate(`Comment avez-vous jugé votre accueil sur Vikidia ?` = fct_reorder(`Comment avez-vous jugé votre accueil sur Vikidia ?`, Freq)) %>% 
+  ggplot(aes(x=`Comment avez-vous jugé votre accueil sur Vikidia ?`, y=Freq))+
+    geom_bar(stat="identity", fill="#3a25ff", width=.6) +
+    coord_flip() +
+    ylab("Nombre de répondants") + xlab("") + ggtitle("Évaluation de l'accueil sur Vikidia") +
+    theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        axis.title.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks.y = element_blank())
 
 
 # -------------- Quels outils pour animer la communauté ?
 
 
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% select(87:91) %>% summarise_all(funs(sum(!is.na(.)))) %>% 
+  t() %>% as.data.frame() %>% rownames_to_column()
+
+  # Plot
+table %>% mutate(rowname = fct_reorder(rowname, desc(V1))) %>% 
+  ggplot(aes(x=rowname, y=V1))+
+    geom_bar(stat="identity", fill="#3a25ff", width=.6) +
+    ylab("Nombre de répondants") + xlab("") + ggtitle("Canaux de discussions actifs") +
+    theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        axis.title.y = element_blank(),
+        axis.line.x = element_blank(),
+        axis.line.y = element_blank(),
+        axis.ticks.y = element_blank())
+
+
+
+
 # -------------- Quelle confiance est accordée à Vikidia ?
+
+
+
+### 1)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
