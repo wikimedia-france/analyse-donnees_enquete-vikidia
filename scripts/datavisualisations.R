@@ -3,7 +3,7 @@
 
 
 # Librairies
-packages = c("tidyverse", "wordcloud2", "tm","textstem", "lemon", "echarts4r", "echarts4r.assets", "extrafont", "ggraph", "igraph", "flexdashboard", "waffle", "hrbrthemes", "ggpubr", "fmsb", "glue")
+packages = c("tidyverse", "wordcloud2", "tm","textstem", "lemon", "echarts4r", "echarts4r.assets", "extrafont", "ggraph", "igraph", "flexdashboard", "waffle", "hrbrthemes", "ggpubr", "fmsb", "glue", "treemap")
 package.check <- lapply(
   packages,
   FUN = function(x) {
@@ -112,7 +112,8 @@ process_alternatives <- process_alternatives %>% filter(Séquentiel != 43, Séqu
 
 # On attribue une activité aux 3 répondants 'Étudiant, élève' n'ayant pas précisé leur niveau d'étude
 enquete_vikidia[92, 96] <- "Étudiant"
-enquete_vikidia[c(254, 419), 96] <- "Élève au collège"
+enquete_vikidia[254, 96] <- "Élève au collège"
+enquete_vikidia[419, 96] <- "Élève au lycée"
 
 # On "neutralise" les réponses
   # genre
@@ -272,7 +273,46 @@ graph <- ggplot(table, aes(x = annee, y = Freq, group = ` `, colour = ` `)) +
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21))
 graph
-saving_plot(graph, "4_timeline")
+saving_plot(graph, "4_timeline1")
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Vous êtes ...`) %>% 
+  summarise(Freq = n()) %>% ungroup()
+
+  # Plot
+graph <- ggplot(table, aes(x = annee, y = Freq, group = `Vous êtes ...`, colour = `Vous êtes ...`)) +
+  geom_line(size=1.7, alpha=0.9, linetype=1) +
+  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
+  scale_color_manual(values = c("#3a25ff", "#82888d", "#fffd33", "#48ffbc", "#f6f6f6")) +
+  labs(x = "Année", y = "Nombre de répondants", title = "Nombre de répondants ayant rejoint la communauté par année") +
+  theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21))
+graph
+saving_plot(graph, "4_timeline2")
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Quel est votre degré de contribution ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% rename(`Degré de contribution` = `Quel est votre degré de contribution ?`)
+
+  # Plot
+graph <- ggplot(table, aes(x = annee, y = Freq, group = `Degré de contribution`, colour = `Degré de contribution`)) +
+  geom_line(size=1.7, alpha=0.9, linetype=1) +
+  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
+  scale_color_manual(values = c("#3a25ff", "#82888d", "#eeeaff", "#fffd33", "#48ffbc", "#f6f6f6")) +
+  labs(x = "Année", y = "Nombre de répondants", title = "Nombre de répondants ayant rejoint la communauté par année") +
+  theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21))
+graph
+saving_plot(graph, "4_timeline4")
+
+
+
 
 
 ### 5)
@@ -577,7 +617,7 @@ table$`Types de contributions` <- factor(table$`Types de contributions`, order =
   # Plot
 graph <- ggplot(table, aes(x = outil, y = V1)) +
   geom_col(aes(color = `Types de contributions`, fill = `Types de contributions`), position = position_dodge(0.8), width = 0.7) +
-  scale_color_manual(values = c("#3a25ff","#3a25ff","#82888d","#82888d","#48ffbc","#48ffbc","#fffd33"))+
+  scale_color_manual(values = c("#3a25ff","#48ffbc","#82888d","#3a25ff","#48ffbc","#82888d","#fffd33"))+
   scale_fill_manual(values = c("#3a25ff", "#eeeaff", "#82888d", "#f6f6f6", "#48ffbc", "#f6f6f6", "#fffd33")) +
   labs(x = "Responsabilités", y = "Nombre de réponses", "Nombre d'utilisations", title = "Contributions apportées à Vikidia selon les responsabilités") +
   theme_classic() +
@@ -644,7 +684,7 @@ saving_plot(graph, "15_bar_connu-outil")
 non <- enquete_vikidia %>% filter(!is.na(`Non`))
 non <- as.data.frame(table(non$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Ne partage pas")
 arr <- enquete_vikidia %>% filter(!is.na(`Il m'arrive de parler de mes découvertes sur l'encyclopédie`))
-arr <- as.data.frame(table(arr$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Partage de temps à autres")
+arr <- as.data.frame(table(arr$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Partage de temps à autre")
 rec <- enquete_vikidia %>% filter(!is.na(`Je recommande le site à mes proches`))
 rec <- as.data.frame(table(rec$`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) %>% mutate(partage = "Recommande aux proches")
     # merge
@@ -691,7 +731,7 @@ de Vikidia autour de lui",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(reverse = T, title = "Perception estimée de Vikidia par le grand public"),
-         color = FALSE)
+         color = 'none')
 graph
 saving_plot(graph, "16_waffle")
 
@@ -731,24 +771,63 @@ table$raisons <- factor(table$raisons, order = TRUE,
                                                        ))
 
   # Plot
-graph <- ggballoonplot(table, x = "Var1", y = "raisons", size = "Freq",
-              fill = "Freq", facet.by = "Var2",
-              ggtheme = theme_bw()) + labs(title = "Motivations à l'utilisation de Vikidia plutôt que Wikipédia") +
-  scale_fill_gradient2(
-    low = "#eeeaff", 
-    high = "#3a25ff", 
-    midpoint = .02
-  ) + theme(
-        text = element_text(family = "Montserrat", size = 12),
+graph <- ggballoonplot(table, x = "Var1", y = "raisons", size = "Freq", fill = "Var2", ggtheme = theme_bw()) + 
+  labs(title = "Motivations à l'utilisation de Vikidia plutôt que Wikipédia") +
+  facet_wrap(~Var2) +
+ # scale_alpha("Freq") +
+  scale_fill_manual(values = c("#fffd33", "#3a25ff")) +
+  theme(text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21))+
   guides(size = guide_legend(reverse = T, title = "Effectifs"),
          fill = "none")
 graph
-saving_plot(graph, "16_waffle")
+saving_plot(graph, "17_ballonplot")
 
 
 
 # -------------- Quelles sont les alternatives à Vikidia ?
+
+
+  # Table de fréquences des réponses
+table <- process_alternatives %>% group_by(`Grandes catégories...6`, `Petites catégories`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% na.omit() %>% 
+  mutate(`Moyennes catégories` = case_when(`Grandes catégories...6` == "ressources numériques" & grepl("wiki", `Petites catégories`) == TRUE ~ "Les wikis",
+                                           TRUE ~ " "),
+         `Grandes catégories...6` = toupper(`Grandes catégories...6`),
+         colors = case_when(`Grandes catégories...6` == "RESSOURCES NUMÉRIQUES" ~ "#3a25ff",
+                            `Grandes catégories...6` == "RESSOURCES PHYSIQUES" ~ "#82888d",
+                            `Grandes catégories...6` == "RESSOURCES HUMAINES" ~ "#48ffbc"))
+
+  # Plot
+treemap(table, index= c("Grandes catégories...6", "Moyennes catégories", "Petites catégories"), vSize = "Freq", vColor="colors",
+ 
+    type="color",                    
+    palette = c("#fffd33", "#3a25ff", "#82888d"),
+    drop.unused.levels = FALSE,
+    title="Alternatives à Vikidia par type de ressources",   
+    fontsize.title=21,                    
+    fontsize.labels=c(18, 15, 12),              
+    fontcolor.labels=c("white", "white", "white"),    # Color of labels
+    #fontcolor.labels=c("black", "black", "black"),    # Color of labels
+    fontface.labels=c(2, 4, 1),   
+    fontfamily.title = "Montserrat",
+    fontfamily.labels = "Montserrat",
+    fontfamily.legend = "Montserrat",
+    bg.labels=c("transparent"), 
+    border.lwds=c(3,2,1),
+    align.labels=list(
+        c("left", "top"), 
+        c("right", "bottom"),
+        c("center", "center")),                                 
+    inflate.labels = F,
+    force.print.labels = T,
+    
+   # position.legend = "right",
+    #reverse.legend = TRUE,
+    #title.legend = "Type de ressources",
+) 
+
+
 
 
 # -------------- Ce qui questionne
@@ -787,6 +866,10 @@ graph <- ggplot(table, aes(x = `Quel âge avez-vous ?`, y = Freq)) +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21))
+graph
+ggsave(file = "dataviz/SVG/19_stacked_accessibilite.svg", plot=graph, width=14, height=8)
+ggsave(file = "dataviz/PNG/19_stacked_accessibilite.png", plot=graph, width=14, height=8)
+
 
 
 
@@ -812,12 +895,12 @@ table$`Comment évaluez vous votre participation aux canaux de discussion ?` <- 
 table$`Comment évaluez vous votre participation aux canaux de discussion ?` <- factor(table$`Comment évaluez vous votre participation aux canaux de discussion ?`, order = TRUE, levels = c("N'a pas connaissance des canaux   ", "A connaissance sans y participer", "Participe de temps à autre", "Actif sur les canaux"))
 
   # Regroupement des catégories : somme par groupe
-table <- table %>% group_by(`Comment évaluez vous votre participation aux canaux de discussion ?`) %>% mutate(Freq = sum(Freq)) %>% distinct()
+table <- table %>% group_by(`Comment évaluez vous votre participation aux canaux de discussion ?`) %>% mutate(Freq = sum(Freq)) %>% distinct() %>% 
+  mutate(`Comment évaluez vous votre participation aux canaux de discussion ?` = paste(Freq, "-", `Comment évaluez vous votre participation aux canaux de discussion ?`))
 
   # Plot
 par(family = 'Monsterrat')
-pie(table$Freq, labels = table$`Comment évaluez vous votre participation aux canaux de discussion ?`, border="white", col = c("#82888d", "#eeeaff", "#fffd33", "#f6f6f6", "#48ffbc", "#3a25ff"), main = "Participation aux canaux de discussion", cex.main = 2)
-
+pie(table$Freq, labels = table$`Comment évaluez vous votre participation aux canaux de discussion ?`, border="white", col = c("#82888d", "#eeeaff", "#fffd33", "#3a25ff"), main = "Participation aux canaux de discussion", cex.main = 2)
 
 
 
@@ -844,11 +927,13 @@ table$`Que pensez-vous des pages d'aide ?` <- table$`Que pensez-vous des pages d
 table$`Que pensez-vous des pages d'aide ?` <- factor(table$`Que pensez-vous des pages d'aide ?`, order = TRUE, levels = c("N'a pas connaissance des pages d'aide   ", "N'en a pas besoin", "Elles pourraient être améliorées", "Elles sont claires"))
 
   # Regroupement des catégories : somme par groupe
-table <- table %>% group_by(`Que pensez-vous des pages d'aide ?`) %>% mutate(Freq = sum(Freq)) %>% distinct()
+table <- table %>% group_by(`Que pensez-vous des pages d'aide ?`) %>% mutate(Freq = sum(Freq)) %>% distinct() %>% 
+  mutate(`Que pensez-vous des pages d'aide ?` = paste(Freq, "-", `Que pensez-vous des pages d'aide ?`))
 
   # Plot
 par(family = 'Monsterrat')
-pie(table$Freq, labels = table$`Que pensez-vous des pages d'aide ?`, border="white", col = c("#82888d", "#eeeaff", "#fffd33", "#f6f6f6", "#48ffbc", "#3a25ff"), main = "Avis sur les pages d'aide", cex.main = 2)
+pie(table$Freq, labels = table$`Que pensez-vous des pages d'aide ?`, border="white", col = c("#82888d", "#eeeaff", "#fffd33", "#3a25ff"), main = "Avis sur les pages d'aide", cex.main = 2)
+
 
 
 
@@ -871,11 +956,14 @@ graph <- ggplot(table, aes(x = is_contrib)) +
   geom_bar(aes(y = Freq), width = 0.3, stat = "identity", fill = c("#3a25ff", "#82888d"), col = c("#3a25ff", "#82888d")) +
   geom_text(aes(x = is_contrib, y = 70), label = paste(table$percent, "%"),
             colour = c("#f6f6f6","#eeeaff"), size = 8, fontface = "bold") +
-  coord_flip() + labs(title = "Intégration à la communauté selon la contribution", y = "Nombre de répondants", x = "") +
+  coord_flip() + labs(title = "Part des personnes se sentant intégrées à la communauté de Vikidia, 
+selon s'ils contribuent ou pas à Vikidia", y = "Nombre de répondants", x = "") +
   theme_classic() +
   theme(text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21))
-   
+graph   
+saving_plot(graph, "21_gauge_integration")
+
 
 
 ### 2)
@@ -907,6 +995,10 @@ graph <- table %>% #mutate(`Comment avez-vous jugé votre accueil sur Vikidia ?`
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank())
+graph
+saving_plot(graph, "22_bar_accueil")
+
+
 
 
 # -------------- Quels outils pour animer la communauté ?
@@ -914,8 +1006,11 @@ graph <- table %>% #mutate(`Comment avez-vous jugé votre accueil sur Vikidia ?`
 
 
   # Table de fréquences des réponses
-table <- enquete_vikidia %>% select(87:91) %>% summarise_all(funs(sum(!is.na(.)))) %>% 
-  t() %>% as.data.frame() %>% rownames_to_column()
+table <- enquete_vikidia %>% select(87:92) %>% filter(!grepl(c("ucun|jamais|rien|pas|nul|zero|sans"), `Veuillez préciser...92`)) %>% select(-6) %>%
+  rename(`Autres canaux` = `Autres canaux de discussion`,
+         `Bavardages` = `Les Bavardages`,
+         `Pages de discussion` = `Les pages de discussion`) %>% 
+  summarise_all(funs(sum(!is.na(.)))) %>% t() %>% as.data.frame() %>% rownames_to_column()
 
   # Plot
 graph <- table %>% mutate(rowname = fct_reorder(rowname, desc(V1))) %>% 
@@ -930,6 +1025,8 @@ graph <- table %>% mutate(rowname = fct_reorder(rowname, desc(V1))) %>%
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank())
+graph
+saving_plot(graph, "23_bar_canaux")
 
 
 
@@ -995,7 +1092,8 @@ graph <- table %>%
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank())
-
+graph
+saving_plot(graph, "25_lollipop")
 
 
 
@@ -1019,18 +1117,22 @@ table$`Fiabilités des articles` <- table$`Fiabilités des articles` %>%
   # Ordonner les réponses
 table$`Fiabilités des articles` <- factor(table$`Fiabilités des articles`, order = TRUE, levels = c("Méfiance vis-à-vis du contenu", "À prendre avec précaution", "Pas toujours fiables", "Plutôt fiables", "Tout à fait fiables"))
 
+  # Pourcentage plutôt que fréquence
+table <- table %>% group_by(is_contrib) %>% mutate(percent = round(Freq / sum(Freq), 2))
+
   # Plot
-graph <- ggplot(table, aes(x = is_contrib, y = Freq)) +
+graph <- ggplot(table, aes(x = is_contrib, y = percent)) +
   geom_col(aes(color = `Fiabilités des articles`, fill = `Fiabilités des articles`), position = position_dodge(0.8), width = 0.7) +
-  scale_color_manual(values = c("#82888d","#82888d","#82888d","#82888d","#82888d","#82888d","#82888d"))+
-  scale_fill_manual(values = c("#3a25ff", "#eeeaff", "#48ffbc", "#f6f6f6", "#82888d", "#f6f6f6", "#fffd33")) +
-  labs(x = "", y = "Nombre de répondants", title = "Évaluation de la fiabilité des articles selon la contribution") +
+  scale_color_manual(values = c("#82888d","#82888d","#82888d","#3a25ff","#3a25ff","#3a25ff","#82888d"))+
+  scale_fill_manual(values = c("#82888d", "#f6f6f6", "#fffd33", "#3a25ff", "#eeeaff", "#3a25ff", "#fffd33")) +
+  labs(x = "", y = "Pourcentage de réponses par groupe", title = "Évaluation de la fiabilité des articles selon la contribution") +
+  scale_y_continuous(labels = scales::percent) +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21))
-
-
+graph
+saving_plot(graph, "26_grouped_fiabilite")
 
 
 
