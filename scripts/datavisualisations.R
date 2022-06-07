@@ -3,7 +3,7 @@
 
 
 # Librairies
-packages = c("tidyverse", "wordcloud2", "tm","textstem", "lemon", "echarts4r", "echarts4r.assets", "extrafont", "ggraph", "igraph", "flexdashboard", "waffle", "hrbrthemes", "ggpubr", "fmsb", "glue", "treemap")
+packages = c("tidyverse", "wordcloud2", "tm","textstem", "lemon", "extrafont", "ggraph", "igraph", "flexdashboard", "waffle", "hrbrthemes", "ggpubr", "fmsb", "glue", "treemap")
 package.check <- lapply(
   packages,
   FUN = function(x) {
@@ -128,7 +128,7 @@ enquete_vikidia <- enquete_vikidia %>% mutate(`Quel est votre degré de contribu
                                                                                                          c("C'est la première fois que je consulte Vikidia" = "Consulte Vikidia pour la première fois",
                                                                                                            "Je consulte Vikidia mais je n'ai jamais contribué" = "Consulte Vikidia mais n'y contribue pas",
                                                                                                            "J'ai déjà contribué une fois ou deux" = "A contribué une ou deux fois",
-                                                                                                           "Je contribue environ une fois par mois, ou moins" = "Contribue une fois pas moins ou moins",
+                                                                                                           "Je contribue environ une fois par mois, ou moins" = "Contribue une fois par mois ou moins",
                                                                                                            "Je contribue plusieurs fois par mois" = "Contribue plusieurs fois par mois",
                                                                                                            "Je contribue une fois par semaine ou plus" = "Contribue une fois par semaine ou plus")))
 
@@ -174,6 +174,7 @@ table <- enquete_vikidia %>% group_by(`Êtes vous ...`) %>% summarise(Freq = n()
 
   # Paramètres graphiques
 table$fraction <- table$Freq / sum(table$Freq)  #percentages
+table$proportion <- round((table$Freq / sum(table$Freq))*100)  #percentages
 table$ymax <- cumsum(table$fraction)  # cumulative percentages (top of each rectangle)
 table$ymin <- c(0, head(table$ymax, n=-1))  #bottom of each rectangle
 table$labelPosition <- (table$ymax + table$ymin) / 2  #label position
@@ -181,10 +182,10 @@ table$labelPosition <- (table$ymax + table$ymin) / 2  #label position
   # Plot
 graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 3.3, xmin = 2, fill = Genre)) +
   geom_rect() +
-  geom_text(x=4, aes(y=labelPosition, label = Freq), color = "#333333", size=7) +
+  geom_text(x=4, aes(y=labelPosition, label = paste(proportion,"%",sep = "")), color = "#333333", size=7) +
   geom_text(aes(x = 0, y = 0, label = sum(Freq)), col = "#333333", alpha=0.8, size=14, fontface="bold", inherit.aes = FALSE) +
-  scale_fill_manual(values = c('#fffd33','#3a25ff','#82888d')) +
-  scale_color_manual(values = c('#fffd33','#3a25ff','#82888d')) +
+  scale_fill_manual(values = c('#fffd33','#2ca25f','#82888d')) +
+  scale_color_manual(values = c('#fffd33','#2ca25f','#82888d')) +
   coord_polar(theta="y") +
   ggtitle("Genre des répondants de l'enquête") +
   xlim(c(0, 4)) +   
@@ -210,18 +211,23 @@ graph <- table %>% #filter(percent != 0) %>%
   ggplot(mapping = aes(x = ifelse(test = Genre == "masculin", yes = -Freq, no = Freq), 
                      y = `Quel âge avez-vous ?`, fill = Genre)) +
   geom_col() + #col = "black"
-  scale_x_symmetric(labels = abs) +
-  scale_colour_manual(values = c('#fffd33', '#3a25ff'),
+  scale_x_symmetric(labels = abs) + 
+  scale_colour_manual(values = c('#fffd33', '#2ca25f'),
                       aesthetics = c("colour", "fill")) +
-  labs(x = "Nombre de répondants", y = "", title = "Nombre de répondants selon l'âge et le genre") +
+  labs(x = "Nombre de répondants", y = "",title = "Nombre de répondants selon l'âge et le genre") +
   theme_classic() + theme(legend.position = "right",
                           text = element_text(family = "Monsterrat", size = 12),
                           plot.title = element_text(face = "bold", size = 21),
                           axis.title.y = element_blank(),
                           axis.line.y = element_blank(),
-                          axis.ticks.y = element_blank())
+                          axis.ticks.y = element_blank()) +
+  geom_text(aes(y = `Quel âge avez-vous ?`, x = ifelse(test = Genre == "masculin", yes = -Freq-10, no = Freq+10), label = paste(percent,"%",sep = "")), 
+            color = "#333333", 
+            size = 3,
+            check_overlap = T)
+
 graph
-saving_plot(graph, "2_pyramid")
+saving_plot(graph, "2_pyramid_age")
 
 
 
@@ -230,50 +236,38 @@ saving_plot(graph, "2_pyramid")
 
 
   # Table de fréquences des réponses
-table <- as.data.frame(table(enquete_vikidia$activite)) 
+table <- enquete_vikidia %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% group_by(activite, `Êtes vous ...`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% 
+  mutate(percent = round(Freq / sum(Freq) *100, 0)) %>% 
+  rename(Genre = `Êtes vous ...`)
 
   # Plot
 graph <- table %>% 
-  e_charts(Var1) %>% 
-  e_pictorial(Freq, symbol = ea_icons("user"), 
-              symbolRepeat = TRUE, z = -1,
-              symbolSize = c(20, 20)) %>% 
-  e_theme("westeros") %>%
-  e_theme_custom('{"color":["#3a25ff"]}') %>% 
-  e_title(text = "Nombre de répondants selon l'activité") %>% 
-  e_flip_coords() %>%
-  # Hide Legend
-  e_legend(show = FALSE) %>%
-  # Remove Gridlines
-  e_x_axis(splitLine=list(show = FALSE)) %>%
-  e_y_axis(splitLine=list(show = FALSE)) %>%
-  # Format Label
-  e_labels(fontSize = 12, fontWeight ='bold', position = "right", offset=c(10, 0)) %>% 
-  e_grid(left = "23%")
-graph
+  ggplot(mapping = aes(x = ifelse(test = Genre == "masculin", yes = -Freq, no = Freq), 
+                     y = activite, fill = Genre)) +
+  geom_col() + #col = "black"
+  scale_x_symmetric(labels = abs) + 
+  scale_colour_manual(values = c('#fffd33', '#2ca25f'),
+                      aesthetics = c("colour", "fill")) +
+  labs(x = "Nombre de répondants", y = "", title = "Nombre de répondants selon l'âge et le genre") +
+  theme_classic() + theme(legend.position = "right",
+                          text = element_text(family = "Monsterrat", size = 12),
+                          plot.title = element_text(face = "bold", size = 21),
+                          axis.title.y = element_blank(),
+                          axis.line.y = element_blank(),
+                          axis.ticks.y = element_blank()) +
+  geom_text(aes(y = activite, x = ifelse(test = Genre == "masculin", yes = -Freq-10, no = Freq+10), label = paste(percent,"%",sep = "")), 
+            color = "#333333", 
+            size = 3,
+            check_overlap = T)
 
+graph
+saving_plot(graph, "3_pyramid_activite")
 
 
 
 ### 4)
 
-
-  # Table de fréquences des réponses
-table <- enquete_vikidia %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, is_contrib) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% mutate(is_contrib = str_replace_all(is_contrib, c("0" = "non contributeurs", "1" = "contributeurs"))) %>% rename(` ` = is_contrib)
-
-  # Plot
-graph <- ggplot(table, aes(x = annee, y = Freq, group = ` `, colour = ` `)) +
-  geom_line(size=1.7, alpha=0.9, linetype=1) +
-  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
-  scale_color_manual(values = c("#3a25ff", "#82888d")) +
-  labs(x = "Année", y = "Nombre de répondants", title = "Nombre de répondants ayant rejoint la communauté par année") +
-  theme_classic() +
-  theme(legend.position = "right",
-        text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21))
-graph
-saving_plot(graph, "4_timeline1")
 
 
   # Table de fréquences des réponses
@@ -285,7 +279,7 @@ graph <- ggplot(table, aes(x = annee, y = Freq, group = `Vous êtes ...`, colour
   geom_line(size=1.7, alpha=0.9, linetype=1) +
   geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
   scale_color_manual(values = c("#3a25ff", "#82888d", "#fffd33", "#48ffbc", "#f6f6f6")) +
-  labs(x = "Année", y = "Nombre de répondants", title = "Nombre de répondants ayant rejoint la communauté par année") +
+  labs(x = "Année", y = "Nombre de répondants", title = "Nombre de répondants ayant rejoint la communauté par année", caption = "En quelle année avez-vous rejoint la communauté ?") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
@@ -709,6 +703,8 @@ table$Var1 <- factor(table$Var1, order = TRUE,
                                                        ))
 
   # Plot
+remove.packages("waffle")
+remotes::install_github("hrbrmstr/waffle")
 graph <- ggplot(table, aes(fill = Var1, values = Freq, color = Var1)) +
   geom_waffle(size = .25, n_rows = 10, flip = TRUE) +
   facet_wrap(~partage, nrow = 1, strip.position = "bottom") +
