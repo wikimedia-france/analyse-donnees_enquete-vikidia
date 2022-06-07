@@ -24,35 +24,42 @@
 <rect x='0.000000000000064' y='0.00' width='864.00' height='576.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMTYyLjU1fDg1OC41MnwzMS4wMHw1NDIuMjQ='>
-    <rect x='162.55' y='31.00' width='695.97' height='511.25' />
+  <clipPath id='cpMTYyLjU1fDg1OC41MnwzMS4wMHw1MjMuNDA='>
+    <rect x='162.55' y='31.00' width='695.97' height='492.40' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTYyLjU1fDg1OC41MnwzMS4wMHw1NDIuMjQ=)'>
-<rect x='162.55' y='31.00' width='695.97' height='511.25' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<rect x='194.18' y='138.19' width='569.43' height='49.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='303.11' width='224.96' height='49.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='220.65' width='541.31' height='49.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='385.57' width='161.69' height='49.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='55.73' width='632.70' height='49.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='468.03' width='70.30' height='49.48' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<g clip-path='url(#cpMTYyLjU1fDg1OC41MnwzMS4wMHw1MjMuNDA=)'>
+<rect x='162.55' y='31.00' width='695.97' height='492.40' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='194.18' y='134.24' width='551.06' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<rect x='194.18' y='293.08' width='217.70' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<rect x='194.18' y='213.66' width='523.85' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<rect x='194.18' y='372.50' width='156.48' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<rect x='194.18' y='54.82' width='612.29' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<rect x='194.18' y='451.92' width='68.03' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
+<text x='765.66' y='161.12' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>26%</text>
+<text x='432.30' y='319.96' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>10%</text>
+<text x='738.44' y='240.54' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>25%</text>
+<text x='371.07' y='399.38' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>7%</text>
+<text x='826.89' y='81.70' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>29%</text>
+<text x='282.62' y='478.80' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>3%</text>
 </g>
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA=)'>
-<text x='157.62' y='496.19' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Autre</text>
-<text x='157.62' y='413.74' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='62.39px' lengthAdjust='spacingAndGlyphs'>Pour le travail</text>
-<text x='157.62' y='331.28' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='141.65px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire en classe</text>
-<text x='157.62' y='248.82' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='108.49px' lengthAdjust='spacingAndGlyphs'>Pour la culture générale</text>
-<text x='157.62' y='166.36' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='152.14px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire à la maison</text>
-<text x='157.62' y='83.90' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='88.47px' lengthAdjust='spacingAndGlyphs'>Pour le simple loisir</text>
-<polyline points='194.18,544.98 194.18,542.24 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='369.93,544.98 369.93,542.24 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='545.68,544.98 545.68,542.24 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='721.43,544.98 721.43,542.24 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='194.18' y='554.03' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='369.93' y='554.03' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='545.68' y='554.03' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='721.43' y='554.03' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='510.53' y='567.64' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='119.12px' lengthAdjust='spacingAndGlyphs'>Nombre de réponses</text>
+<text x='157.62' y='479.18' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Autre</text>
+<text x='157.62' y='399.76' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='62.39px' lengthAdjust='spacingAndGlyphs'>Pour le travail</text>
+<text x='157.62' y='320.34' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='141.65px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire en classe</text>
+<text x='157.62' y='240.92' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='108.49px' lengthAdjust='spacingAndGlyphs'>Pour la culture générale</text>
+<text x='157.62' y='161.50' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='152.14px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire à la maison</text>
+<text x='157.62' y='82.08' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='88.47px' lengthAdjust='spacingAndGlyphs'>Pour le simple loisir</text>
+<polyline points='194.18,526.14 194.18,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='364.26,526.14 364.26,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='534.35,526.14 534.35,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='704.43,526.14 704.43,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='194.18' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='364.26' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='534.35' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='704.43' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='510.53' y='548.80' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='119.12px' lengthAdjust='spacingAndGlyphs'>Nombre de réponses</text>
 <text x='162.55' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='621.70px' lengthAdjust='spacingAndGlyphs'>Les contextes d'utilisation de Vikidia chez les contributeurs</text>
+<text x='858.52' y='567.16' text-anchor='end' style='font-size: 14.00px; font-style: italic; font-family: "Noto Sans";' textLength='280.58px' lengthAdjust='spacingAndGlyphs'>Dans quel(s) contexte(s) utilisez-vous Vikidia ?</text>
 </g>
 </svg>
