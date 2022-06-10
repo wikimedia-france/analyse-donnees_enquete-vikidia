@@ -182,11 +182,10 @@ table$labelPosition <- (table$ymax + table$ymin) / 2  #label position
 
   # Plot
 graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 3.3, xmin = 2, fill = Genre)) +
-  geom_rect() +
+  geom_rect(col = "white", size = 2) +
   geom_text(x=4, aes(y=labelPosition, label = paste(proportion,"%",sep = "")), color = "#333333", size=7) +
   geom_text(aes(x = 0, y = 0, label = sum(Freq)), col = "#333333", alpha=0.8, size=14, fontface="bold", inherit.aes = FALSE) +
   scale_fill_manual(values = c('#fffd33','#2ca25f','#82888d')) +
-  scale_color_manual(values = c('#fffd33','#2ca25f','#82888d')) +
   coord_polar(theta="y") +
   ggtitle("Genre des répondants de l'enquête") +
   xlim(c(0, 4)) +   
@@ -204,14 +203,15 @@ saving_plot(graph, "1_donut")
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% group_by(`Quel âge avez-vous ?`, `Êtes vous ...`) %>% 
   summarise(Freq = n()) %>% ungroup() %>% 
-  mutate(percent = round(Freq / sum(Freq) *100, 0)) %>% 
+  mutate(percent = Freq / sum(Freq) *100,
+         percent = ifelse(percent < 0.5, round(percent, 1), round(percent, 0))) %>% 
   rename(Genre = `Êtes vous ...`)
 
   # Plot
 graph <- table %>% #filter(percent != 0) %>% 
   ggplot(mapping = aes(x = ifelse(test = Genre == "masculin", yes = -Freq, no = Freq), 
                      y = `Quel âge avez-vous ?`, fill = Genre)) +
-  geom_col() + #col = "black"
+  geom_col(col = "white", size = 1.3) + #col = "black"
   scale_x_symmetric(labels = abs) + 
   scale_colour_manual(values = c('#fffd33', '#2ca25f'),
                       aesthetics = c("colour", "fill")) +
@@ -246,7 +246,7 @@ table <- enquete_vikidia %>% filter(`Êtes vous ...` != "préfère ne pas le dir
 graph <- table %>% 
   ggplot(mapping = aes(x = ifelse(test = Genre == "masculin", yes = -Freq, no = Freq), 
                      y = activite, fill = Genre)) +
-  geom_col() + #col = "black"
+  geom_col(col = "white", size = 2) + #col = "black"
   scale_x_symmetric(labels = abs) + 
   scale_colour_manual(values = c('#fffd33', '#2ca25f'),
                       aesthetics = c("colour", "fill")) +
@@ -282,14 +282,14 @@ table$rowname <- table$rowname %>% str_replace_all(c("Autre...26" = "Autre",
   # Plot
 graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>% 
   ggplot(aes(x = rowname, y = V1)) +
-  geom_bar(stat = "identity", fill = "#3a25ff", width = .6) +
+  geom_bar(stat = "identity", width = .6, fill = "#3a25ff") +
   coord_flip() +
-  labs(x = "", y = "Nombre de réponses", title = "Les contextes d'utilisation de Vikidia", caption = "Dans quel(s) contexte(s) utilisez-vous Vikidia ?") +
+  labs(x = "", y = "Nombre de réponses", title = "Les contextes d'utilisation de Vikidia", subtitle = "\nDans quel(s) contexte(s) utilisez-vous Vikidia ?") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         axis.title.y = element_blank(),
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
@@ -362,11 +362,10 @@ table$labelPosition <- (table$ymax + table$ymin) / 2  #label position
 
   # Plot
 graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 3.3, xmin = 2, fill = Genre)) +
-  geom_rect() +
+  geom_rect(col = "white", size = 2) +
   geom_text(x=4, aes(y=labelPosition, label = paste(proportion,"%",sep = "")), color = "#333333", size=7) +
   geom_text(aes(x = 0, y = 0, label = sum(Freq)), col = "#333333", alpha=0.8, size=14, fontface="bold", inherit.aes = FALSE) +
   scale_fill_manual(values = c('#fffd33','#2ca25f','#82888d')) +
-  scale_color_manual(values = c('#fffd33','#2ca25f','#82888d')) +
   coord_polar(theta="y") +
   ggtitle("Genre des répondants contributeurs de l'enquête") +
   xlim(c(0, 4)) +   
@@ -392,7 +391,7 @@ table <- contributeurs %>% filter(`Êtes vous ...` != "préfère ne pas le dire"
 graph <- table %>% #filter(percent != 0) %>% 
   ggplot(mapping = aes(x = ifelse(test = Genre == "masculin", yes = -Freq, no = Freq), 
                      y = `Quel âge avez-vous ?`, fill = Genre)) +
-  geom_col() + #col = "black"
+  geom_col(col = "white", size = 2) + #col = "black"
   scale_x_symmetric(labels = abs) + 
   scale_colour_manual(values = c('#fffd33', '#2ca25f'),
                       aesthetics = c("colour", "fill")) +
@@ -427,7 +426,7 @@ table <- contributeurs %>% filter(`Êtes vous ...` != "préfère ne pas le dire"
 graph <- table %>% 
   ggplot(mapping = aes(x = ifelse(test = Genre == "masculin", yes = -Freq, no = Freq), 
                      y = activite, fill = Genre)) +
-  geom_col() + #col = "black"
+  geom_col(col = "white", size = 2) + #col = "black"
   scale_x_symmetric(labels = abs) + 
   scale_colour_manual(values = c('#fffd33', '#2ca25f'),
                       aesthetics = c("colour", "fill")) +
@@ -462,20 +461,20 @@ table$rowname <- table$rowname %>% str_replace_all(c("Autre...26" = "Autre",
   # Plot
 graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>% 
   ggplot(aes(x=rowname, y=V1))+
-  geom_bar(stat="identity", fill="#3a25ff", width=.6) +
+  geom_bar(stat="identity", width=.6, fill = "#3a25ff") +
   coord_flip() +
-  labs(x = "", y = "Nombre de réponses", title = "Les contextes d'utilisation de Vikidia chez les contributeurs", caption = "Dans quel(s) contexte(s) utilisez-vous Vikidia ?") +
+  labs(x = "", y = "Nombre de réponses", title = "Les contextes d'utilisation de Vikidia chez les contributeurs", subtitle = "\nDans quel(s) contexte(s) utilisez-vous Vikidia ?") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         axis.title.y = element_blank(),
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank()) +
   geom_text(aes(y = V1 + 3, x = rowname, label = paste(percent, "%", sep = "")), 
-            color = "#333333", size = 3, check_overlap = T)
+            color = "#333333", size = 3, check_overlap = T) 
 graph
 saving_plot(graph, "9_barplot_contextes_contrib")
 
@@ -499,13 +498,13 @@ graph <- ggplot(table, aes(x = annee, y = Freq, group = `Vous êtes ...`, colour
   geom_line(size=1.7, alpha=0.9, linetype=1) +
   geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
   scale_color_manual(values = c("#3a25ff", "#82888d", "#fffd33", "#48ffbc", "#f6f6f6")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", caption = "En quelle année avez-vous rejoint la communauté ?") +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
   scale_x_continuous(breaks = seq(2006, 2021, 1)) +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   guides(colour = guide_legend(reverse = T, title = "Profil du répondant"),
          fill = "none")
 graph
@@ -526,14 +525,14 @@ table <- table %>% mutate(`Niveau d'étude` = str_replace_all(`Niveau d'étude`,
 graph <- ggplot(table, aes(x = annee, y = Freq, group = `Niveau d'étude`, colour = `Niveau d'étude`)) +
   geom_line(size=1.7, alpha=0.9, linetype=1) +
   geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
-  scale_color_manual(values = c("#3a25ff", "#82888d", "#fffd33", "#48ffbc", "#f6f6f6")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs scolaires ayant rejoint la communauté par année", caption = "En quelle année avez-vous rejoint la communauté ?") +
+  scale_color_manual(values = c("#3a25ff", "#7667FF", "#B2A8FF", "#EEEAFF")) +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs scolaires ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
   scale_x_continuous(breaks = seq(2006, 2021, 1)) +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   guides(colour = guide_legend(reverse = T),
          fill = "none")
 graph
@@ -549,14 +548,14 @@ graph <- ggplot(table, aes(x = annee, y = Freq, group = `Degré de contribution`
   geom_line(size=1.7, alpha=0.9, linetype=1) +
   geom_point(size = .8, stroke = 1.5) +
   scale_color_manual(values = c("#3a25ff", "#82888d", "#fffd33", "#48ffbc", "#f6f6f6")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", caption = "En quelle année avez-vous rejoint la communauté ?") +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
   scale_x_continuous(breaks = seq(2006, 2021, 1)) +
   theme_classic() +
   facet_zoom(x = annee > 2014, split = TRUE) +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         strip.background = element_rect(fill = "grey", colour = "#999999", linetype = 2))
 graph
 saving_plot(graph, "10_timeline3")
@@ -587,13 +586,14 @@ graph <- ggplot(table, aes(x = annee, y = Freq, group = `Participation aux canau
   geom_line(size=1.7, alpha=0.9, linetype=1) +
   geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
   scale_color_manual(values = c("#3a25ff", "#82888d", "#fffd33", "#48ffbc", "#f6f6f6", "#f6f6f6")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Ancienneté dans la communauté selon la participation aux canaux de discussion", caption = "En quelle année avez-vous rejoint la communauté ?") +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Ancienneté dans la communauté selon la participation aux 
+canaux de discussion", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
   scale_x_continuous(breaks = seq(2006, 2021, 1)) +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         strip.background = element_rect(fill = "grey", colour = "#999999", linetype = 2))
 graph
 saving_plot(graph, "10_timeline4")
@@ -632,11 +632,11 @@ word_data <- data.frame(word = names(f),freq=f)
 graph <- ggplot(word_data, aes(label = word, size = freq)) +
   geom_text_wordcloud(color = rep_len(c("#fffd33","#3a25ff","#48ffbc"), nrow(word_data)), family = "Montserrat") +
   scale_size_area(max_size = 40) +
-  labs(caption = "Qu'est-ce qui vous a motivé à contribuer pour la première fois ?") +
+  labs(subtitle = "\nQu'est-ce qui vous a motivé à contribuer pour la première fois ?") +
   theme_minimal() +
   theme(text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12))
+        plot.subtitle = element_text(face = "italic", size = 15))
 graph
 saving_plot(graph, "11_wordcloud")
 
@@ -644,11 +644,11 @@ saving_plot(graph, "11_wordcloud")
 graph <- ggplot(word_data, aes(label = word, size = freq)) +
   geom_text_wordcloud(color = rep_len(c("#82888d","#3a25ff","#48ffbc"), nrow(word_data)), family = "Montserrat") +
   scale_size_area(max_size = 40) +
-  labs(caption = "Qu'est-ce qui vous a motivé à contribuer pour la première fois ?") +
+  labs(subtitle = "\nQu'est-ce qui vous a motivé à contribuer pour la première fois ?") +
   theme_minimal() +
   theme(text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12))
+        plot.subtitle = element_text(face = "italic", size = 15))
 saving_plot(graph, "11_wordcloud1")
 
 
@@ -669,20 +669,20 @@ table$rowname <- table$rowname %>% str_replace_all(c("Autre...34" = "Autre",
   # Plot
 graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>% 
   ggplot(aes(x=rowname, y=V1))+
-    geom_bar(stat="identity", fill="#3a25ff", width=.6) +
+    geom_bar(stat="identity", width=.6, fill = "#3a25ff") +
     coord_flip() +
-    labs(x = "", y = "Nombre de réponses", title = "Pourquoi les Vikidiens contribuent", caption = "Pourquoi continuez-vous à contribuer ?") +
+    labs(x = "", y = "Nombre de réponses", title = "Pourquoi les Vikidiens contribuent", subtitle = "\nPourquoi continuez-vous à contribuer ?") +
     theme_classic() +
     theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         axis.title.y = element_blank(),
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank()) +
     geom_text(aes(y = V1 + 3, x = rowname, label = paste(percent, "%", sep = "")), 
-            color = "#333333", size = 3, check_overlap = T)
+            color = "#333333", size = 3, check_overlap = T) 
 graph
 saving_plot(graph, "12_bar_motiv-contrib")
 
@@ -736,12 +736,12 @@ graph <- table %>% filter(`Types de contributions` != "Autre") %>%
   scale_color_manual(values = c("white", "white", "white", "white", "white", "white"))+
   scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33", "#CC3333", "#2ca25f")) +
   labs(x = "Responsabilités", y = "Nombre de réponses", title = "Contributions apportées à Vikidia selon les responsabilités",
-       caption = "Quels types de contributions faites-vous ?, Avez-vous des outils (responsabilités) ?") +
+       subtitle = "\nQuels types de contributions faites-vous ?, Avez-vous des outils (responsabilités) ?") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12))
+        plot.subtitle = element_text(face = "italic", size = 15))
 graph
 ggsave(file = "dataviz/SVG/13_grouped_contrib.svg", plot = graph, width = 15, height = 8)
 ggsave(file = "dataviz/PNG/13_grouped_contrib.png", plot = graph, width = 15, height = 8)
@@ -755,7 +755,7 @@ graph <- table %>% filter(`Types de contributions` != "Autre") %>%
   scale_color_manual(values = c("white", "white", "white", "white", "white", "white"))+
   scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33", "#CC3333", "#2ca25f")) +
   labs(x = "Responsabilités", y = "Nombre de réponses", title = "Contributions apportées à Vikidia selon les responsabilités",
-       caption = "Quels types de contributions faites-vous ?, Avez-vous des outils (responsabilités) ?") +
+       subtitle = "\nQuels types de contributions faites-vous ?, Avez-vous des outils (responsabilités) ?") +
   theme_classic() +
   facet_wrap(~outil, strip.position="bottom") +
   theme(legend.position = "right",
@@ -763,7 +763,7 @@ graph <- table %>% filter(`Types de contributions` != "Autre") %>%
         axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         strip.text.x = element_text(face = "bold"))
 graph
 ggsave(file = "dataviz/SVG/13_grouped_contrib-wrap.svg", plot = graph, width = 15, height = 8)
@@ -774,9 +774,10 @@ ggsave(file = "dataviz/PNG/13_grouped_contrib-wrap.png", plot = graph, width = 1
   # Plot
 graph <- table %>% filter(`Types de contributions` != "Autre") %>%
   ggballoonplot(x = "outil", y = "Types de contributions", size = "V1", fill = "#3a25ff", color = "white", ggtheme = theme_bw()) + 
-  labs(title = "Contributions apportées à Vikidia selon les responsabilités") +
+  labs(title = "Contributions apportées à Vikidia selon les responsabilités", subtitle = "\nQuels types de contributions faites-vous ?, Avez-vous des outils (responsabilités) ?") +
   theme(text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21)) +
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   guides(size = guide_legend(reverse = T, title = "Nombre de réponses"),
          fill = "none")
 graph
@@ -805,12 +806,12 @@ graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>%
     geom_bar(stat="identity", fill="#3a25ff", width=.6) +
     coord_flip() +
     labs(x = "", y = "Nombre de réponses", title = "Canaux par lesquels les répondants ont connu Vikidia", 
-         caption = "Comment avez-vous entendu parler de Vikidia pour la première fois ?") +
+         subtitle = "\nComment avez-vous entendu parler de Vikidia pour la première fois ?") +
     theme_classic() +
     theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         axis.title.y = element_blank(),
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
@@ -864,9 +865,9 @@ table <- table %>%
 
 
   # Paramètres graphiques (forcer l'ordre des catégories sur le graphique: même ordre que dans les données)
-table <- as.data.table(table)
+table <- data.table::as.data.table(table)
 table <- table[j = group := fct_rev(`Selon vous, comment Vikidia est-elle perçue par le grand public ?`)]
-setorder(table, `Selon vous, comment Vikidia est-elle perçue par le grand public ?`)
+data.table::setorder(table, `Selon vous, comment Vikidia est-elle perçue par le grand public ?`)
 
   # Plot
 graph <- ggplot(table, aes(fill = `Selon vous, comment Vikidia est-elle perçue par le grand public ?`, values = n, color = `Selon vous, comment Vikidia est-elle perçue par le grand public ?`)) +
@@ -881,12 +882,12 @@ graph <- ggplot(table, aes(fill = `Selon vous, comment Vikidia est-elle perçue 
 de Vikidia autour de lui",
        x = "Niveau de communication de l'outil",
        y = "Nombre de répondants",
-       caption = "Selon vous, comment Vikidia est-elle perçue par le grand public ?") +
+       subtitle = "\nSelon vous, comment Vikidia est-elle perçue par le grand public ?") +
   theme_minimal(base_family = "Montserrat") +
   theme(panel.grid = element_blank(), axis.ticks.y = element_line(),
         legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(reverse = T, title = "Perception estimée"),
          color = 'none')
@@ -909,12 +910,12 @@ graph <- ggplot(table, aes(fill = `Selon vous, comment Vikidia est-elle perçue 
 de Vikidia autour de lui",
        x = "Niveau de communication de l'outil",
        y = "Nombre de répondants",
-       caption = "Selon vous, comment Vikidia est-elle perçue par le grand public ?") +
+       subtitle = "\nSelon vous, comment Vikidia est-elle perçue par le grand public ?") +
   theme_minimal(base_family = "Montserrat") +
   theme(panel.grid = element_blank(), axis.ticks.y = element_line(),
         legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(reverse = T, title = "Perception estimée"),
          color = 'none')
@@ -938,12 +939,12 @@ graph <- ggplot(table, aes(fill = `Selon vous, comment Vikidia est-elle perçue 
 de Vikidia autour de lui",
        x = "Niveau de communication de l'outil",
        y = "Pourcentage",
-       caption = "Selon vous, comment Vikidia est-elle perçue par le grand public ?") +
+       subtitle = "\nSelon vous, comment Vikidia est-elle perçue par le grand public ?") +
   theme_classic(base_family = "Montserrat") +
   theme(panel.grid = element_blank(), axis.ticks.y = element_line(),
         legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(reverse = T, title = "Perception estimée"),
          color = 'none')
@@ -984,9 +985,9 @@ table$raisons <- factor(table$raisons, order = TRUE,
   # Plot
 graph <- ggballoonplot(table, x = "Var1", y = "raisons", size = "Freq", fill = "#3a25ff", color = "white", ggtheme = theme_bw()) + 
   labs(title = "Pourquoi les Vikidiens utilisent l'outil", 
-       caption = "Pourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?") +
+       subtitle = "\nPourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?") +
   theme(text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21))+
   guides(size = guide_legend(reverse = T, title = "Nombre de réponses"),
          fill = "none")
@@ -1006,15 +1007,15 @@ table <- rbind(amb,tai)
   # Plot
 graph <- ggballoonplot(table, x = "raisons", y = "Var1", size = "Freq", fill = "Var2", color = "Var2", ggtheme = theme_bw()) + 
   labs(title = "Pourquoi les Vikidiens utilisent l'outil", 
-       caption = "Pourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?") +
+       subtitle = "\nPourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?") +
   facet_wrap(~Var2) +
   scale_fill_manual(values = c("#fffd33", "#2ca25f")) +
   scale_color_manual(values = c("#fffd33", "#2ca25f")) +
   theme(text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21))+
   guides(size = guide_legend(reverse = T, title = "Nombre de réponses"),
-         fill = "none")
+         fill = "none", color = "none")
 graph
 saving_plot(graph, "16_ballonplot2")
 
@@ -1025,35 +1026,42 @@ saving_plot(graph, "16_ballonplot2")
 # -------------- Quelles sont les alternatives à Vikidia ?
 
 
+
+### 1)
+
   # Table de fréquences des réponses
 table <- process_alternatives %>% group_by(`Grandes catégories...6`) %>% 
-  summarise(n = n()) %>% ungroup() %>% na.omit() %>% mutate(percent = round(n / sum(n) *100, 0))
+  summarise(Freq = n()) %>% ungroup() %>% na.omit() %>% mutate(proportion = round(Freq / sum(Freq) *100, 0))
+
+  # Paramètres graphiques
+table$fraction <- table$Freq / sum(table$Freq)  #percentages
+table$ymax <- cumsum(table$fraction)  # cumulative percentages (top of each rectangle)
+table$ymin <- c(0, head(table$ymax, n=-1))  #bottom of each rectangle
+table$labelPosition <- (table$ymax + table$ymin) / 2  #label position
+table[1,7] <- 0
+table[3,7] <- 0.97
 
   # Plot
-graph <- table %>% mutate(`Grandes catégories...6` = fct_reorder(`Grandes catégories...6`, n)) %>% 
-  ggplot(aes(x = `Grandes catégories...6`, y = n, fill = `Grandes catégories...6`))+
-    geom_bar(stat = "identity", width = .6) +
-    scale_fill_manual(values = c("#CC3333", "#48ffbc", "#3a25ff")) +
-    coord_flip() +
-    labs(x = "", y = "Nombre de réponses", title = "Type des ressources utilisées comme alternatives 
-à Vikidia", 
-         caption = "Lorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?") +
-    theme_classic() +
-    theme(legend.position = "none",
-        text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
-        axis.title.y = element_blank(),
-        axis.line.x = element_blank(),
-        axis.line.y = element_blank(),
-        axis.ticks.y = element_blank()) +
-    geom_text(aes(y = n + 30, x = `Grandes catégories...6`, label = paste(percent, "%", sep = "")), 
-            color = "#333333", size = 3, check_overlap = T)
+graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 2.8, xmin = 1.5, fill = `Grandes catégories...6`)) +
+  geom_rect(col = "white", size = 2) +
+  geom_text(x=3.5, aes(y=labelPosition, label = paste(proportion,"%",sep = "")), color = "#333333", size=7, check_overlap = T) +
+  scale_fill_manual(values = c("#CC3333", "#3a25ff", "#48ffbc")) +
+  coord_polar(theta="y") +
+    labs(x = "", title = "Type de ressources utilisées comme alternatives à Vikidia", 
+         subtitle = "\nLorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?") +
+  xlim(c(0, 4)) +   
+  theme_void() +
+  theme(legend.position = "right",
+        text = element_text(family = "Monsterrat", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
+        plot.title = element_text(face = "bold", size = 21)) +
+  guides(fill = guide_legend(title = "Type de ressource"))
 graph
-ggsave(file = "dataviz/SVG/17_barplot_alternatives.svg", plot = graph, width = 9, height = 6)
-ggsave(file = "dataviz/PNG/17_barplot_alternatives.png", plot = graph, width = 9, height = 6)
+saving_plot(graph, "17_barplot_alternatives")
 
 
+
+### 2)
 
   # Table de fréquences des réponses
 table <- process_alternatives %>% group_by(`Grandes catégories...6`, `Petites catégories`) %>% 
@@ -1068,13 +1076,12 @@ graph <- ggplot(table, aes(label = `Petites catégories`, size = n, colour = `Gr
                       grid_size = 5) +
   scale_colour_manual(values = c("#CC3333","#3a25ff","#48ffbc")) +
   scale_size_area(max_size = 40) +
-  labs(caption = "Lorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?") +
+  labs(subtitle = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?") +
   theme_minimal() +
-  theme(plot.caption = element_text(face = "italic", size = 12))
+  theme(plot.subtitle = element_text(face = "italic", size = 15))
 graph
 ggsave(file = "dataviz/SVG/17_wordcloud_alternatives.svg", plot = graph, width = 10, height = 9)
 ggsave(file = "dataviz/PNG/17_wordcloud_alternatives.png", plot = graph, width = 10, height = 9)
-
 
 
 
@@ -1106,15 +1113,14 @@ table$`Accessibilité des articles` <- factor(table$`Accessibilité des articles
 
   # Plot
 graph <- ggplot(table, aes(x = `Quel âge avez-vous ?`, y = percent)) +
-  geom_col(aes(color = `Accessibilité des articles`, fill = `Accessibilité des articles`), position = "stack", width = 0.7) +
-  scale_color_manual(values = c("white","white","white","white","white","white","white","white"))+
+  geom_col(aes(fill = `Accessibilité des articles`), position = "stack", width = 0.7, col = "white", size = 2) +
   scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33", "#CC3333", "#2ca25f")) +
   labs(x = "Âge", y = "Pourcentage", title = "Évaluation de l'accessibilité des articles selon l'âge",
-       caption = "Trouvez-vous les articles de Vikidia accessibles ?") +
+       subtitle = "\nTrouvez-vous les articles de Vikidia accessibles ?") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21))
 graph
 ggsave(file = "dataviz/SVG/18_stacked_accessibilite.svg", plot=graph, width=14, height=8)
@@ -1161,7 +1167,7 @@ graph <- ggplot(table, aes(x="", y=percent, fill=`Comment évaluez vous votre pa
   coord_polar("y", start=0) +
   facet_wrap(~is_contrib, strip.position="bottom") +
   scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33")) +
-  labs(title = "Participation aux canaux de discussion", caption = "Comment évaluez vous votre participation aux canaux de discussion ?") +
+  labs(title = "Participation aux canaux de discussion", subtitle = "\nComment évaluez vous votre participation aux canaux de discussion ?") +
   theme_classic() + 
   theme(legend.position="right",
         strip.text.x = element_text(size = 12, face = "bold"),
@@ -1171,7 +1177,7 @@ graph <- ggplot(table, aes(x="", y=percent, fill=`Comment évaluez vous votre pa
         axis.line = element_blank(),
         axis.text = element_blank(),
         text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(reverse = T, title = " ")) +
   geom_text(aes(y = ypos, x = 1.6, label = paste(round(percent,0), "%", sep="")), color = "#333333", size=3, check_overlap = T)
@@ -1222,7 +1228,7 @@ graph <- ggplot(table, aes(x="", y=percent, fill=`Que pensez-vous des pages d'ai
   coord_polar("y", start=0) +
   facet_wrap(~is_contrib, strip.position="bottom") +
   scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33")) +
-  labs(title = "Avis sur les pages d'aide", caption = "Que pensez-vous des pages d'aide ?") +
+  labs(title = "Avis sur les pages d'aide", subtitle = "\nQue pensez-vous des pages d'aide ?") +
   theme_classic() + 
   theme(legend.position="right",
         strip.text.x = element_text(size = 12, face = "bold"),
@@ -1232,7 +1238,7 @@ graph <- ggplot(table, aes(x="", y=percent, fill=`Que pensez-vous des pages d'ai
         axis.line = element_blank(),
         axis.text = element_blank(),
         text = element_text(family = "Montserrat", size = 12),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(reverse = T, title = " ")) +
   geom_text(aes(y = ypos, x = 1.6, label = paste(round(percent,0), "%", sep="")), color = "#333333", size=3, check_overlap = T)
@@ -1276,19 +1282,19 @@ table <- table %>% group_by(`Comment évaluez vous votre participation aux canau
   # Plot
 graph <- ggballoonplot(table, x = "Que pensez-vous des pages d'aide ?", y = "Comment évaluez vous votre participation aux canaux de discussion ?", size = "n", fill = "is_contrib", color = "is_contrib", ggtheme = theme_bw()) + 
   facet_wrap(~is_contrib) +
-  scale_fill_manual(values = c("#fffd33", "#2ca25f")) +
-  scale_color_manual(values = c("#fffd33", "#2ca25f")) +
+  scale_fill_manual(values = c("#82888d", "#3a25ff")) +
+  scale_color_manual(values = c("#82888d", "#3a25ff")) +
   theme(text = element_text(family = "Montserrat", size = 12),
         strip.text.x = element_text(size = 12, face = "bold"),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21),
         axis.title = element_text()) + #censé afficher xlab et ylab
-  guides(size = guide_legend(reverse = T, title = "Nombre de répondants"), fill = "none") +
+  guides(size = guide_legend(reverse = T, title = "Nombre de répondants"), fill = "none", color = "none") +
   labs(x = "Évaluation des pages",
        y = "Participation aux canaux de discussion",
        title = "Avis sur les pages d'aide selon la participation aux 
 canaux de discussion",
-       caption = "Comment évaluez vous votre participation aux canaux de discussion ?, Que pensez-vous des pages d'aide ?")
+       subtitle = "\nComment évaluez vous votre participation aux canaux de discussion ?, \nQue pensez-vous des pages d'aide ?")
 graph
 saving_plot(graph, "20_ballonplot")
 
@@ -1317,10 +1323,12 @@ graph <- ggplot(table, aes(x = is_contrib)) +
   geom_text(aes(x = is_contrib, y = percent - 9), label = paste(table$percent, "%"),
             colour = "white", size = 8, fontface = "bold") +
   coord_flip() + labs(title = "Part des personnes se sentant intégrées à la communauté de Vikidia, 
-selon s'ils contribuent ou pas à Vikidia", y = "Pourcentage", x = "") +
+selon s'ils contribuent ou pas à Vikidia", y = "Pourcentage", x = "", subtitle = "\nVous sentez-vous suffisamment intégré à la communauté vikidienne ?") +
   theme_classic() +
   theme(text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21))
+        axis.text.y = element_text(face = "bold"),
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15))
 graph
 saving_plot(graph, "21_gauge_integration")
 
@@ -1354,15 +1362,15 @@ table$`Accessibilité des articles` <- factor(table$`Accessibilité des articles
 graph <- ggplot(table, aes(x = `Accessibilité des articles`, y = n)) +
   geom_col(aes(color = `Accessibilité des articles`, fill = `Accessibilité des articles`), position = position_dodge(0.8), width = 0.7) +
   scale_color_manual(values = c("white", "white", "white", "white", "white"))+
-  scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33", "#CC3333")) +
+  scale_fill_manual(values = c("#3a25ff", "#6756FF", "#9488FF", "#C1B9FF", "#EEEAFF")) +
   labs(x = "Accessibilité des articles", y = "Nombre de répondants", title = "Évaluation de l'accessibilité des articles par les lecteurs se sentant 
 integrés à la communauté",
-       caption = "Trouvez-vous les articles de Vikidia accessibles ?") +
+       subtitle = "\nTrouvez-vous les articles de Vikidia accessibles ?") +
   theme_classic() +
   theme(legend.position = "none",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   geom_text(aes(y = n + 6, x = `Accessibilité des articles`, label = paste(round(percent,0), "%", sep="")), color = "#333333", size=3, check_overlap = T)
 graph
 saving_plot(graph, "22_bar_accessibilite")
@@ -1397,16 +1405,16 @@ table <- table %>% group_by(`Comment évaluez vous votre participation aux canau
   # Plot
 graph <- ggplot(table, aes(x = `Comment évaluez vous votre participation aux canaux de discussion ?`, y = n)) +
   geom_col(aes(color = `Comment évaluez vous votre participation aux canaux de discussion ?`, fill = `Comment évaluez vous votre participation aux canaux de discussion ?`), position = position_dodge(0.8), width = 0.7) +
-  scale_color_manual(values = c("white", "white", "white", "white", "white"))+
-  scale_fill_manual(values = c("#3a25ff", "#82888d", "#48ffbc", "#fffd33", "#CC3333")) +
+  scale_color_manual(values = c("white", "white", "white", "white"))+
+  scale_fill_manual(values = c("#EEEAFF", "#B2A8FF", "#7667FF", "#3A25FF")) +
   labs(x = "Participation aux canaux", y = "Nombre de répondants", title = "Participation des contributeurs se sentant integrés à la communauté, 
 aux canaux de discussion",
-       caption = "Comment évaluez vous votre participation aux canaux de discussion ?") +
+       subtitle = "\nComment évaluez vous votre participation aux canaux de discussion ?") +
   theme_classic() +
   theme(legend.position = "none",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   geom_text(aes(y = n + 1, x = `Comment évaluez vous votre participation aux canaux de discussion ?`, label = paste(round(percent,0), "%", sep="")), color = "#333333", size=3, check_overlap = T)
 graph
 saving_plot(graph, "22_bar_canaux")
@@ -1434,16 +1442,16 @@ table$`Comment avez-vous jugé votre accueil sur Vikidia ?` <- factor(table$`Com
   # Plot
 graph <- table %>% 
   ggplot(aes(x=`Comment avez-vous jugé votre accueil sur Vikidia ?`, y=Freq, fill = `Êtes vous ...`, group = `Êtes vous ...`))+
-    geom_bar(stat="identity", position = "dodge", width=.6) +
+    geom_bar(stat="identity", position = "dodge", width=.6, col = "white", size = 2) +
     coord_flip() +
     labs(x = "", y = "Nombre de répondants", title = "Évaluation de l'accueil sur Vikidia", 
-       caption = "Comment avez vous jugé votre accueil sur Vikidia ?") +
+       subtitle = "\nComment avez vous jugé votre accueil sur Vikidia ?") +
     theme_classic() +
     scale_fill_manual(values = c('#fffd33', '#2ca25f')) +
     theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12),
+        plot.subtitle = element_text(face = "italic", size = 15),
         axis.title.y = element_blank(),
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
@@ -1477,15 +1485,15 @@ graph <- table %>%
   geom_col(aes(color = `Quel âge avez-vous ?`, fill = `Quel âge avez-vous ?`), position = position_dodge(0.8), width = 0.7) +
   facet_wrap(~`Êtes vous ...`) +
   scale_color_manual(values = c("white", "white", "white", "white", "white", "white", "white", "white", "white"))+
-  #scale_fill_manual(values = c("#48ffbc", "#82888d", "#3a25ff", "#fffd33", "#CC3333", "#2ca25f", "#e4ceaa", "#df744a", "#448ca4")) +
-  scale_fill_manual(values = c("#d14e3d", "#df744a", "#e3a675", "#e4ceaa", "#85a5a0", "#43949b", "#448ca4", "#2a5c77", "#1c314c")) +
+  scale_fill_manual(values = c("#48ffbc", "#82888d", "#3a25ff", "#fffd33", "#CC3333", "#2ca25f", "#e4ceaa", "#df744a", "#448ca4")) +
+  #scale_fill_manual(values = c("#d14e3d", "#df744a", "#e3a675", "#e4ceaa", "#85a5a0", "#43949b", "#448ca4", "#2a5c77", "#1c314c")) +
   labs(x = "Canaux de discussion", y = "Nombre de réponses", title = "Canaux de discussion des répondants selon l'âge et le genre",
-       caption = "Sur quel(s) canal(ux) de discussions êtes-vous actif.ve ?") +
+       subtitle = "\nSur quel(s) canal(ux) de discussions êtes-vous actif.ve ?") +
   theme_bw() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   guides(fill = guide_legend(title = "Âge du répondant", reverse = F), color = "none")
 graph
 ggsave(file = "dataviz/SVG/24_grouped_canaux.svg", plot = graph, width = 15, height = 8)
@@ -1495,20 +1503,20 @@ ggsave(file = "dataviz/PNG/24_grouped_canaux.png", plot = graph, width = 15, hei
   # Plot 2
 graph <- table %>%
   ggplot(aes(x = outils, y = n)) +
-  geom_bar(aes(fill = `Quel âge avez-vous ?`), color = "white", position="stack", stat="identity", width = 0.7) +
+  geom_bar(aes(fill = `Quel âge avez-vous ?`), color = "white", size = 1.3, position="stack", stat="identity", width = 0.7) +
   facet_wrap(~`Êtes vous ...`) +
   #scale_fill_manual(values = c("#48ffbc", "#82888d", "#3a25ff", "#fffd33", "#CC3333", "#2ca25f", "#e4ceaa", "#df744a", "#448ca4")) +
   scale_fill_manual(values = c("#d14e3d", "#df744a", "#e3a675", "#e4ceaa", "#85a5a0", "#43949b", "#448ca4", "#2a5c77", "#1c314c")) +
   labs(x = "Canaux de discussion", y = "Nombre de réponses", title = "Canaux de discussion des répondants selon l'âge et le genre",
-       caption = "Sur quel(s) canal(ux) de discussions êtes-vous actif.ve ?") +
+       subtitle = "\nSur quel(s) canal(ux) de discussions êtes-vous actif.ve ?") +
   theme_bw() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   guides(fill = guide_legend(title = "Âge du répondant", reverse = F), color = "none")
 graph
-saving_plot(graph, "24_stacked_canaux")
+saving_plot(graph, "24_stacked_canaux1")
 ## retirer age == "prefère ne pas le dire"
 
 
@@ -1544,12 +1552,12 @@ graph <- table %>%
           gridline.mid.colour = "grey") +
   xlim(-15,15) +
   labs(title = "Évaluation de Vikidia par ses lecteurs",
-       caption = "Veuillez noter votre satisfaction sur les sujets suivants") +
+       subtitle = "\nVeuillez noter votre satisfaction sur les sujets suivants") +
   ggplot2::annotate("text", x = 10, y = -1, label = "\ 1 : Très mauvaise \n5 : Très bonne", col = "#666666") +
   theme(legend.position = "none",
         text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12))
+        plot.subtitle = element_text(face = "italic", size = 15))
 graph
 saving_plot(graph, "25_radar_eval")
 
@@ -1571,7 +1579,7 @@ graph <- table %>%
     geom_point(size=6, color="#3a25ff") +
     coord_flip() +
     labs(x = "", y = "Note", title = "Évaluation de la fiabilité des articles selon l'activité",
-       caption = "Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
+       subtitle = "\nQuel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
     lims(y = c(0, 5)) +
     theme_classic() +
   theme(legend.position = "right",
@@ -1581,7 +1589,7 @@ graph <- table %>%
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank(),
-        plot.caption = element_text(face = "italic", size = 12))
+        plot.subtitle = element_text(face = "italic", size = 15))
 graph
 saving_plot(graph, "26_lollipop1")
 
@@ -1604,7 +1612,7 @@ graph <- table %>%
     geom_point(size=6, color="#3a25ff") +
     coord_flip() +
     labs(x = "", y = "Note", title = "Évaluation de la fiabilité des articles selon l'âge",
-       caption = "Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
+       subtitle = "\nQuel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
     lims(y = c(0, 5)) +
     theme_classic() +
   theme(legend.position = "right",
@@ -1614,7 +1622,7 @@ graph <- table %>%
         axis.line.x = element_blank(),
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank(),
-        plot.caption = element_text(face = "italic", size = 12))
+        plot.subtitle = element_text(face = "italic", size = 15))
 graph
 saving_plot(graph, "26_lollipop2")
 
@@ -1641,16 +1649,16 @@ table$`Fiabilités des articles` <- factor(table$`Fiabilités des articles`, ord
   # Plot
 graph <- ggplot(table, aes(y = Freq)) +
   geom_col(aes(x = `Fiabilités des articles`, fill = `Fiabilités des articles`), position = position_dodge(0.8), width = 0.7, col = "white") +
-  scale_fill_manual(values = c("#48ffbc", "#82888d", "#3a25ff", "#fffd33", "#CC3333")) +
+  scale_fill_manual(values = c("#EEEAFF", "#C1B9FF", "#9488FF", "#6756FF", "#3A25FF")) +
   labs(x = "Fiabilités des articles", y = "Nombre de répondants", title = "Évaluation de la fiabilité des articles",
-       caption = "Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
+       subtitle = "\nQuel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
   theme_classic() +
   theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
         axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         plot.title = element_text(face = "bold", size = 21),
-        plot.caption = element_text(face = "italic", size = 12)) +
+        plot.subtitle = element_text(face = "italic", size = 15)) +
   guides(fill = guide_legend(title = " ", reverse = F), color = "none") +
   geom_text(aes(y = Freq + 10, x = `Fiabilités des articles`, label = paste(percent, "%", sep="")), color = "#333333", size=3, check_overlap = T)
 graph
