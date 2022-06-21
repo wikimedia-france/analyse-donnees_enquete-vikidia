@@ -1,0 +1,143 @@
+---
+title: "Rapport d'analyse"
+subtitle: "Résultats d’une enquête menée auprès de la communauté vikidienne"
+date: "*28 juin 2022*"
+output: 
+    html_document:
+        #self_contained: false
+        theme: paper
+        toc: yes
+        toc_float: yes
+        toc_depth: 6
+        code_folding: hide
+        include:
+            after_body: footer.html
+sansfont: Montserrat
+knit: (
+  function(inputFile, encoding) { 
+    
+    rmarkdown::render(inputFile, params = "ask",  
+      encoding    = encoding,
+      output_dir = "../reports", 
+      output_file = paste0(tools::file_path_sans_ext(inputFile), ".html")) })
+---
+
+```{=html}
+<style>
+body {
+text-align: justify
+}
+</style>
+```
+```{r setup, include=FALSE}
+# General settings     
+knitr::opts_chunk$set(
+	#eval = TRUE,
+	echo=FALSE,
+	fig.align = "center",
+	fig.show = "hold",
+	message = FALSE,
+	error = FALSE,
+	warning = FALSE,
+	collapse = TRUE,
+	#out.width = "100%",
+	#width=12, height=8,
+    results = 'asis'
+)
+```
+
+<br>
+
+[![logo_datactivist](https://nextcloud.datactivist.coop/s/piepkJorB5XRzm8/preview){height="140"}](https://datactivist.coop/fr/)             [![logo_wikimedia](https://nextcloud.datactivist.coop/s/cfSk2qjMpytmp8C/preview){height="100"}](https://wikimediafoundation.org)             [![logo_vikidia](https://nextcloud.datactivist.coop/s/8Zni6it8k5pqEPT/preview){height="90"}](https://fr.vikidia.org/wiki/Vikidia:Accueil)
+
+<br>
+
+Avec plus de 30.000 articles et 60.000 utilisateurs, Vikidia est une ressource en ligne incontournable pour les 8-13 ans. Cette encyclopédie collaborative a connu une croissance importante depuis sa création en 2006.
+
+Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association française Wikimédia a été chargée d'organiser une enquête auprès de la communauté vikidienne.
+
+De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.).
+
+------------------------------------------------------------------------
+
+<br>
+
+# I - Préparation des données
+
+<br>
+
+Dans le but d'analyser les résultats de l'enquête, un **nettoyage des données** est nécessaire. Ainsi, les réponses au séquentiel 474 et 475 sont retirées car elles font ***doublons*** avec la réponse 473. De même, certaines réponses ***incohérentes ou peu fiables*** au vu des champs libres complétés, sont supprimées. Cela concerne les réponses 43, 75, 317, 465, 479, 484, 498, 499, 524, 537, 594, 598, 613, 614, 621, 630, 676, 677, 717, 722, 780 et 793. Les données analysées comportent donc les réponses de 774 répondants.
+
+Dans un deuxième temps, certaines réponses aux questions suivantes sont traitées :
+
+-   **question *"En quelle année avez-vous rejoint la communauté Vikidienne ?"*** : extraction de l'année lorsqu'elle est citée à l'aide d'une fonction, puis traitement à la main des autres types de réponses (exemple : "*il y a 4 ans*") ;
+-   **question *"Qu'est ce qui vous a motivé à contribuer pour la première fois ?"*** : regroupement, lemmatisation et harmonisation des réponses à la main ;
+-   **question *"Lorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?"*** : standardisation des réponses (sans accent et en minuscules), extraction des mots-clés / des réponses les plus courantes, puis traitement manuel de ces réponses pour les lemmatiser ;
+-   **questions *"Vous êtes ..."* et *"Veuillez préciser votre niveau d'étude"*** : agrégation des deux champs ; le détail du niveau d'étude est collé à l'activité du répondant (exemple : '*Étudiant/élève*' et '*École primaire (du CP au CM2)*', devient "*Élève en école primaire*").
+
+Enfin, une variable additionnelle est créée dans le but de distinguer les lecteurs des contributeurs, elle est basée sur les réponses à la question "*Quel est votre degré de contribution ?*".
+
+<br>
+
+Les parties suivantes présentent l'analyse des réponses à l'enquête, sous 4 objectifs définis :
+
+-   rendre compte de la variété des profils ;
+-   dresser le profil du contributeur moyen ;
+-   cerner les usages ;
+-   analyser les besoins des utilisateurs.
+
+Le questionnaire est analysé de manière visuelle ; chaque datavisualistion permet de représenter les réponses à une ou plusieurs questions. Pour chaque datavisualisation, une mise en contexte est effectuée avant d'en interpréter les résultats.
+
+<br>
+
+------------------------------------------------------------------------
+
+# II - Rendre compte de la variété des profils
+
+<br>
+
+## Genre des répondants de l'enquête
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/1_donut.png)
+
+La visualisation ci-dessus montre la répartition des répondants selon leur genre. Sur 774 répondants ; 380 sont des femmes, soit 49%, 285 sont des hommes, soit 37%, et 109 préfèrent ne pas le dire, soit 14%.
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de répondants selon l'âge et le genre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
+    -   "*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre. On voit que la catégorie regroupant le plus de répondants est celle des filles ayant entre 14 et 18 ans, qui représente 21% de la population. Elle est suivie par la tranche des moins de 14 ans où l'on retrouve 113 filles, soit 17% des répondants. 
+
+<br>
+
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
