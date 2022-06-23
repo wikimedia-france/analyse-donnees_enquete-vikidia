@@ -122,9 +122,9 @@ La visualisation ci-dessus montre la répartition des répondants selon leur gen
 
 <br>
 
--   **population** : tous les répondants
+-   **population** : tous les répondants de genre féminin ou masculin (suppression de la catégorie "*Préfère ne pas le dire*")
 
--   **nombre de répondants** : 774
+-   **nombre de répondants** : 665
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
@@ -136,6 +136,1310 @@ La visualisation ci-dessus montre la répartition des répondants selon leur gen
 ![](../dataviz/PNG/2_pyramid_age.png)
 
 La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre. On voit que la catégorie regroupant le plus de répondants est celle des filles ayant entre 14 et 18 ans, qui représente 21% de la population. Elle est suivie par la tranche des moins de 14 ans où l'on retrouve 113 filles, soit 17% des répondants. 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de répondants selon l'activité et le genre
+
+<br>
+
+-   **population** : tous les répondants de genre féminin ou masculin
+
+-   **nombre de répondants** : 665
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+
+<br>
+
+![](../dataviz/PNG/3_pyramid_activite.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Les contextes d'utilisation de Vikidia
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de réponses** : 1407
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Dans quel(s) contexte(s) utilisez-vous Vikidia ?*" : 'Dans le cadre scolaire à la maison (voir les devoirs, les révisions etc.)', 'Dans le cadre scolaire en classe (en cours, en club etc.)', 'Pour ma culture générale', 'Pour le travail', 'En tant que simple loisir', 'Autre'
+
+<br>
+
+![](../dataviz/PNG/4_barplot_contextes.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Degré de contribution des répondants
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+
+<br>
+
+![](../dataviz/PNG/5_dendrogram.png)
+
+La visualisation ci-dessus montre . 
+
+<br>
+
+------------------------------------------------------------------------
+
+# III - Dresser le profil du contributeur moyen
+
+
+<br>
+
+## Genre des répondants contributeurs de l'enquête
+
+<br>
+
+-   **population** : les contributeurs
+
+-   **nombre de répondants** : 163
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/6_donut_contrib.png)
+
+La visualisation ci-dessus montre la répartition des répondants selon leur genre. Sur 774 répondants ; 380 sont des femmes, soit 49%, 285 sont des hommes, soit 37%, et 109 préfèrent ne pas le dire, soit 14%. FINIR
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de contributeurs selon l'âge et le genre
+
+<br>
+
+-   **population** : les contributeurs de genre féminin ou masculin (suppression de la catégorie "*Préfère ne pas le dire*")
+
+-   **nombre de répondants** : 138
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
+    -   "*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/7_pyramid_age_contrib.png)
+
+La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre. On voit que la catégorie regroupant le plus de répondants est celle des filles ayant entre 14 et 18 ans, qui représente 21% de la population. Elle est suivie par la tranche des moins de 14 ans où l'on retrouve 113 filles, soit 17% des répondants. FINIR
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de contributeurs selon l'activité et le genre
+
+<br>
+
+-   **population** : les contributeurs de genre féminin ou masculin
+
+-   **nombre de répondants** : 138
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+
+<br>
+
+![](../dataviz/PNG/8_pyramid_activite_contrib.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Les contextes d'utilisation de Vikidia chez les contributeurs
+
+<br>
+
+-   **population** : les contributeurs
+
+-   **nombre de réponses** : 313
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Dans quel(s) contexte(s) utilisez-vous Vikidia ?*" : 'Dans le cadre scolaire à la maison (voir les devoirs, les révisions etc.)', 'Dans le cadre scolaire en classe (en cours, en club etc.)', 'Pour ma culture générale', 'Pour le travail', 'En tant que simple loisir', 'Autre'
+
+<br>
+
+![](../dataviz/PNG/9_barplot_contextes_contrib.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+## Pourquoi les Vikidiens contribuent
+
+<br>
+
+-   **population** : les contributeurs
+
+-   **nombre de réponses** : 261
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Pourquoi continuez-vous à contribuer ?*" : 'Je me plais au sein de la communauté', 'J’ai des responsabilités', 'Les domaines abordés m’intéressent', 'J’aime contribuer au projet Vikidia', 'Autre'
+
+<br>
+
+![](../dataviz/PNG/12_bar_motiv-contrib.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Contributions apportées à Vikidia selon les responsabilités
+
+<br>
+
+-   **population** : les contributeurs
+
+-   **nombre de réponses** : 441
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Quels types de contributions faites-vous ?*" : 'De la patrouille', 'Ajouts sur la partie plus technique', 'Corrections orthographiques ou typographiques', 'Travail de catégorisation et d’ajouts de portail', 'Création amélioration d’articles', 'Aide aux nouveaux utilisateurs', 'Autre'
+    -   "*Avez-vous des outils (responsabilités) ?*" : 'Patrouilleur', 'Administrateur', 'Bureaucrate', 'Vérificateur d’IP', 'Nuker', 'Plus maintenant'
+
+<br>
+
+![](../dataviz/PNG/13_grouped_contrib-wrap.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de contributeurs ayant rejoint la communauté par année
+
+<br>
+
+-   **population** : les contributeurs (avec une réponse consistante, année comprise entre 2006 et 2021)
+
+-   **nombre de répondants** : 128
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*En quelle année avez-vous rejoint la communauté ?*" 
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève'
+
+<br>
+
+![](../dataviz/PNG/10_timeline1.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de contributeurs scolaires ayant rejoint la communauté par année
+
+<br>
+
+-   **population** : les contributeurs scolaires (avec une réponse consistante, année comprise entre 2006 et 2021)
+
+-   **nombre de répondants** : 97
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*En quelle année avez-vous rejoint la communauté ?*" 
+    -   "*Veuillez préciser le niveau d’étude :*" : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures'
+
+<br>
+
+![](../dataviz/PNG/10_timeline2.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Nombre de contributeurs ayant rejoint la communauté par année
+
+<br>
+
+-   **population** : les contributeurs (avec une réponse consistante, année comprise entre 2006 et 2021)
+
+-   **nombre de répondants** : 128
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*En quelle année avez-vous rejoint la communauté ?*" 
+    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+
+<br>
+
+![](../dataviz/PNG/10_timeline3.png)
+
+La visualisation ci-dessus montre . 
+
+
+<br>
+
+------------------------------------------------------------------------
+
+# IV - Cerner les usages
+
+
+<br>
+
+
+## Motivations à la contribution
+
+<br>
+
+-   **population** : les contributeurs
+
+-   **nombre de réponses** : 113
+
+-   **question représentée issue du questionnaire** :
+
+    -   "*Qu'est-ce qui vous a motivé à contribuer pour la première fois ?*"
+
+<br>
+
+![](../dataviz/PNG/11_wordcloud.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Canaux par lesquels les répondants ont connu Vikidia
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de réponses** : 1007
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Comment avez-vous entendu parler de Vikidia pour la première fois ?*" : 'Par votre milieu professionnel', 'Par votre milieu scolaire, étudiant', 'Par vos proches', 'Par hasard au gré de vos navigations sur internet', 'Par Wikipédia', 'Autre'
+
+<br>
+
+![](../dataviz/PNG/14_bar_connu-outil.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Niveau de popularité estimé par le répondant, selon qu'il parle de Vikidia autour de lui
+
+<br>
+
+-   **population** : tous les répondants (suppression des réponses '*Autre*' pour le niveau de popularité estimé)
+
+-   **nombre de répondants** : 730
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Quel est le niveau de popularité de Vikidia dans le grand public selon vous ?*" : 'Personne ne connaît Vikidia en dehors de la communauté', 'Vikidia est peu connue, et le grand public en est méfiant', 'Vikidia devrait gagner à être mieux connue', 'Vikidia est de plus en plus connue et elle gagne en confiance', 'Tout le monde connaît Vikidia !', 'Autre'
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+
+<br>
+
+![](../dataviz/PNG/15_waffle.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Pourquoi les Vikidiens utilisent l'outil
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de réponses** : 1080
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Pourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?*" : 'Les articles y sont plus faciles à comprendre', 'Vikidia est plus adaptée à mon niveau/âge', 'Je préfère l’ambiance au sein de la communauté vikidienne', 'La communauté vikidienne est de plus petite taille', 'Je préfère Wikipédia', 'Autre'
+    -   "*"*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/16_ballonplot1.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Pourquoi les Vikidiens utilisent l'outil
+
+<br>
+
+-   **population** : les répondants de genre féminin ou masculin, consultant Vikidia pour l'ambiance favorable ou la taille de communauté
+
+-   **nombre de réponses** : 491
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Pourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?*" : 'Un homme'
+    -   "*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/16_ballonplot2.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Type de ressources utilisées comme alternatives à Vikidia
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de réponses** : 775
+
+-   **question représentée issue du questionnaire** :
+
+    -   "*Lorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?*"
+
+<br>
+
+![](../dataviz/PNG/17_barplot_alternatives.png)
+![](../dataviz/PNG/17_wordcloud_alternatives.png)
+
+Les visualisations ci-dessus montrent . 
+
+
+<br>
+
+------------------------------------------------------------------------
+
+# V - Analyser les besoins des utilisateurs
+
+
+<br>
+
+
+
+## Évaluation de l'accessibilité des articles selon l'âge
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Trouvez-vous les articles de Vikidia accessibles ?*" : 'Pas du tout accessible', 'Peu accessibles', 'Moyennement accessibles', 'Plutôt accessibles', 'Très accessibles'
+    -   "*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/18_stacked_accessibilite.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Participation aux canaux de discussion
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n’y ai jamais participé', 'J’ai déjà écrit un ou deux messages', 'Il m’arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
+    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+
+<br>
+
+![](../dataviz/PNG/19_pie1.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Avis sur les pages d'aide
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Que pensez-vous des pages d'aide ?*" : 'Je n’en ai jamais eu besoin', 'Elles sont suffisamment claires', 'Je ne les trouve pas utiles', 'Elles sont trop complexes', 'Il existe des pages d’aide ???', 'Je pense qu’elles pourraient être améliorées'
+    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+
+<br>
+
+![](../dataviz/PNG/19_pie2.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## titre
+
+<br>
+
+-   **population** : tous les répondants
+
+-   **nombre de répondants** : 774
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Êtesgggggg*" : 'Un homme'
+    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+
+<br>
+
+![](../dataviz/PNG/2_pyramid_age.png)
+
+La visualisation ci-dessus montre . 
+
 
 <br>
 

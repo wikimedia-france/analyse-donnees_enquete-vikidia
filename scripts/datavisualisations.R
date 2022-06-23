@@ -181,10 +181,10 @@ saving_plot_custom <- function(graph, name, width, height) {
 
 
 
-# -------------- Qui sont les vikidiens ?
+# -------------- Rendre compte de la variété des profils
 
 
-### 1)
+######---
 
 
   # Table de fréquences des réponses
@@ -214,7 +214,7 @@ graph
 saving_plot_petit(graph, "1_donut")
 
 
-### 2)
+######---
 
 
   # Table de fréquences des réponses
@@ -249,7 +249,7 @@ saving_plot_petit(graph, "2_pyramid_age")
 
 
 
-### 3)
+######---
 
 
 
@@ -284,7 +284,7 @@ saving_plot_petit(graph, "3_pyramid_activite")
 
 
 
-### 4)
+######---
 
 
   # Table de fréquences des réponses
@@ -319,7 +319,7 @@ saving_plot_custom(graph, "4_barplot_contextes", 8, 6)
 
 
 
-### 5)
+######---
 
 
 
@@ -343,21 +343,23 @@ graph <- ggraph(mygraph, layout = 'dendrogram') +
   geom_node_text(aes(label=percent, filter=leaf, color=as.factor(group)), angle=0, hjust=0, nudge_y=0.1) +
   geom_node_point(aes(filter=leaf, size=value, color=as.factor(group)), alpha=1) +
   scale_size(range = c(4,14)) +
-  ggtitle("Degré de contribution des répondants") +
+  labs(title = "Degré de contribution des répondants", subtitle = "\nQuel est votre degré de contribution ?") +
   coord_flip() + scale_y_reverse(expand = c(0.01, 0), limits = c(NA,-2)) +
   scale_colour_manual(values = rep(c('#ca97ae', '#dd4627')), aesthetics = "colour") +
   theme_void() +
   theme(legend.position="none",
+        plot.subtitle = element_text(face = "italic", size = 15),
         text = element_text(family = "Montserrat", face = "bold", size = 12),
         plot.title = element_text(face = "bold", size = 21))
 graph
-saving_plot_petit(graph, "5_dendrogram")
+saving_plot_custom(graph, "5_dendrogram", 9, 6)
 
 
 
 
 
-# -------------- Qui sont les contributeurs ?
+# -------------- Dresser le profil du contributeur moyen
+
 
 
 # Filtre sur les contributeurs
@@ -365,7 +367,7 @@ contributeurs <- enquete_vikidia %>% filter(is_contrib == 1)
 
 
 
-### 1)
+######---
 
 
   # Table de fréquences des réponses
@@ -396,7 +398,7 @@ saving_plot_petit(graph, "6_donut_contrib")
 
 
 
-### 2)
+######---
 
 
   # Table de fréquences des réponses
@@ -430,7 +432,7 @@ saving_plot_petit(graph, "7_pyramid_age_contrib")
 
 
 
-### 3)
+######---
 
 
 
@@ -465,7 +467,7 @@ saving_plot_petit(graph, "8_pyramid_activite_contrib")
 
 
 
-### 4)
+######---
 
 
   # Table de fréquences des réponses
@@ -499,140 +501,7 @@ saving_plot_custom(graph, "9_barplot_contextes_contrib", 11, 7)
 
 
 
-### 5)
-
-
-
-  # Table de fréquences des réponses
-table <- contributeurs %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Vous êtes ...`) %>% 
-  summarise(Freq = n()) %>% ungroup()
-
-  # On ordonne et renomme les catégories
-table <- table %>% mutate(`Vous êtes ...` = factor(`Vous êtes ...`, 
-                                                    order = TRUE, 
-                                                    levels = c("Étudiant, élève", "En recherche d'emploi", "En activité", "Retraité")))
-
-  # Plot
-graph <- ggplot(table, aes(x = annee, y = Freq, group = `Vous êtes ...`, colour = `Vous êtes ...`)) +
-  geom_line(size=1.7, alpha=0.9, linetype=1) +
-  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
-  scale_color_manual(values = c("#21468d", "#74a466", "#fecf5d", "#f38337")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
-  scale_x_continuous(breaks = seq(2006, 2021, 1)) +
-  theme_classic() +
-  theme(legend.position = "right",
-        text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21),
-        plot.subtitle = element_text(face = "italic", size = 15),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
-  guides(colour = guide_legend(reverse = T, title = "Profil du répondant"),
-         fill = "none")
-graph
-saving_plot_custom(graph, "10_timeline1", 10.6, 6)
-
-
-
-  # Table de fréquences des réponses
-table <- contributeurs %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Veuillez préciser votre niveau d'étude`) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% na.omit() %>% rename(`Niveau d'étude` = `Veuillez préciser votre niveau d'étude`)
-
-  # On ordonne et renomme les niveaux d'études
-table <- table %>% mutate(`Niveau d'étude` = str_replace_all(`Niveau d'étude`, "École primaire \\(du CP au CM2\\)", "École primaire"),
-                          `Niveau d'étude` = factor(`Niveau d'étude`, 
-                                                    order = TRUE, 
-                                                    levels = c("École primaire", "Collège", "Lycée", "Études supérieures")))
-
-  # Plot
-graph <- ggplot(table, aes(x = annee, y = Freq, group = `Niveau d'étude`, colour = `Niveau d'étude`)) +
-  geom_line(size=1.7, alpha=0.9, linetype=1) +
-  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
-  scale_color_manual(values = c("#21468d", "#637DAF", "#A6B5D1", "#E8ECF3")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs scolaires ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
-  scale_x_continuous(breaks = seq(2006, 2021, 1)) +
-  theme_classic() +
-  theme(legend.position = "right",
-        text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21),
-        plot.subtitle = element_text(face = "italic", size = 15),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
-  guides(colour = guide_legend(reverse = T),
-         fill = "none")
-graph
-saving_plot_custom(graph, "10_timeline2", 12, 7)
-
-
-
-  # Table de fréquences des réponses
-table <- contributeurs %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Quel est votre degré de contribution ?`) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% rename(`Degré de contribution` = `Quel est votre degré de contribution ?`)
-
-  # Plot
-graph <- ggplot(table, aes(x = annee, y = Freq, group = `Degré de contribution`, colour = `Degré de contribution`)) +
-  geom_line(size=1.7, alpha=0.9, linetype=1) +
-  geom_point(size = .8, stroke = 1.5) +
-  scale_color_manual(values = c("#21468d", "#74a466", "#fecf5d", "#f38337")) +
-  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
-  scale_x_continuous(breaks = seq(2006, 2021, 1)) +
-  theme_classic() +
-  facet_zoom(x = annee > 2014, split = TRUE) +
-  theme(legend.position = "right",
-        text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21),
-        plot.subtitle = element_text(face = "italic", size = 15),
-        strip.background = element_rect(fill = "grey", colour = "#999999", linetype = 2),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0)))
-graph
-saving_plot_custom(graph, "10_timeline3", 10.6, 8)
-
-
-
-
-
-
-
-# -------------- Pourquoi contribuer ?
-
-
-### 1)
-
-
-
-  # Préparation des données
-data_wordcloud <- glimpse(contributeurs)
-corpus = Corpus(VectorSource(data_wordcloud$motivations_contrib))
-    # mise en forme des mots
-corpus = tm_map(corpus, PlainTextDocument) #Conversion to Lowercase
-corpus = tm_map(corpus, tolower)
-corpus = tm_map(corpus, removePunctuation) #Removing Punctuation
-    # retrait des mots non désirés (pronoms, auxiliaires etc.)
-corpus = tm_map(corpus, removeWords, c("cloth", stopwords("french"))) #Remove stopwords
-corpus = tm_map(corpus, stripWhitespace) # Eliminate white spaces
-corpus[[1]][1] 
-    # bon format du df
-DTM <- TermDocumentMatrix(corpus)
-mat <- as.matrix(DTM)
-f <- sort(rowSums(mat),decreasing=TRUE) 
-word_data <- data.frame(word = names(f),freq=f)
-
-  # Plot
-graph <- ggplot(word_data, aes(label = word, size = freq)) +
-  geom_text_wordcloud(color = rep_len(c("#fecf5d","#21468d","#f48337"), nrow(word_data)), family = "Montserrat") +
-  scale_size_area(max_size = 40) +
-  labs(subtitle = "\nQu'est-ce qui vous a motivé à contribuer pour la première fois ?") +
-  theme_minimal() +
-  theme(text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21),
-        plot.subtitle = element_text(face = "italic", size = 15))
-graph
-saving_plot_moyen(graph, "11_wordcloud")
-
-
-
-
-### 2)
+######---
 
 
   # Table de fréquences des réponses
@@ -667,31 +536,9 @@ saving_plot_custom(graph, "12_bar_motiv-contrib", 8, 6)
 
 
 
-
-### Regroupement des catégories de tranches d'âge
-enquete_vikidia <- enquete_vikidia %>% mutate(`Quel âge avez-vous ?` = str_replace_all(`Quel âge avez-vous ?`, 
-                                                                                       c("Moins de 8 ans" = "Moins de 14 ans",
-                                                                                         "Entre 8 et 13 ans" = "Moins de 14 ans",
-                                                                                         "Entre 19 et 25 ans" = "Entre 19 et 35 ans",
-                                                                                         "Entre 26 et 35 ans" = "Entre 19 et 35 ans",
-                                                                                         "Entre 36 et 50 ans" = "Entre 36 et 60 ans",
-                                                                                         "Entre 51 et 60 ans" = "Entre 36 et 60 ans")))
+######---
 
 
-# On ordonne les variables aux catégories ordonnées
-  # âge
-enquete_vikidia$`Quel âge avez-vous ?` <- factor(enquete_vikidia$`Quel âge avez-vous ?`, order = TRUE, 
-                                                 levels = c('Moins de 14 ans', 'Entre 14 et 18 ans', 'Entre 19 et 35 ans', 'Entre 36 et 60 ans', 'Plus de 60 ans', 'Préfère ne pas le dire'))
-
-
-
-
-
-# -------------- Quels sont les types de contribution ?
-
-
-
-### 1)
 
   # Table de fréquences des réponses
 pat <- contributeurs %>% filter(!is.na(`Patrouilleur`)) %>% select(36:42) %>% summarise_all(funs(sum(!is.na(.)))) %>% rename(Autre = `Autre...42`) %>% 
@@ -754,13 +601,170 @@ saving_plot_grand(graph, "13_grouped_contrib-wrap")
 
 
 
-
-# -------------- Comment arrive-t-on dans la communauté ?
+######---
 
 
 
   # Table de fréquences des réponses
-table <- contributeurs %>% select(14:19) %>% summarise_all(funs(sum(!is.na(.)))) %>% 
+table <- contributeurs %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Vous êtes ...`) %>% 
+  summarise(Freq = n()) %>% ungroup()
+
+  # On ordonne et renomme les catégories
+table <- table %>% mutate(`Vous êtes ...` = factor(`Vous êtes ...`, 
+                                                    order = TRUE, 
+                                                    levels = c("Étudiant, élève", "En recherche d'emploi", "En activité", "Retraité")))
+
+  # Plot
+graph <- ggplot(table, aes(x = annee, y = Freq, group = `Vous êtes ...`, colour = `Vous êtes ...`)) +
+  geom_line(size=1.7, alpha=0.9, linetype=1) +
+  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
+  scale_color_manual(values = c("#21468d", "#74a466", "#fecf5d", "#f38337")) +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
+  scale_x_continuous(breaks = seq(2006, 2021, 1)) +
+  theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15),
+        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
+  guides(colour = guide_legend(reverse = T, title = "Profil du répondant"),
+         fill = "none")
+graph
+saving_plot_custom(graph, "10_timeline1", 10.6, 6)
+
+
+######---
+
+
+
+  # Table de fréquences des réponses
+table <- contributeurs %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Veuillez préciser votre niveau d'étude`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% na.omit() %>% rename(`Niveau d'étude` = `Veuillez préciser votre niveau d'étude`)
+
+  # On ordonne et renomme les niveaux d'études
+table <- table %>% mutate(`Niveau d'étude` = str_replace_all(`Niveau d'étude`, "École primaire \\(du CP au CM2\\)", "École primaire"),
+                          `Niveau d'étude` = factor(`Niveau d'étude`, 
+                                                    order = TRUE, 
+                                                    levels = c("École primaire", "Collège", "Lycée", "Études supérieures")))
+
+  # Plot
+graph <- ggplot(table, aes(x = annee, y = Freq, group = `Niveau d'étude`, colour = `Niveau d'étude`)) +
+  geom_line(size=1.7, alpha=0.9, linetype=1) +
+  geom_point(colour="white", size = 2, pch = 21, stroke = 1.5) +
+  scale_color_manual(values = c("#21468d", "#637DAF", "#A6B5D1", "#E8ECF3")) +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs scolaires ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?") +
+  scale_x_continuous(breaks = seq(2006, 2021, 1)) +
+  theme_classic() +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15),
+        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
+  guides(colour = guide_legend(reverse = T),
+         fill = "none")
+graph
+saving_plot_custom(graph, "10_timeline2", 12, 7)
+
+
+######---
+
+
+
+  # Table de fréquences des réponses
+table <- contributeurs %>% filter(annee > 2005 & annee < 2022) %>% group_by(annee, `Quel est votre degré de contribution ?`) %>% 
+  summarise(Freq = n()) %>% ungroup() %>% rename(`Degré de contribution` = `Quel est votre degré de contribution ?`)
+
+  # Plot
+graph <- ggplot(table, aes(x = annee, y = Freq, group = `Degré de contribution`, colour = `Degré de contribution`)) +
+  geom_line(size=1.7, alpha=0.9, linetype=1) +
+  geom_point(size = .8, stroke = 1.5) +
+  scale_color_manual(values = c("#21468d", "#74a466", "#fecf5d", "#f38337")) +
+  labs(x = "Année d'intégration à la communauté", y = "Nombre de contributeurs", title = "Nombre de contributeurs ayant rejoint la communauté par année", subtitle = "\nEn quelle année avez-vous rejoint la communauté ?, Quel est votre degré de contribution ?") +
+  scale_x_continuous(breaks = seq(2006, 2021, 1)) +
+  theme_classic() +
+  facet_zoom(x = annee > 2014, split = TRUE) +
+  theme(legend.position = "right",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15),
+        strip.background = element_rect(fill = "grey", colour = "#999999", linetype = 2),
+        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0)))
+graph
+saving_plot_custom(graph, "10_timeline3", 10.6, 8)
+
+
+
+
+
+
+# -------------- Cerner les usages
+
+
+
+
+######---
+
+
+
+  # Préparation des données
+data_wordcloud <- glimpse(contributeurs)
+corpus = Corpus(VectorSource(data_wordcloud$motivations_contrib))
+    # mise en forme des mots
+corpus = tm_map(corpus, PlainTextDocument) #Conversion to Lowercase
+corpus = tm_map(corpus, tolower)
+corpus = tm_map(corpus, removePunctuation) #Removing Punctuation
+    # retrait des mots non désirés (pronoms, auxiliaires etc.)
+corpus = tm_map(corpus, removeWords, c("cloth", stopwords("french"))) #Remove stopwords
+corpus = tm_map(corpus, stripWhitespace) # Eliminate white spaces
+corpus[[1]][1] 
+    # bon format du df
+DTM <- TermDocumentMatrix(corpus)
+mat <- as.matrix(DTM)
+f <- sort(rowSums(mat),decreasing=TRUE) 
+word_data <- data.frame(word = names(f),freq=f)
+
+  # Plot
+graph <- ggplot(word_data, aes(label = word, size = freq)) +
+  geom_text_wordcloud(color = rep_len(c("#fecf5d","#21468d","#f48337"), nrow(word_data)), family = "Montserrat") +
+  scale_size_area(max_size = 40) +
+  labs(subtitle = "\nQu'est-ce qui vous a motivé à contribuer pour la première fois ?") +
+  theme_minimal() +
+  theme(text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15))
+graph
+saving_plot_moyen(graph, "11_wordcloud")
+
+
+
+#------
+
+### Regroupement des catégories de tranches d'âge
+enquete_vikidia <- enquete_vikidia %>% mutate(`Quel âge avez-vous ?` = str_replace_all(`Quel âge avez-vous ?`, 
+                                                                                       c("Moins de 8 ans" = "Moins de 14 ans",
+                                                                                         "Entre 8 et 13 ans" = "Moins de 14 ans",
+                                                                                         "Entre 19 et 25 ans" = "Entre 19 et 35 ans",
+                                                                                         "Entre 26 et 35 ans" = "Entre 19 et 35 ans",
+                                                                                         "Entre 36 et 50 ans" = "Entre 36 et 60 ans",
+                                                                                         "Entre 51 et 60 ans" = "Entre 36 et 60 ans")))
+
+
+# On ordonne les variables aux catégories ordonnées
+  # âge
+enquete_vikidia$`Quel âge avez-vous ?` <- factor(enquete_vikidia$`Quel âge avez-vous ?`, order = TRUE, 
+                                                 levels = c('Moins de 14 ans', 'Entre 14 et 18 ans', 'Entre 19 et 35 ans', 'Entre 36 et 60 ans', 'Plus de 60 ans', 'Préfère ne pas le dire'))
+
+
+#------
+
+
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% select(14:19) %>% summarise_all(funs(sum(!is.na(.)))) %>% 
   t() %>% as.data.frame() %>% rownames_to_column() %>% mutate(percent = round((V1 / sum(V1))*100, 0))
 table$rowname <- table$rowname %>% str_replace_all(c("Autre...19" = "Autre",
                                                      "Par hasard et au gré de vos navigations sur Internet" = "Par hasard, sur Internet",
@@ -785,15 +789,15 @@ graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>%
         axis.line.y = element_blank(),
         axis.ticks.y = element_blank(),
         axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0))) +
-    geom_text(aes(y = V1 + 3, x = rowname, label = paste(percent, "%", sep = "")), 
+    geom_text(aes(y = V1 + 15, x = rowname, label = paste(percent, "%", sep = "")), 
             color = "#333333", size = 3, check_overlap = T)
 graph
 saving_plot_custom(graph, "14_bar_connu-outil", 10, 7)
 
 
 
+######---
 
-# -------------- Pourquoi arrive-t-on dans la communauté ?
 
 
   # Table de fréquences des réponses
@@ -847,11 +851,10 @@ graph <- ggplot(table, aes(fill = `Selon vous, comment Vikidia est-elle perçue 
                      expand = c(0,0)) +
   scale_fill_manual(values = c("#21468d", "#74a466", "#fecf5d", "#f38337", "#da4729")) +
   coord_equal() +
-  labs(title = "Niveau de popularité estimé par le répondant, selon qu'il parle 
-de Vikidia autour de lui",
-       x = "Niveau de communication de l'outil",
+  labs(title = "Niveau de popularité estimé par le répondant selon son activité",
+       x = "Activité",
        y = "Nombre de répondants",
-       subtitle = "\nSelon vous, comment Vikidia est-elle perçue par le grand public ?") +
+       subtitle = "\nQuel est le niveau de popularité de Vikidia dans le grand public selon vous ?") +
   theme_minimal(base_family = "Montserrat") +
   theme(panel.grid = element_blank(), axis.ticks.y = element_line(),
         legend.position = "right",
@@ -867,9 +870,8 @@ saving_plot_grand(graph, "15_waffle")
 
 
 
+######---
 
-
-# -------------- Pourquoi reste-t-on dans la communauté ?
 
 
   # Table de fréquences des réponses
@@ -911,6 +913,10 @@ graph
 saving_plot_custom(graph, "16_ballonplot1", 10, 7)
 
 
+
+######---
+
+
   # Table
 filtre <- enquete_vikidia %>% filter(!is.na(`Les articles y sont plus faciles à comprendre`), `Êtes vous ...` != "préfère ne pas le dire")
 amb <- as.data.frame(table(filtre$`Quel âge avez-vous ?`, filtre$`Êtes vous ...`)) %>% mutate(raisons = "Ambiance favorable")
@@ -942,11 +948,10 @@ saving_plot_custom(graph, "16_ballonplot2", 8.6, 6)
 
 
 
-# -------------- Quelles sont les alternatives à Vikidia ?
+
+######---
 
 
-
-### 1)
 
   # Table de fréquences des réponses
 table <- process_alternatives %>% group_by(`Grandes catégories...6`) %>% 
@@ -981,11 +986,11 @@ graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 2.8, xmin = 1.5, fil
         plot.title = element_text(face = "bold", size = 21)) +
   guides(fill = guide_legend(title = "Type de ressource"))
 graph
-saving_plot_petit(graph, "17_barplot_alternatives")
+saving_plot_custom(graph, "17_barplot_alternatives", 11, 5)
 
 
 
-### 2)
+######---
 
   # Table de fréquences des réponses
 table <- process_alternatives %>% group_by(`Grandes catégories...6`, `Petites catégories`) %>% 
@@ -1008,10 +1013,12 @@ saving_plot_custom(graph, "17_wordcloud_alternatives", 10, 9)
 
 
 
-# -------------- Ce qui questionne
+
+# -------------- Analyser les besoins des utilisateurs
 
 
-### 1)
+
+######---
 
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% group_by(`Quel âge avez-vous ?`, `Trouvez-vous les articles de Vikidia accessibles ?`) %>% 
@@ -1054,7 +1061,7 @@ saving_plot_custom(graph, "18_stacked_accessibilite", 10, 6)
 
 
 
-### 2)
+######---
 
 
   # Table de fréquences des réponses
@@ -1115,7 +1122,7 @@ saving_plot_petit(graph, "19_pie1")
 
 
 
-### 3)
+######---
 
 
   # Table de fréquences des réponses
@@ -1175,7 +1182,7 @@ saving_plot_petit(graph, "19_pie2")
 
 
 
-### 4)
+######---
 
 
   # Table
@@ -1234,7 +1241,7 @@ saving_plot_custom(graph, "20_ballonplot", 10, 7)
 
 
 
-### 1)
+######---
 
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% group_by(is_contrib, `Vous sentez-vous suffisamment intégré à la communauté vikidienne ?`) %>% 
@@ -1262,7 +1269,7 @@ saving_plot_moyen(graph, "21_gauge_integration")
 
 
 
-### 2)
+######---
 
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% filter(is_contrib == 0 & `Vous sentez-vous suffisamment intégré à la communauté vikidienne ?` == "Oui") %>% 
@@ -1309,7 +1316,7 @@ saving_plot_custom(graph, "22_bar_accessibilite", 9, 7)
 
 
 
-### 3)
+######---
 
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% filter(is_contrib == 1 & `Vous sentez-vous suffisamment intégré à la communauté vikidienne ?` == "Oui") %>% 
@@ -1354,7 +1361,7 @@ saving_plot_custom(graph, "22_bar_canaux", 9, 7)
 
 
 
-### 3)
+######---
 
 
 
@@ -1442,7 +1449,7 @@ saving_plot_grand(graph, "24_grouped_canaux")
 
 
 
-### 1)
+######---
 
 
   # Table de fréquences des réponses
@@ -1478,7 +1485,7 @@ saving_plot_petit(graph, "25_radar_eval")
 
 
 
-### 2)
+######---
 
 
   # Table de fréquences des réponses
@@ -1513,7 +1520,7 @@ saving_plot_custom(graph, "26_lollipop1", 10, 6.7)
 
 
 
-### 3)
+######---
 
 
   # Table de fréquences des réponses
@@ -1547,7 +1554,7 @@ saving_plot_custom(graph, "26_lollipop2", 10, 6.7)
 
 
 
-### 4)
+######---
 
 
 
