@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='864.00pt' height='576.00pt' viewBox='0 0 864.00 576.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='792.00pt' height='504.00pt' viewBox='0 0 792.00 504.00'>
 <defs>
   <style type='text/css'><![CDATA[
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
@@ -16,50 +16,51 @@
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
 <defs>
-  <clipPath id='cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA='>
-    <rect x='0.00' y='0.00' width='864.00' height='576.00' />
+  <clipPath id='cpMC4wMHw3OTIuMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='792.00' height='504.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA=)'>
-<rect x='0.000000000000064' y='0.00' width='864.00' height='576.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1MDQuMDA=)'>
+<rect x='0.000000000000064' y='-0.000000000000057' width='792.00' height='504.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMTYyLjU1fDg1OC41MnwzMS4wMHw1MjMuNDA='>
-    <rect x='162.55' y='31.00' width='695.97' height='492.40' />
+  <clipPath id='cpMTYyLjU1fDc4Ni41Mnw2Ni45OXw0NjMuMDI='>
+    <rect x='162.55' y='66.99' width='623.97' height='396.03' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTYyLjU1fDg1OC41MnwzMS4wMHw1MjMuNDA=)'>
-<rect x='162.55' y='31.00' width='695.97' height='492.40' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<rect x='194.18' y='134.24' width='551.06' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='293.08' width='217.70' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='213.66' width='523.85' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='372.50' width='156.48' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='54.82' width='612.29' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<rect x='194.18' y='451.92' width='68.03' height='47.65' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #3A25FF;' />
-<text x='765.66' y='161.12' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>26%</text>
-<text x='432.30' y='319.96' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>10%</text>
-<text x='738.44' y='240.54' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>25%</text>
-<text x='371.07' y='399.38' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>7%</text>
-<text x='826.89' y='81.70' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>29%</text>
-<text x='282.62' y='478.80' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>3%</text>
+<g clip-path='url(#cpMTYyLjU1fDc4Ni41Mnw2Ni45OXw0NjMuMDI=)'>
+<rect x='162.55' y='66.99' width='623.97' height='396.03' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='190.91' y='150.03' width='494.06' height='38.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.91' y='277.78' width='195.18' height='38.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.91' y='213.90' width='469.66' height='38.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.91' y='341.66' width='140.29' height='38.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.91' y='86.15' width='548.95' height='38.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.91' y='405.53' width='60.99' height='38.33' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<text x='703.26' y='172.24' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>26%</text>
+<text x='404.39' y='299.99' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>10%</text>
+<text x='678.87' y='236.12' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>25%</text>
+<text x='349.50' y='363.87' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>7%</text>
+<text x='758.16' y='108.36' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>29%</text>
+<text x='270.20' y='427.74' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>3%</text>
 </g>
-<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw1NzYuMDA=)'>
-<text x='157.62' y='479.18' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Autre</text>
-<text x='157.62' y='399.76' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='62.39px' lengthAdjust='spacingAndGlyphs'>Pour le travail</text>
-<text x='157.62' y='320.34' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='141.65px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire en classe</text>
-<text x='157.62' y='240.92' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='108.49px' lengthAdjust='spacingAndGlyphs'>Pour la culture générale</text>
-<text x='157.62' y='161.50' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='152.14px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire à la maison</text>
-<text x='157.62' y='82.08' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='88.47px' lengthAdjust='spacingAndGlyphs'>Pour le simple loisir</text>
-<polyline points='194.18,526.14 194.18,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='364.26,526.14 364.26,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='534.35,526.14 534.35,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='704.43,526.14 704.43,523.40 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='194.18' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='364.26' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='534.35' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='704.43' y='535.19' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='510.53' y='548.80' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='119.12px' lengthAdjust='spacingAndGlyphs'>Nombre de réponses</text>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1MDQuMDA=)'>
+<text x='157.62' y='428.12' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Autre</text>
+<text x='157.62' y='364.25' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='62.39px' lengthAdjust='spacingAndGlyphs'>Pour le travail</text>
+<text x='157.62' y='300.37' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='141.65px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire en classe</text>
+<text x='157.62' y='236.49' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='108.49px' lengthAdjust='spacingAndGlyphs'>Pour la culture générale</text>
+<text x='157.62' y='172.62' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='152.14px' lengthAdjust='spacingAndGlyphs'>Dans le cadre scolaire à la maison</text>
+<text x='157.62' y='108.74' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='88.47px' lengthAdjust='spacingAndGlyphs'>Pour le simple loisir</text>
+<polyline points='190.91,465.76 190.91,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='343.40,465.76 343.40,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='495.88,465.76 495.88,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='648.37,465.76 648.37,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='190.91' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='343.40' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='495.88' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='648.37' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='474.53' y='495.64' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='119.12px' lengthAdjust='spacingAndGlyphs'>Nombre de réponses</text>
+<text x='162.55' y='41.71' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='162.55' y='57.91' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='300.61px' lengthAdjust='spacingAndGlyphs'>Dans quel(s) contexte(s) utilisez-vous Vikidia ?</text>
 <text x='162.55' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='621.70px' lengthAdjust='spacingAndGlyphs'>Les contextes d'utilisation de Vikidia chez les contributeurs</text>
-<text x='858.52' y='567.16' text-anchor='end' style='font-size: 14.00px; font-style: italic; font-family: "Noto Sans";' textLength='280.58px' lengthAdjust='spacingAndGlyphs'>Dans quel(s) contexte(s) utilisez-vous Vikidia ?</text>
 </g>
 </svg>

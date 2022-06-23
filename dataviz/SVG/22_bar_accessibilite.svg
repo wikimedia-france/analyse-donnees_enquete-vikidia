@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='648.00pt' height='504.00pt' viewBox='0 0 648.00 504.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw1MDQuMDA=)'>
+<rect x='0.000000000000064' y='0.00' width='648.00' height='504.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNDguMjh8NjQyLjUyfDg5LjY3fDQ2My4wMg=='>
+    <rect x='48.28' y='89.67' width='594.24' height='373.35' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDguMjh8NjQyLjUyfDg5LjY3fDQ2My4wMg==)'>
+<rect x='48.28' y='89.67' width='594.24' height='373.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='305.40' y='414.23' width='79.99' height='31.82' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #7990BA;' />
+<rect x='76.85' y='439.99' width='79.99' height='6.06' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #D2DAE8;' />
+<rect x='191.13' y='427.87' width='79.99' height='18.18' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #A6B5D1;' />
+<rect x='419.68' y='205.13' width='79.99' height='240.92' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #4D6BA3;' />
+<rect x='533.96' y='115.73' width='79.99' height='330.32' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<text x='345.40' y='408.19' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>5%</text>
+<text x='116.85' y='433.95' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>1%</text>
+<text x='231.12' y='421.82' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>3%</text>
+<text x='459.68' y='199.09' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>38%</text>
+<text x='573.95' y='109.69' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>53%</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw1MDQuMDA=)'>
+<polyline points='48.28,463.02 48.28,89.67 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='43.35' y='449.48' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='43.35' y='373.72' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='43.35' y='297.95' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='16.46px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text x='43.35' y='222.19' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='16.46px' lengthAdjust='spacingAndGlyphs'>150</text>
+<text x='43.35' y='146.43' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='16.46px' lengthAdjust='spacingAndGlyphs'>200</text>
+<polyline points='45.54,446.05 48.28,446.05 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='45.54,370.29 48.28,370.29 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='45.54,294.53 48.28,294.53 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='45.54,218.77 48.28,218.77 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='45.54,143.01 48.28,143.01 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='48.28,463.02 642.52,463.02 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='116.85,465.76 116.85,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='231.12,465.76 231.12,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='345.40,465.76 345.40,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='459.68,465.76 459.68,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='573.95,465.76 573.95,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='116.85' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='50.39px' lengthAdjust='spacingAndGlyphs'>Inexistante</text>
+<text x='231.12' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='53.55px' lengthAdjust='spacingAndGlyphs'>Insuffisante</text>
+<text x='345.40' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='42.08px' lengthAdjust='spacingAndGlyphs'>Moyenne</text>
+<text x='459.68' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='38.69px' lengthAdjust='spacingAndGlyphs'>Correcte</text>
+<text x='573.95' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='28.93px' lengthAdjust='spacingAndGlyphs'>Élevée</text>
+<text x='345.40' y='495.64' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='134.93px' lengthAdjust='spacingAndGlyphs'>Accessibilité des articles</text>
+<text transform='translate(14.05,276.34) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='132.47px' lengthAdjust='spacingAndGlyphs'>Nombre de répondants</text>
+<text x='48.28' y='64.39' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='48.28' y='80.59' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='316.43px' lengthAdjust='spacingAndGlyphs'>Trouvez-vous les articles de Vikidia accessibles ?</text>
+<text x='48.28' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='584.60px' lengthAdjust='spacingAndGlyphs'>Évaluation de l'accessibilité des articles par les lecteurs </text>
+<text x='48.28' y='43.16' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='391.32px' lengthAdjust='spacingAndGlyphs'>se sentant integrés à la communauté</text>
+</g>
+</svg>

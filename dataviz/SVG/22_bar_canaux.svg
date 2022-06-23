@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='648.00pt' height='504.00pt' viewBox='0 0 648.00 504.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw2NDguMDB8MC4wMHw1MDQuMDA='>
+    <rect x='0.00' y='0.00' width='648.00' height='504.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw1MDQuMDA=)'>
+<rect x='0.000000000000064' y='0.00' width='648.00' height='504.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNDIuNzl8NjQyLjUyfDg5LjY3fDQ2My4wMg=='>
+    <rect x='42.79' y='89.67' width='599.73' height='373.35' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNDIuNzl8NjQyLjUyfDg5LjY3fDQ2My4wMg==)'>
+<rect x='42.79' y='89.67' width='599.73' height='373.35' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='364.08' y='193.47' width='99.95' height='252.58' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #637DAF;' />
+<rect x='221.28' y='201.36' width='99.95' height='244.69' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #A6B5D1;' />
+<rect x='506.87' y='217.15' width='99.95' height='228.90' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='78.49' y='114.53' width='99.95' height='331.52' style='stroke-width: 1.07; stroke: #FFFFFF; stroke-linecap: square; stroke-linejoin: miter; fill: #E8ECF3;' />
+<text x='414.05' y='188.62' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>24%</text>
+<text x='271.26' y='196.51' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>23%</text>
+<text x='556.85' y='212.30' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>22%</text>
+<text x='128.47' y='109.69' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>31%</text>
+</g>
+<g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHw1MDQuMDA=)'>
+<polyline points='42.79,463.02 42.79,89.67 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='37.86' y='449.48' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='37.86' y='370.54' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='37.86' y='291.61' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='37.86' y='212.68' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='37.86' y='133.75' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>40</text>
+<polyline points='40.05,446.05 42.79,446.05 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='40.05,367.12 42.79,367.12 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='40.05,288.18 42.79,288.18 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='40.05,209.25 42.79,209.25 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='40.05,130.32 42.79,130.32 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='42.79,463.02 642.52,463.02 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='128.47,465.76 128.47,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='271.26,465.76 271.26,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='414.05,465.76 414.05,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='556.85,465.76 556.85,463.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='128.47' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='103.82px' lengthAdjust='spacingAndGlyphs'>N'a pas connaissance   </text>
+<text x='271.26' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='145.67px' lengthAdjust='spacingAndGlyphs'>A connaissance sans y participer</text>
+<text x='414.05' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='118.63px' lengthAdjust='spacingAndGlyphs'>Participe de temps à autre</text>
+<text x='556.85' y='474.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='86.72px' lengthAdjust='spacingAndGlyphs'>Actif sur les canaux</text>
+<text x='342.66' y='495.64' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='138.59px' lengthAdjust='spacingAndGlyphs'>Participation aux canaux</text>
+<text transform='translate(14.05,276.34) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='132.47px' lengthAdjust='spacingAndGlyphs'>Nombre de répondants</text>
+<text x='42.79' y='64.39' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='42.79' y='80.59' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='463.88px' lengthAdjust='spacingAndGlyphs'>Comment évaluez vous votre participation aux canaux de discussion ?</text>
+<text x='42.79' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='584.65px' lengthAdjust='spacingAndGlyphs'>Participation des contributeurs se sentant integrés à la </text>
+<text x='42.79' y='43.16' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='417.47px' lengthAdjust='spacingAndGlyphs'>communauté, aux canaux de discussion</text>
+</g>
+</svg>

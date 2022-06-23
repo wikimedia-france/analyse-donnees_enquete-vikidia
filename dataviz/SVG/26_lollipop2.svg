@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='720.00pt' height='482.40pt' viewBox='0 0 720.00 482.40'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw0ODIuNDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='482.40' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0ODIuNDA=)'>
+<rect x='0.00' y='0.00' width='720.00' height='482.40' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpOTEuMjB8NzE0LjUyfDY2Ljk5fDQ0MS40Mg=='>
+    <rect x='91.20' y='66.99' width='623.32' height='374.43' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpOTEuMjB8NzE0LjUyfDY2Ljk5fDQ0MS40Mg==)'>
+<rect x='91.20' y='66.99' width='623.32' height='374.43' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<line x1='571.80' y1='398.22' x2='119.53' y2='398.22' style='stroke-width: 1.49; stroke: #21468D; stroke-linecap: butt;' />
+<line x1='552.33' y1='326.21' x2='119.53' y2='326.21' style='stroke-width: 1.49; stroke: #21468D; stroke-linecap: butt;' />
+<line x1='549.14' y1='110.19' x2='119.53' y2='110.19' style='stroke-width: 1.49; stroke: #21468D; stroke-linecap: butt;' />
+<line x1='547.44' y1='182.20' x2='119.53' y2='182.20' style='stroke-width: 1.49; stroke: #21468D; stroke-linecap: butt;' />
+<line x1='511.24' y1='254.20' x2='119.53' y2='254.20' style='stroke-width: 1.49; stroke: #21468D; stroke-linecap: butt;' />
+<circle cx='571.80' cy='398.22' r='6.76' style='stroke-width: 0.71; stroke: #21468D; fill: #21468D;' />
+<circle cx='552.33' cy='326.21' r='6.76' style='stroke-width: 0.71; stroke: #21468D; fill: #21468D;' />
+<circle cx='549.14' cy='110.19' r='6.76' style='stroke-width: 0.71; stroke: #21468D; fill: #21468D;' />
+<circle cx='547.44' cy='182.20' r='6.76' style='stroke-width: 0.71; stroke: #21468D; fill: #21468D;' />
+<circle cx='511.24' cy='254.20' r='6.76' style='stroke-width: 0.71; stroke: #21468D; fill: #21468D;' />
+<text x='594.46' y='401.27' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='4.88px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='575.00' y='329.26' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='12.05px' lengthAdjust='spacingAndGlyphs'>3.8</text>
+<text x='571.80' y='113.24' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='12.05px' lengthAdjust='spacingAndGlyphs'>3.8</text>
+<text x='570.10' y='185.25' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='12.05px' lengthAdjust='spacingAndGlyphs'>3.8</text>
+<text x='533.91' y='257.25' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='12.05px' lengthAdjust='spacingAndGlyphs'>3.5</text>
+</g>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw0ODIuNDA=)'>
+<text x='86.27' y='401.64' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='73.17px' lengthAdjust='spacingAndGlyphs'>Moins de 14 ans</text>
+<text x='86.27' y='329.64' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='80.79px' lengthAdjust='spacingAndGlyphs'>Entre 14 et 18 ans</text>
+<text x='86.27' y='257.63' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='80.79px' lengthAdjust='spacingAndGlyphs'>Entre 19 et 35 ans</text>
+<text x='86.27' y='185.63' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='80.79px' lengthAdjust='spacingAndGlyphs'>Entre 36 et 60 ans</text>
+<text x='86.27' y='113.62' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='64.46px' lengthAdjust='spacingAndGlyphs'>Plus de 60 ans</text>
+<polyline points='119.53,444.16 119.53,441.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='232.87,444.16 232.87,441.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='346.20,444.16 346.20,441.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='459.53,444.16 459.53,441.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='572.86,444.16 572.86,441.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='686.19,444.16 686.19,441.42 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='119.53' y='453.21' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='232.87' y='453.21' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='346.20' y='453.21' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='459.53' y='453.21' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>3</text>
+<text x='572.86' y='453.21' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>4</text>
+<text x='686.19' y='453.21' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='402.86' y='474.04' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='27.48px' lengthAdjust='spacingAndGlyphs'>Note</text>
+<text x='91.20' y='41.71' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='91.20' y='57.91' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='582.78px' lengthAdjust='spacingAndGlyphs'>Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?</text>
+<text x='91.20' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='496.25px' lengthAdjust='spacingAndGlyphs'>Évaluation de la fiabilité des articles selon l'âge</text>
+</g>
+</svg>
