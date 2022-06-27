@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='576.00pt' height='432.00pt' viewBox='0 0 576.00 432.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='684.00pt' height='432.00pt' viewBox='0 0 684.00 432.00'>
 <defs>
   <style type='text/css'><![CDATA[
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
@@ -16,48 +16,48 @@
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
 <defs>
-  <clipPath id='cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA='>
-    <rect x='0.00' y='0.00' width='576.00' height='432.00' />
+  <clipPath id='cpMC4wMHw2ODQuMDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='684.00' height='432.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
-<rect x='0.00' y='0.000000000000057' width='576.00' height='432.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.00' y='0.000000000000057' width='684.00' height='432.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpMTY2Ljc2fDU3MC41Mnw2Ni45OXwzOTEuMDI='>
-    <rect x='166.76' y='66.99' width='403.76' height='324.03' />
+  <clipPath id='cpMTY2Ljc2fDY3OC41Mnw2Ni45OXwzOTEuMDI='>
+    <rect x='166.76' y='66.99' width='511.76' height='324.03' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMTY2Ljc2fDU3MC41Mnw2Ni45OXwzOTEuMDI=)'>
-<rect x='166.76' y='66.99' width='403.76' height='324.03' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
-<rect x='185.11' y='210.31' width='183.53' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
-<rect x='185.11' y='272.62' width='136.67' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
-<rect x='185.11' y='148.00' width='273.34' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
-<rect x='185.11' y='85.68' width='355.34' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
-<rect x='185.11' y='334.94' width='70.29' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
-<text x='380.35' y='232.05' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>18%</text>
-<text x='333.50' y='294.37' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>13%</text>
-<text x='470.17' y='169.74' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>27%</text>
-<text x='552.17' y='107.43' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>35%</text>
-<text x='267.11' y='356.68' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>7%</text>
+<g clip-path='url(#cpMTY2Ljc2fDY3OC41Mnw2Ni45OXwzOTEuMDI=)'>
+<rect x='166.76' y='66.99' width='511.76' height='324.03' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='190.02' y='210.31' width='232.62' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.02' y='272.62' width='173.23' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.02' y='148.00' width='346.45' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.02' y='85.68' width='450.39' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<rect x='190.02' y='334.94' width='89.09' height='37.39' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #21468D;' />
+<text x='437.49' y='232.05' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>18%</text>
+<text x='378.10' y='294.37' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>13%</text>
+<text x='551.32' y='169.74' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>27%</text>
+<text x='655.26' y='107.43' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='16.86px' lengthAdjust='spacingAndGlyphs'>35%</text>
+<text x='293.96' y='356.68' text-anchor='middle' style='font-size: 8.54px;fill: #333333; font-family: "Arial";' textLength='11.97px' lengthAdjust='spacingAndGlyphs'>7%</text>
 </g>
-<g clip-path='url(#cpMC4wMHw1NzYuMDB8MC4wMHw0MzIuMDA=)'>
+<g clip-path='url(#cpMC4wMHw2ODQuMDB8MC4wMHw0MzIuMDA=)'>
 <text x='161.83' y='357.06' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Autre</text>
 <text x='161.83' y='294.75' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='112.50px' lengthAdjust='spacingAndGlyphs'>Avoir des responsabilités</text>
 <text x='161.83' y='232.43' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='136.32px' lengthAdjust='spacingAndGlyphs'>Se plaire dans la communauté</text>
 <text x='161.83' y='170.12' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='156.35px' lengthAdjust='spacingAndGlyphs'>Intérêt pour les domaines abordés</text>
 <text x='161.83' y='107.80' text-anchor='end' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='124.28px' lengthAdjust='spacingAndGlyphs'>Contribuer au projet Vikidia</text>
-<polyline points='185.11,393.76 185.11,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='282.73,393.76 282.73,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='380.35,393.76 380.35,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<polyline points='477.98,393.76 477.98,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='185.11' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='282.73' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>25</text>
-<text x='380.35' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
-<text x='477.98' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>75</text>
-<text x='368.64' y='423.64' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='119.12px' lengthAdjust='spacingAndGlyphs'>Nombre de réponses</text>
+<polyline points='190.02,393.76 190.02,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='313.75,393.76 313.75,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='437.49,393.76 437.49,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='561.22,393.76 561.22,391.02 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='190.02' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='5.49px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='313.75' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>25</text>
+<text x='437.49' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>50</text>
+<text x='561.22' y='402.81' text-anchor='middle' style='font-size: 9.60px;fill: #4D4D4D; font-family: "Noto Sans";' textLength='10.97px' lengthAdjust='spacingAndGlyphs'>75</text>
+<text x='422.64' y='423.64' text-anchor='middle' style='font-size: 12.00px; font-family: "Noto Sans";' textLength='119.12px' lengthAdjust='spacingAndGlyphs'>Nombre de réponses</text>
 <text x='166.76' y='41.71' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
 <text x='166.76' y='57.91' style='font-size: 15.00px; font-style: italic; font-family: "Noto Sans";' textLength='261.06px' lengthAdjust='spacingAndGlyphs'>Pourquoi continuez-vous à contribuer ?</text>
-<text x='166.76' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='362.52px' lengthAdjust='spacingAndGlyphs'>Pourquoi les Vikidiens contribuent</text>
+<text x='166.76' y='20.48' style='font-size: 21.00px; font-weight: bold; font-family: "Noto Sans";' textLength='501.78px' lengthAdjust='spacingAndGlyphs'>Pourquoi les Vikidiens continuent de contribuer</text>
 </g>
 </svg>

@@ -336,6 +336,7 @@ vertices <- data.frame(
   value = c(0, edges$value)
 ) %>% mutate(percent = paste("  ", round(value / 774 * 100, 0), "% : ", name, sep = ""))
 
+
   # Plot
 mygraph <- graph_from_data_frame(edges, vertices=vertices)
 graph <- ggraph(mygraph, layout = 'dendrogram') + 
@@ -518,7 +519,7 @@ graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>%
   ggplot(aes(x=rowname, y=V1))+
     geom_bar(stat="identity", width=.6, fill = "#21468d") +
     coord_flip() +
-    labs(x = "", y = "Nombre de réponses", title = "Pourquoi les Vikidiens contribuent", subtitle = "\nPourquoi continuez-vous à contribuer ?") +
+    labs(x = "", y = "Nombre de réponses", title = "Pourquoi les Vikidiens continuent de contribuer", subtitle = "\nPourquoi continuez-vous à contribuer ?") +
     theme_classic() +
     theme(legend.position = "right",
         text = element_text(family = "Montserrat", size = 12),
@@ -532,7 +533,7 @@ graph <- table %>% mutate(rowname = fct_reorder(rowname, V1)) %>%
     geom_text(aes(y = V1 + 3, x = rowname, label = paste(percent, "%", sep = "")), 
             color = "#333333", size = 3, check_overlap = T) 
 graph
-saving_plot_custom(graph, "12_bar_motiv-contrib", 8, 6)
+saving_plot_custom(graph, "12_bar_motiv-contrib", 9.5, 6)
 
 
 

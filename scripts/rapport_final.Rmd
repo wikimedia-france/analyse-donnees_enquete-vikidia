@@ -131,7 +131,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur gen
 
 ![](../dataviz/PNG/2_pyramid_age.png)
 
-La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre. On voit que la catégorie regroupant le plus de répondants est celle des filles ayant entre 14 et 18 ans, qui représente 21% de la population. Elle est suivie par la tranche des moins de 14 ans où l'on retrouve 113 filles, soit 17% des répondants. 
+La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre, les pourcentages étant présentés par genre. Chez les filles, la catégorie regroupant le plus de répondants est celle des 14 et 18 ans, qui représente 37% des répondants de genre féminin. Elle est suivie par la tranche des 8 à 13 ans où l'on retrouve 111 filles, soit 29% des répondants féminins. Chez les garçons, ce sont aussi les tranches d'âge entre 8 et 18 ans qui dominent, avec plus de la moitié des répondants masculins (29 et 23%). 
 
 
 
@@ -156,8 +156,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur âg
 
 ![](../dataviz/PNG/3_pyramid_activite.png)
 
-La visualisation ci-dessus montre . 
-
+La visualisation ci-dessus montre la répartition des répondants par activité. Pour cela, les questions de l'activité et du niveau d'étude ont été rassemblées. Le niveau d'étude dominant chez les filles est le collège, avec 36% de cette sous-population, suivie par le lycée qui englobe 26% des répondants féminins - ce qui correspond aux constats émis à partir de la visualisation précédente. La répartition des garçons est moins centrée sur le collège et lycée, puisque ces niveaux d'étude regroupent 48% des répondants masculins (contre 62% des répondants féminins). La catégorie "en activité", troisième catégorie où l'on trouve le plus de répondant en proportion, confirme cette hypothèse puisque l'on voit qu'elle regroupe 22% des répondants **masculins** (22%) contre 18% des répondants **féminins** (puisque celles-ci sont en majorité au collège ou lycée).
 
 
 ------------------------------------------------------------------------
@@ -180,7 +179,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/4_barplot_contextes.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre dans quels contextes principaux les répondants utilisent l'encyclopédie. On voit que 32% des répondants l'utilisent dans un cadre de travail scolaire à la maison. 24% l'utilisent pour leur culture générale et 18% pour le loisir. Ainsi, 42% (18 + 24%) des répondants ont un usage de Vikidia "*volontaire*", pour apprendre et découvrir des choses, sans chercher une réponse en particulier. 
 
 
 
@@ -204,7 +203,10 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/5_dendrogram.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre le degré de contribution des répondants de l'enquête. À partir de la question "*Quel est votre degré de contribution ?*", a été créée une nouvelle variable indiquant si le répondant contribue à l'encyclopédie, ou s'il est simple lecteur. Les catégories '*C’est la première fois que je consulte Vikidia*' et '*Je consulte Vikidia mais je n’ai jamais contribué*' qui regroupent près de 80% des répondants, permettent d'identifier les **lecteurs.** Il est intéressant de noter que 20% des répondants consultent Vikidia pour la première fois, donc ont peu d'expérience vis-à-vis des sujets à évaluer au cours du questionnaire. 
+
+Les 4 catégories restantes identifient les **contributeurs**, avec différents niveaux de contribution. Parmi les 163 contributeurs (21% des répondants), 72 ont contribué une ou deux fois, 21 contribuent une fois par mois ou moins, 32 contribuent plusieurs fois par mois et 38 contribuent une fois par semaine ou plus.
+
 
 <br>
 
@@ -231,7 +233,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/6_donut_contrib.png)
 
-La visualisation ci-dessus montre la répartition des répondants selon leur genre. Sur 774 répondants ; 380 sont des femmes, soit 49%, 285 sont des hommes, soit 37%, et 109 préfèrent ne pas le dire, soit 14%. FINIR
+La visualisation ci-dessus montre la répartition des contributeurs selon leur genre. Tandis que le genre féminin représentait 49% de tous les répondants, celui-ci représente 37% des 163 contributeurs. Le genre masculin représente 48% des contributeurs, contre 37% de tous les répondants. Aussi, la gente masculine est sur-représentée chez les contributeurs, lorsque l'on compare à l'échantillon entier.
 
 ------------------------------------------------------------------------
 
@@ -254,7 +256,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur gen
 
 ![](../dataviz/PNG/7_pyramid_age_contrib.png)
 
-La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre. On voit que la catégorie regroupant le plus de répondants est celle des filles ayant entre 14 et 18 ans, qui représente 21% de la population. Elle est suivie par la tranche des moins de 14 ans où l'on retrouve 113 filles, soit 17% des répondants. FINIR
+La visualisation ci-dessus montre la répartition des contributeurs selon leur âge et leur genre. La tranche d'âge regroupant le plus de contributeurs est celle des 8-13 ans qui regroupe 35% des garçons et 45% des filles, suivie par la tranche des 14-18 ans avec respectivement 26 et 30%. Tandis que les 14-18 ans dominaient la population de tous les répondants, les contributeurs sont principalement agés de 8 à 13 ans.
 
 
 
@@ -279,8 +281,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur âg
 
 ![](../dataviz/PNG/8_pyramid_activite_contrib.png)
 
-La visualisation ci-dessus montre . 
-
+La visualisation ci-dessus montre la répartition des contributeurs selon leur activité et leur genre. Le constat est le même que celui de la datavisualisation précédente ; la majorité des contributeurs sont au collège, avec 36% des garçons et 47% des filles. Chez les garçons la catégorie qui suit est celle des répondants **en activité** qui regroupe 19% des garçons, tandis que chez les filles la catégorie suivante est celle du lycée, avec 18% des filles.¨
 
 
 ------------------------------------------------------------------------
@@ -303,13 +304,37 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/9_barplot_contextes_contrib.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre dans quels contextes principaux les contributeurs utilisent l'encyclopédie. Il est intéressant de noter que l'utilisation principale de l'outil pour les contributeurs est "le simple loisir" avec 29% des réponses, tandis que pour l'ensemble des répondants c'était "le cadre scolaire à la maison" qui primait avec 32% des réponses. Les contributeurs semblent ainsi contribuer pour le loisir, pour le plaisir.
+
+<br>
+------------------------------------------------------------------------
+
+
+## Motivations initiales à la contribution
+
+<br>
+
+-   **population** : les contributeurs
+
+-   **nombre de réponses** : 113
+
+-   **question représentée issue du questionnaire** :
+
+    -   "*Qu'est-ce qui vous a motivé à contribuer pour la première fois ?*"
+
+<br>
+
+![](../dataviz/PNG/11_wordcloud.png)
+
+La visualisation ci-dessus montre ce qui a motivé les répondants à contribuer pour la première fois à Vikidia. On voit de belles motivations telles que la transmission, l'aide, la création, mais aussi de la correction, de l'amélioration ou du challenge. D'autres répondants contribuent pour la communauté qui existe au sein de l'encyclopédie, ou encore pour sa fiabilité et donc l'envie de l'enrichir davantage. 
 
 
 
 ------------------------------------------------------------------------
 
-## Pourquoi les Vikidiens contribuent
+<br>
+
+## Pourquoi les Vikidiens continuent de contribuer
 
 <br>
 
@@ -325,7 +350,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/12_bar_motiv-contrib.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre ce qui motive les répondants à continuer de contribuer à l'encyclopédie. La principale motivation est celle du contribuer au projet Vikidia avec 35% des réponses des contributeurs, suivie par l'intérêt pour les domaines abordés, à 27%. Les raisons qui poussent les répondants à continuer de contribuer sont ainsi dans la lignée des motivations initiales à la contribution ("communauté", "intérêt", "créer" etc.).
 
 
 
@@ -350,7 +375,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/13_grouped_contrib-wrap.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre le type de contributions apportées selon les outils utilisés / les reponsabilités. On observe d'emblée que les principales responsabilités sont : '*administrateur*', '*patrouilleur*' et '*anciens responsables*'. On observe aussi une certaine homogénéité de type de contributions chez les bureaucrates, les nukers, les vérificateurs d'IP et les administrateurs, où la répartition des contributeurs varie  entre 13-14 et 20% pour chaque type de contribution. A contrario, on observe une plus grande hétérogénéité chez les patrouilleurs et les anciens responsables. La principale contribution des patrouilleurs à l'encyclopédie est la patrouille (22% des patrouilleurs), suivie par la création ou l'amélioration d'articles (20%), et la correction orthographique ou typographique (19%). Les anciens responsables contribuaient à l'encyclopédie principalement par la création ou l'amélioration d'articles (52%).
 
 
 
@@ -375,7 +400,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/10_timeline1.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le profil du répondant. On voit que c'est principalement à partir de 2017 que la communauté s'est agrandie d'étudiants et d'élèves, avec 28  nouveaux contributeurs pour les années 2020 et 2021. En 2020, la communauté a accueillie 8 nouveaux contributeurs en activité. 
 
 
 
@@ -400,7 +425,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/10_timeline2.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, zoomé sur les contributeurs scolaires uniquement, ce qui permet de décomposer la masse des étudiants / élèves visible sur le graphique précédent. On observe ainsi que les nouveaux arrivants à partir de 2017 étaient pour la plupart au collège ou lycée.
 
 
 
@@ -425,7 +450,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/10_timeline3.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le degré de contribution. On observe ici encore de nombreux contributeurs ayant rejoint la communauté à partir de 2017. 
 
 
 <br>
@@ -437,30 +462,6 @@ La visualisation ci-dessus montre .
 
 <br>
 
-
-## Motivations à la contribution
-
-<br>
-
--   **population** : les contributeurs
-
--   **nombre de réponses** : 113
-
--   **question représentée issue du questionnaire** :
-
-    -   "*Qu'est-ce qui vous a motivé à contribuer pour la première fois ?*"
-
-<br>
-
-![](../dataviz/PNG/11_wordcloud.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
 
 ## Canaux par lesquels les répondants ont connu Vikidia
 
