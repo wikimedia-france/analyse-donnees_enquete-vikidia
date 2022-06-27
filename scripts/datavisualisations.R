@@ -219,10 +219,10 @@ saving_plot_petit(graph, "1_donut")
 
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% group_by(`Quel âge avez-vous ?`, `Êtes vous ...`) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% 
+  summarise(Freq = n()) %>% ungroup() %>% group_by(`Êtes vous ...`) %>% 
   mutate(percent = Freq / sum(Freq) *100,
          percent = ifelse(percent < 0.5, round(percent, 1), round(percent, 0))) %>% 
-  rename(Genre = `Êtes vous ...`)
+  rename(Genre = `Êtes vous ...`) %>% ungroup()
 
   # Plot
 graph <- table %>% #filter(percent != 0) %>% 
@@ -255,9 +255,9 @@ saving_plot_petit(graph, "2_pyramid_age")
 
   # Table de fréquences des réponses
 table <- enquete_vikidia %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% group_by(activite, `Êtes vous ...`) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% 
+  summarise(Freq = n()) %>% ungroup() %>% group_by(`Êtes vous ...`) %>% 
   mutate(percent = round(Freq / sum(Freq) *100, 0)) %>% 
-  rename(Genre = `Êtes vous ...`)
+  rename(Genre = `Êtes vous ...`) %>% ungroup()
 
   # Plot
 graph <- table %>% 
@@ -403,9 +403,9 @@ saving_plot_petit(graph, "6_donut_contrib")
 
   # Table de fréquences des réponses
 table <- contributeurs %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% group_by(`Quel âge avez-vous ?`, `Êtes vous ...`) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% 
+  summarise(Freq = n()) %>% ungroup() %>% group_by(`Êtes vous ...`) %>% 
   mutate(percent = round(Freq / sum(Freq) *100, 0)) %>% 
-  rename(Genre = `Êtes vous ...`)
+  rename(Genre = `Êtes vous ...`) %>% ungroup()
 
   # Plot
 graph <- table %>%  
@@ -438,9 +438,9 @@ saving_plot_petit(graph, "7_pyramid_age_contrib")
 
   # Table de fréquences des réponses
 table <- contributeurs %>% filter(`Êtes vous ...` != "préfère ne pas le dire") %>% group_by(activite, `Êtes vous ...`) %>% 
-  summarise(Freq = n()) %>% ungroup() %>% 
+  summarise(Freq = n()) %>% ungroup() %>% group_by(`Êtes vous ...`) %>% 
   mutate(percent = round(Freq / sum(Freq) *100, 0)) %>% 
-  rename(Genre = `Êtes vous ...`)
+  rename(Genre = `Êtes vous ...`) %>% ungroup()
 
   # Plot
 graph <- table %>% 
