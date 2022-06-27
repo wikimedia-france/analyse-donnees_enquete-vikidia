@@ -32,7 +32,6 @@ text-align: justify
 ```{r setup, include=FALSE}
 # General settings     
 knitr::opts_chunk$set(
-	#eval = TRUE,
 	echo=FALSE,
 	fig.align = "center",
 	fig.show = "hold",
@@ -40,10 +39,7 @@ knitr::opts_chunk$set(
 	error = FALSE,
 	warning = FALSE,
 	collapse = TRUE,
-	#out.width = "100%",
-	#width=12, height=8,
-    results = 'asis'
-)
+    results = 'asis')
 ```
 
 <br>
@@ -122,7 +118,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur gen
 
 <br>
 
--   **population** : tous les répondants de genre féminin ou masculin (suppression de la catégorie "*Préfère ne pas le dire*")
+-   **population** : les répondants de genre féminin ou masculin (suppression de la catégorie "*Préfère ne pas le dire*")
 
 -   **nombre de répondants** : 665
 
@@ -147,7 +143,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur âg
 
 <br>
 
--   **population** : tous les répondants de genre féminin ou masculin
+-   **population** : les répondants de genre féminin ou masculin
 
 -   **nombre de répondants** : 665
 
@@ -671,7 +667,7 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Avis sur les pages d'aide selon la participation aux canaux de discussion
 
 <br>
 
@@ -681,12 +677,12 @@ La visualisation ci-dessus montre .
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n’y ai jamais participé', 'J’ai déjà écrit un ou deux messages', 'Il m’arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
+    -   "*Que pensez-vous des pages d'aide ?*" : 'Je n’en ai jamais eu besoin', 'Elles sont suffisamment claires', 'Je ne les trouve pas utiles', 'Elles sont trop complexes', 'Il existe des pages d’aide ???', 'Je pense qu’elles pourraient être améliorées'
 
 <br>
 
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/20_ballonplot.png)
 
 La visualisation ci-dessus montre . 
 
@@ -696,47 +692,21 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Part des personnes se sentant intégrées à la communauté de Vikidia, selon s'ils contribuent ou pas à Vikidia
 
 <br>
 
--   **population** : tous les répondants
+-   **population** : les répondants se sentant intégrés à la communauté
 
--   **nombre de répondants** : 774
+-   **nombre de répondants** : 548
 
--   **questions représentées et leurs réponses issues du questionnaire** :
+-   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
+    -   "*Vous sentez-vous suffisamment intégré à la communauté vikidienne ?*" : 'Oui', 'Non'
 
 <br>
 
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/21_gauge_integration.png)
 
 La visualisation ci-dessus montre . 
 
@@ -746,47 +716,21 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Évaluation de l'accessibilité des articles par les lecteurs se sentant integrés à la communauté
 
 <br>
 
--   **population** : tous les répondants
+-   **population** : les lecteurs se sentant intégrés à la communauté
 
--   **nombre de répondants** : 774
+-   **nombre de répondants** : 414
 
--   **questions représentées et leurs réponses issues du questionnaire** :
+-   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
+    -   "*Trouvez-vous les articles de Vikidia accessibles ?*" : 'Pas du tout accessibles', 'Peu accessibles', 'Moyennement accessibles', 'Plutôt accessibles', 'Très accessibles'
 
 <br>
 
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/22_bar_accessibilite.png)
 
 La visualisation ci-dessus montre . 
 
@@ -796,47 +740,21 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Participation des contributeurs se sentant integrés à la communauté, aux canaux de discussion
 
 <br>
 
--   **population** : tous les répondants
+-   **population** : les contributeurs se sentant intégrés à la communauté
 
--   **nombre de répondants** : 774
+-   **nombre de répondants** : 134
 
--   **questions représentées et leurs réponses issues du questionnaire** :
+-   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
+    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n’y ai jamais participé', 'J’ai déjà écrit un ou deux messages', 'Il m’arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
 
 <br>
 
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/22_bar_canaux.png)
 
 La visualisation ci-dessus montre . 
 
@@ -846,47 +764,21 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Évaluation de l'accueil sur Vikidia
 
 <br>
 
--   **population** : tous les répondants
+-   **population** : les répondants de genre féminin ou masculin
 
--   **nombre de répondants** : 774
+-   **nombre de répondants** : 665
 
--   **questions représentées et leurs réponses issues du questionnaire** :
+-   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
+    -   "*Comment avez vous jugé votre accueil sur Vikidia ?*" : 'Excellent', 'Bon', 'Moyen', 'Laisse à désirer'
 
 <br>
 
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/23_bar_accueil.png)
 
 La visualisation ci-dessus montre . 
 
@@ -896,7 +788,58 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Canaux de discussion des répondants selon l'âge et le genre
+
+<br>
+
+-   **population** : les répondants ayant précisé leur âge (suppression de la catégorie “Préfère ne pas le dire”) et participant aux canaux de discussion
+
+-   **nombre de répondants** : 639
+
+-   **questions représentées et leurs réponses issues du questionnaire** :
+
+    -   "*Sur quel(s) canal(ux) de discussions êtes-vous actif.ve ?*" : 'Discord', 'Les Bavardages', 'IRC', 'Pages de discussion', 'Autre(s) canaux de discussion ?'
+    -   "*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+
+<br>
+
+![](../dataviz/PNG/24_grouped_canaux.png)
+
+La visualisation ci-dessus montre . 
+Préciser : premier traitement pour supprimer les réponses "autres" qui veulent dire 'aucun'.
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Évaluation de Vikidia par ses lecteurs
+
+<br>
+
+-   **population** : les lecteurs
+
+-   **nombre de répondants** : 611
+
+-   **question représentée et ses réponses issues du questionnaire** :
+
+    -   "*Veuillez noter votre satisfaction sur les sujets suivants*" : 'la qualité des articles', 'l’accessibilité des sujets traités', 'la qualité et la pertinence des illustrations', 'la diversité des sujets traités', 'la qualité syntaxique et typographique', 'Le projet Vikidia en général'
+
+<br>
+
+![](../dataviz/PNG/25_radar_eval.png)
+
+La visualisation ci-dessus montre . 
+Préciser : pas de diférence dans la note attribuée par groupe (lectuers/contrib, age, activite etC.)
+
+
+
+------------------------------------------------------------------------
+
+<br>
+
+## Évaluation de la fiabilité des articles
 
 <br>
 
@@ -904,14 +847,13 @@ La visualisation ci-dessus montre .
 
 -   **nombre de répondants** : 774
 
--   **questions représentées et leurs réponses issues du questionnaire** :
+-   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+    -   "*Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?*" : 'Je me méfie des informations que je trouve sur Vikidia', 'Les articles de Vikidia sont plutôt fiables', 'Les articles de Vikidia sont tout à fait fiables', 'Les informations trouvées sur Vikidia ne sont pas toujours fiables', 'Les informations trouvées sur Vikidia sont à prendre avec précaution'
 
 <br>
 
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/27_grouped_fiabilite.png)
 
 La visualisation ci-dessus montre . 
 
@@ -921,7 +863,7 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Évaluation de la fiabilité des articles selon l'activité
 
 <br>
 
@@ -931,12 +873,12 @@ La visualisation ci-dessus montre .
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+    -   "*Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?*" : 'Je me méfie des informations que je trouve sur Vikidia', 'Les articles de Vikidia sont plutôt fiables', 'Les articles de Vikidia sont tout à fait fiables', 'Les informations trouvées sur Vikidia ne sont pas toujours fiables', 'Les informations trouvées sur Vikidia sont à prendre avec précaution'
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
 
 <br>
 
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/26_lollipop1.png)
 
 La visualisation ci-dessus montre . 
 
@@ -946,497 +888,22 @@ La visualisation ci-dessus montre .
 
 <br>
 
-## titre
+## Évaluation de la fiabilité des articles selon l'âge
 
 <br>
 
--   **population** : tous les répondants
+-   **population** : les répondants ayant précisé leur âge
 
--   **nombre de répondants** : 774
+-   **nombre de répondants** : 721
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
+    -   "*Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?*" : 'Je me méfie des informations que je trouve sur Vikidia', 'Les articles de Vikidia sont plutôt fiables', 'Les articles de Vikidia sont tout à fait fiables', 'Les informations trouvées sur Vikidia ne sont pas toujours fiables', 'Les informations trouvées sur Vikidia sont à prendre avec précaution'
+    -   "*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
 
 <br>
 
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
-
-La visualisation ci-dessus montre . 
-
-
-
-------------------------------------------------------------------------
-
-<br>
-
-## titre
-
-<br>
-
--   **population** : tous les répondants
-
--   **nombre de répondants** : 774
-
--   **questions représentées et leurs réponses issues du questionnaire** :
-
-    -   "*Êtesgggggg*" : 'Un homme'
-    -   "*Quelgggggggg*" : 'Moins de 8 ans'
-
-<br>
-
-![](../dataviz/PNG/2_pyramid_age.png)
+![](../dataviz/PNG/26_lollipop2.png)
 
 La visualisation ci-dessus montre . 
 

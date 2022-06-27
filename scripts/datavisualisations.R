@@ -463,7 +463,7 @@ graph <- table %>%
             check_overlap = T)
 
 graph
-saving_plot_petit(graph, "8_pyramid_activite_contrib")
+saving_plot_custom(graph, "8_pyramid_activite_contrib", 9.5, 6)
 
 
 
@@ -1424,7 +1424,7 @@ graph <- table %>% filter(`Quel âge avez-vous ?` != "Préfère ne pas le dire")
   ggplot(aes(x = outils, y = n)) +
   geom_col(aes(color = `Quel âge avez-vous ?`, fill = `Quel âge avez-vous ?`), position = position_dodge(0.8), width = 0.7) +
   facet_wrap(~`Êtes vous ...`) +
-  scale_color_manual(values = c("white", "white", "white", "white", "white", "white", "white", "white", "white"))+
+  scale_color_manual(values = c("white", "white", "white", "white", "white"))+
   scale_fill_manual(values = c("#21468d", "#74a466", "#fecf5d", "#f38337", "#da4729")) +
   labs(x = "Canaux de discussion", y = "Nombre de réponses", title = "Canaux de discussion des répondants selon l'âge et le genre",
        subtitle = "\nSur quel(s) canal(ux) de discussions êtes-vous actif.ve ?") +
@@ -1482,6 +1482,46 @@ graph <- table %>%
         plot.subtitle = element_text(face = "italic", size = 15))
 graph
 saving_plot_petit(graph, "25_radar_eval")
+
+
+
+######---
+
+
+
+  # Table de fréquences des réponses
+table <- enquete_vikidia %>% group_by(`Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`) %>% summarise(Freq = n()) %>% rename(`Fiabilités des articles` = `Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`) %>% mutate(percent = round(Freq / sum(Freq) *100, 0))
+
+  # Neutralisation des réponses
+table$`Fiabilités des articles` <- table$`Fiabilités des articles` %>% 
+          str_replace_all(c("Je me méfie des informations que je trouve sur Vikidia" = "Méfiance vis-à-vis du contenu", 
+                            "Les articles de Vikidia sont plutôt fiables" = "Plutôt fiables",
+                            "Les articles de Vikidia sont tout à fait fiables" = "Tout à fait fiables",  
+                            "Les informations trouvées sur Vikidia ne sont pas toujours fiables" = "Pas toujours fiables",
+                            "Les informations trouvées sur Vikidia sont à prendre avec précaution" = "À prendre avec précaution")) 
+
+  # Ordonner les réponses
+table$`Fiabilités des articles` <- factor(table$`Fiabilités des articles`, order = TRUE, levels = c("Méfiance vis-à-vis du contenu", "À prendre avec précaution", "Pas toujours fiables", "Plutôt fiables", "Tout à fait fiables"))
+
+  # Plot
+graph <- ggplot(table, aes(y = Freq)) +
+  geom_col(aes(x = `Fiabilités des articles`, fill = `Fiabilités des articles`), position = position_dodge(0.8), width = 0.7, col = "white") +
+  scale_fill_manual(values = c("#D2DAE8", "#A6B5D1", "#7990BA", "#4D6BA3", "#21468d")) +
+  labs(x = "Fiabilités des articles", y = "Nombre de répondants", title = "Évaluation de la fiabilité des articles",
+       subtitle = "\nQuel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
+  theme_classic() +
+  theme(legend.position = "none",
+        text = element_text(family = "Montserrat", size = 12),
+        plot.title = element_text(face = "bold", size = 21),
+        plot.subtitle = element_text(face = "italic", size = 15),
+        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
+  guides(fill = guide_legend(title = " ", reverse = F), color = "none") +
+  geom_text(aes(y = Freq + 10, x = `Fiabilités des articles`, label = paste(percent, "%", sep="")), color = "#333333", size=3, check_overlap = T) +
+  coord_flip()
+graph
+saving_plot_custom(graph, "27_grouped_fiabilite", 11, 6.5)
+
 
 
 
@@ -1551,45 +1591,5 @@ graph <- table %>% filter(`Quel âge avez-vous ?` != "Préfère ne pas le dire")
         axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)))
 graph
 saving_plot_custom(graph, "26_lollipop2", 10, 6.7)
-
-
-
-######---
-
-
-
-  # Table de fréquences des réponses
-table <- enquete_vikidia %>% group_by(`Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`) %>% summarise(Freq = n()) %>% rename(`Fiabilités des articles` = `Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?`) %>% mutate(percent = round(Freq / sum(Freq) *100, 0))
-
-  # Neutralisation des réponses
-table$`Fiabilités des articles` <- table$`Fiabilités des articles` %>% 
-          str_replace_all(c("Je me méfie des informations que je trouve sur Vikidia" = "Méfiance vis-à-vis du contenu", 
-                            "Les articles de Vikidia sont plutôt fiables" = "Plutôt fiables",
-                            "Les articles de Vikidia sont tout à fait fiables" = "Tout à fait fiables",  
-                            "Les informations trouvées sur Vikidia ne sont pas toujours fiables" = "Pas toujours fiables",
-                            "Les informations trouvées sur Vikidia sont à prendre avec précaution" = "À prendre avec précaution")) 
-
-  # Ordonner les réponses
-table$`Fiabilités des articles` <- factor(table$`Fiabilités des articles`, order = TRUE, levels = c("Méfiance vis-à-vis du contenu", "À prendre avec précaution", "Pas toujours fiables", "Plutôt fiables", "Tout à fait fiables"))
-
-  # Plot
-graph <- ggplot(table, aes(y = Freq)) +
-  geom_col(aes(x = `Fiabilités des articles`, fill = `Fiabilités des articles`), position = position_dodge(0.8), width = 0.7, col = "white") +
-  scale_fill_manual(values = c("#D2DAE8", "#A6B5D1", "#7990BA", "#4D6BA3", "#21468d")) +
-  labs(x = "Fiabilités des articles", y = "Nombre de répondants", title = "Évaluation de la fiabilité des articles",
-       subtitle = "\nQuel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?") +
-  theme_classic() +
-  theme(legend.position = "none",
-        text = element_text(family = "Montserrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21),
-        plot.subtitle = element_text(face = "italic", size = 15),
-        axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
-  guides(fill = guide_legend(title = " ", reverse = F), color = "none") +
-  geom_text(aes(y = Freq + 10, x = `Fiabilités des articles`, label = paste(percent, "%", sep="")), color = "#333333", size=3, check_overlap = T) +
-  coord_flip()
-graph
-saving_plot_custom(graph, "27_grouped_fiabilite", 11, 6.5)
-
 
 
