@@ -1480,7 +1480,7 @@ table <- enquete_vikidia %>%
   mutate_at(vars(`La qualité des articles`, `L'accessibilité des sujets traités`, `La qualité et la pertinence des illustrations`, `La diversité des sujets traités`, `La qualité synthaxique et typographique`, `Le projet Vikidia en général`), ~ str_replace_all(., c("Très bonne" = "5", "Plutôt bonne" = "4", "Moyenne" = "3", "Plutôt mauvaise" = "2", "Très mauvaise" = "1")))
 table[,1:6] <- lapply(table[,1:6], as.numeric)
 table <- table %>% ungroup() %>% summarise_all(funs(mean(.))) %>% #mutate(total = "total", .before = `La qualité des articles`) %>% 
-  rename(`La qualité synthaxique \net typographique` = `La qualité synthaxique et typographique`,
+  rename(`La qualité syntaxique \net typographique` = `La qualité synthaxique et typographique`,
          `La qualité et la pertinence \ndes illustrations` = `La qualité et la pertinence des illustrations`)
 
   # Plot

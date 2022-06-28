@@ -686,7 +686,7 @@ La visualisation ci-dessus montre l'avis sur les pages d'aide des lecteurs et de
 
 ![](../dataviz/PNG/20_ballonplot.png)
 
-La visualisation ci-dessus croise la participation aux canaux de discussion, à l'avis sur les pages d'aide, des répondants lecteurs et contributeurs. On observe d'emblée que les lecteurs qui n'ont pas connaissance des canaux de discussion n'ont pas non plus connaissance des pages d'aide à 66% ou n'en ont pas besoin à 30%. Pour les lecteurs qui ont connaissances des canaux sans y participer, 43% n'ont pas besoin des pages d'aide, 39% n'en a pas connaissance et seulement 15% en ont connaissance et les trouvent claires. De l'autre côté, les contributeurs 40% des contributeurs actifs sur les canaux trouvent les pages d'aide claires, 31% ensent qu'elles pourraient être améliorées et 20% n'en ont pas besoin. 
+La visualisation ci-dessus croise la participation aux canaux de discussion, à l'avis sur les pages d'aide, des répondants lecteurs et contributeurs. On observe d'emblée que les lecteurs qui n'ont pas connaissance des canaux de discussion n'ont pas non plus connaissance des pages d'aide à 66% ou n'en ont pas besoin à 30%. Pour les lecteurs qui ont connaissances des canaux sans y participer, 43% n'ont pas besoin des pages d'aide, 39% n'en a pas connaissance et seulement 15% en ont connaissance et les trouvent claires. De l'autre côté, 40% des contributeurs actifs sur les canaux trouvent les pages d'aide claires, 31% pensent qu'elles pourraient être améliorées et 20% n'en ont pas besoin. Les avis sur les pages d'aide des contributeurs participant de temps à autre aux canaux de discussion sont plutôt hétérogènes ; 31% les trouvent claires, 29% pensent qu'elles pourraient être améliorées, 24% n'en a pas besoin et 16% n'en a pas connaissance. Ici encore, la majorité des contributeurs n'ayant pas connaissance des canaux n'a pas non plus connaissance des pages d'aide (54%), 36% n'en a pas besoin.
 
 
 ------------------------------------------------------------------------
@@ -709,7 +709,8 @@ La visualisation ci-dessus croise la participation aux canaux de discussion, à 
 
 ![](../dataviz/PNG/21_gauge_integration.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre le pourcentage de répondants se sentant intégrés à la communauté, qu'ils soient lecteurs ou contributeurs. Sur les 611 lecteurs, 414 se sentent intégrés à la communauté, soit 68%, tandis que sur les 163 contributeurs, 134 se sentent intégrés, soit 82%. Le sentiment d'intégration est ainsi davantage présent chez les contributeurs qui prennent part à la communauté en participant aux canaux de discussion, en consultant les pages d'aide (comme nous venons de le voir), créant ainsi un sentiment d'appartenance à une communauté. Comme analysé précédemment, le fait de se plaire dans la communauté explique à 18% pourquoi les Vikidiens continuent de contribuer. 
+
 
 
 
@@ -733,7 +734,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/22_bar_accessibilite.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre l'accessibilité des articles évaluée par les 414 lecteurs se sentant intégrés à la communauté. Plus de la moitié trouvent les articles de Vikidia très accessibles, près de 4 répondants sur 20 les trouvent plutôt accessibles et seuls 37 répondants soit 9% pensent que l'accessibilité est moyenne, insuffisante ou inexistante. 
 
 
 
@@ -757,7 +758,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/22_bar_canaux.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre la participation aux canaux de discussion des 134 contributeurs se sentant intégrés à la communauté. Les résultats sont sensiblement identiques à la datavisualisation représentant la participation aux canaux de discussion des lecteurs et des contributeurs, à 1 ou 2 points de pourcentage de différence. Cela s'explique par le fait que la population utilisée est quasiment identique, puisque seuls 29 des 163 contributeurs ne se sentent pas intégrés à la communauté. 
 
 
 
@@ -781,7 +782,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/23_bar_accueil.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre comment les répondants jugent de l'accueil qu'ils ont reçu sur Vikidia, selon leur genre. Chez les garçons, on observe que 32% d'eux ont jugé leur accueil "excellent" et 52% l'ont jugé "bon". Chez les filles, la proportion de répondants ayant jugé leur accueil "excellent" est inférieur à celle des garçons (24%), elles sont ainsi davantage à avoir ressenti un "bon" accueil (59%). Seuls 3% de ces dernières pensent que l'accueil laisse à désirer, tandis que 5% des garçons ont cet opinion. 
 
 
 
@@ -806,8 +807,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/24_grouped_canaux.png)
 
-La visualisation ci-dessus montre . 
-Préciser : premier traitement pour supprimer les réponses "autres" qui veulent dire 'aucun'.
+La visualisation ci-dessus montre les canaux sur lesquels les répondants sont actifs, selon l'âge et le genre. Pour cette datavisualisation, un premier traitement a été réalisé dans le but de retirer toutes les réponses "*Autre*" qui signifiaient que le répondant **ne participe pas** aux canaux de discussion (cela était précisé par la suite dans un champ libre). Pour les réponses restantes, on voit d'emblée que le principal canal de discussion sur lequel les répondants sont actifs est "Discord", suivi par les pages de discussion puis les Bavardages. Le canal "Discord" est davantage utilisé par les répondants de 14 à 18 ans, avec 45% des filles et 35% des garçons. Il apparaît aussi que les femmes de 36 à 60 ans, ainsi que les hommes de 19 à 35 ans sont actifs sur les pages de discussion. On trouve en proportion bien plus de 14-18 ans actifs sur "les Bavardages" chez les filles (47%) que chez les garçons (17%).
 
 
 
@@ -831,8 +831,7 @@ Préciser : premier traitement pour supprimer les réponses "autres" qui veulent
 
 ![](../dataviz/PNG/25_radar_eval.png)
 
-La visualisation ci-dessus montre . 
-Préciser : pas de diférence dans la note attribuée par groupe (lectuers/contrib, age, activite etC.)
+La visualisation ci-dessus montre la note moyenne attribuée par les répondants lecteurs aux sujets présentés. Il est à préciser que les notes varient très peu d'un groupe à l'autre (lecteurs / contributeurs, selon la classe d'âge, l'activité etc.). On voit alors que le sujet ayant la moyenne la plus basse est celui de la *qualité et la pertinence des illustrations* avec une note moyenne de 3.94/5, suivie par la *qualité syntaxique et typographique* avec une note de 3.95/5. Ce constat est cohérent avec les conclusions précédentes, puisque l'on voyait que de nombreuses contributions portaient sur la correction orthographique ou l'amélioration d'articles existants. A contrario, les sujets récoltants les notes moyennes les plus élevées sont le *projet Vikidia en général* avec 4.4/5, suivie par l'*accessibilité des sujets traités* où la moyenne est de 4.2/5. Les notes moyennes des 2 sujets restants sont, quant à elles, très proches (4.06 et 4.08/5).
 
 
 
@@ -856,7 +855,7 @@ Préciser : pas de diférence dans la note attribuée par groupe (lectuers/contr
 
 ![](../dataviz/PNG/27_grouped_fiabilite.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles. On observe que près de 6 répondants sur 10 trouvent les articles de Vikidia plutôt fiables, 21% les trouvent tout à fait fiables. Un peu plus d'un répondant sur 10 pense que les articles de Vikdia sont à prendre avec précaution, voire qu'il faut se méfier du contenu.  
 
 
 
@@ -881,7 +880,7 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/26_lollipop1.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles, selon leur activité. Pour cette datavisualisation les réponses textuelles ont été remplacées par une évaluation de 1 à 5 où '1' correspond à *'Je me méfie des informations que je trouve sur Vikidia'* et '5' correspond à *'Les articles de Vikidia sont tout à fait fiables'*. Les moyennes sur 5 sont ensuite présentées par activité du répondant. On observe ainsi certaines disparités dans l'évaluation moyenne : les élèves en école primaire ont tendance à "sur-noter" la fiabilité des articles, puisqu'en moyenne ils l'évaluent à 4.1/5, tandis que la moyenne toutes activités confondues est de 3.75/5. En revanche, ce sont les répondant en recherche d'emploi ou les étudiants qui estiment en moyenne la fiabilité la plus faible : respectivement 3.5 et 3.4/5.
 
 
 
@@ -906,8 +905,25 @@ La visualisation ci-dessus montre .
 
 ![](../dataviz/PNG/26_lollipop2.png)
 
-La visualisation ci-dessus montre . 
+La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles, selon leur âge. Cette visualisation vient confirmer les constats émis à partir de la représentation précédente, à savoir que les moins de 14 ans pensent les articles de Vikidia plus fiables en moyenne que les 19-35 ans, qui sont ceux qui estiment que les articles sont les moins fiables, en moyenne.
 
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+<br>
+
+**Pour conclure**, au vu des réponses au questionnaire diffusé entre juin et octobre 2021, nous pouvons dire que les vikidiens ont des profils, des usages et des avis divers. Nous avons cependant pu observer des tendances, que la liste ci-dessous résume dans les grandes lignes : 
+
+- le répondant moyen est une fille, âgée de 14 à 18 ans, étant au collège et utilisant Vikidia dans un cadre scolaire à la maison, sans y contribuer ; 
+- le contributeur moyen est un garçon âgé de 8 à 13 ans, étant au collège et utilisant Vikidia pour le simple loisir, en ayant contribué 1 ou 2 fois ;
+- les contributeurs contribuent pour améliorer et transmettre, sont motivés par l'idée de contribuer au projet Vikidia et sont principalement administrateurs ou patrouilleurs ;
+- il y a eu une hausse du nombre de nouveaux contributeurs à partir de 2017 ;
+- les répondants ont connu Vikidia par hasard sur internet, la majorité pense que pour le grand public l'encylopédie devrait gagner en popularité, ils l'utilisent plutôt que Wikipédia pour la simplicité des articles, mais n'hésitent pas à utiliser *Wikipédia* lorsqu'ils ne trouvent pas les informations cherchées sur Vikidia ; 
+- la majorité des lecteurs n'a pas connaissance des canaux de discussion ni des pages d'aide, mais les contributeurs les connaissent et les utilisent davantage ; 
+- les contributeurs se sentent plus intégrés à la communauté vikidienne que les lecteurs ;
+- les répondants trouvent l'accessibilité des articles élevée ou correcte, jugent leur accueil sur Vikidia bon et sont principalement actifs sur Discord ; 
+- les répondants trouvent la fiabilité des articles correcte de manière générale, mais les étudiants l'évaluent à la baisse, tandis que les élèves en école primaire l'évaluent à la hausse. 
 
 <br>
 
