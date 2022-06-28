@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' ?>
-<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='720.00pt' height='648.00pt' viewBox='0 0 720.00 648.00'>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='864.00pt' height='648.00pt' viewBox='0 0 864.00 648.00'>
 <defs>
   <style type='text/css'><![CDATA[
     .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
@@ -14,53 +14,55 @@
     }
   ]]></style>
 </defs>
-<rect width='100%' height='100%' style='stroke: none; fill: none;'/>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
 <defs>
-  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw2NDguMDA='>
-    <rect x='0.00' y='0.00' width='720.00' height='648.00' />
+  <clipPath id='cpMC4wMHw4NjQuMDB8MC4wMHw2NDguMDA='>
+    <rect x='0.00' y='0.00' width='864.00' height='648.00' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw2NDguMDA=)'>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw2NDguMDA=)'>
+<rect x='0.00' y='0.00' width='864.00' height='648.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
 </g>
 <defs>
-  <clipPath id='cpNS40OHw3MTQuNTJ8MzE2Ljg3fDY0Mi41Mg=='>
-    <rect x='5.48' y='316.87' width='709.04' height='325.65' />
+  <clipPath id='cpNS40OHw4NTguNTJ8MzE2Ljg3fDY0Mi41Mg=='>
+    <rect x='5.48' y='316.87' width='853.04' height='325.65' />
   </clipPath>
 </defs>
-<g clip-path='url(#cpNS40OHw3MTQuNTJ8MzE2Ljg3fDY0Mi41Mg==)'>
-<text x='360.00' y='481.50' text-anchor='middle' style='font-size: 5.05px;fill: #F48337; font-family: "Noto Sans";' textLength='11.27px' lengthAdjust='spacingAndGlyphs'>amis</text>
-<text x='340.96' y='480.14' text-anchor='middle' style='font-size: 5.05px;fill: #F48337; font-family: "Noto Sans";' textLength='16.41px' lengthAdjust='spacingAndGlyphs'>mamie</text>
-<text x='386.26' y='482.28' text-anchor='middle' style='font-size: 7.15px;fill: #F48337; font-family: "Noto Sans";' textLength='25.78px' lengthAdjust='spacingAndGlyphs'>parents</text>
-<text x='340.57' y='493.69' text-anchor='middle' style='font-size: 7.15px;fill: #F48337; font-family: "Noto Sans";' textLength='26.95px' lengthAdjust='spacingAndGlyphs'>proches</text>
-<text x='372.53' y='494.37' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='19.31px' lengthAdjust='spacingAndGlyphs'>Amazon</text>
-<text x='381.22' y='473.61' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='9.98px' lengthAdjust='spacingAndGlyphs'>Arte</text>
-<text x='368.87' y='464.27' text-anchor='middle' style='font-size: 49.52px;fill: #21468D; font-family: "Noto Sans";' textLength='377.40px' lengthAdjust='spacingAndGlyphs'>autres sites web</text>
-<text x='322.63' y='474.89' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='11.76px' lengthAdjust='spacingAndGlyphs'>cairn</text>
-<text x='409.84' y='483.11' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='15.62px' lengthAdjust='spacingAndGlyphs'>CNRTL</text>
-<text x='293.64' y='474.68' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='18.86px' lengthAdjust='spacingAndGlyphs'>dicoado</text>
-<text x='290.15' y='487.54' text-anchor='middle' style='font-size: 8.75px;fill: #21468D; font-family: "Noto Sans";' textLength='32.18px' lengthAdjust='spacingAndGlyphs'>fandom</text>
-<text x='350.13' y='506.13' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='34.71px' lengthAdjust='spacingAndGlyphs'>France Culture</text>
-<text x='408.15' y='497.33' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='36.69px' lengthAdjust='spacingAndGlyphs'>Futura sciences</text>
-<text x='430.89' y='483.26' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='15.66px' lengthAdjust='spacingAndGlyphs'>Gallica</text>
-<text x='280.86' y='502.97' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='22.54px' lengthAdjust='spacingAndGlyphs'>Hérodote</text>
-<text x='396.76' y='508.58' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='35.21px' lengthAdjust='spacingAndGlyphs'>Khan Academy</text>
-<text x='251.90' y='476.51' text-anchor='middle' style='font-size: 11.30px;fill: #21468D; font-family: "Noto Sans";' textLength='47.94px' lengthAdjust='spacingAndGlyphs'>Larousse</text>
-<text x='429.56' y='505.75' text-anchor='middle' style='font-size: 7.15px;fill: #21468D; font-family: "Noto Sans";' textLength='21.09px' lengthAdjust='spacingAndGlyphs'>Lumni</text>
-<text x='345.73' y='553.29' text-anchor='middle' style='font-size: 47.68px;fill: #21468D; font-family: "Noto Sans";' textLength='472.38px' lengthAdjust='spacingAndGlyphs'>moteur de recherche</text>
-<text x='453.02' y='492.79' text-anchor='middle' style='font-size: 8.75px;fill: #21468D; font-family: "Noto Sans";' textLength='27.24px' lengthAdjust='spacingAndGlyphs'>presse</text>
-<text x='338.41' y='514.37' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='35.25px' lengthAdjust='spacingAndGlyphs'>Savant Cogitus</text>
-<text x='241.98' y='485.67' text-anchor='middle' style='font-size: 8.75px;fill: #21468D; font-family: "Noto Sans";' textLength='43.88px' lengthAdjust='spacingAndGlyphs'>universalis</text>
-<text x='463.12' y='483.98' text-anchor='middle' style='font-size: 13.37px;fill: #21468D; font-family: "Noto Sans";' textLength='24.53px' lengthAdjust='spacingAndGlyphs'>wiki</text>
-<text x='241.15' y='500.08' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='24.06px' lengthAdjust='spacingAndGlyphs'>wikimédia</text>
-<text x='484.95' y='519.02' text-anchor='middle' style='font-size: 16.76px;fill: #21468D; font-family: "Noto Sans";' textLength='65.40px' lengthAdjust='spacingAndGlyphs'>wikimini</text>
-<text x='360.00' y='520.32' text-anchor='middle' style='font-size: 113.81px;fill: #21468D; font-family: "Noto Sans";' textLength='506.29px' lengthAdjust='spacingAndGlyphs'>wikipédia</text>
-<text x='490.02' y='495.29' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='29.44px' lengthAdjust='spacingAndGlyphs'>wiktionnaire</text>
-<text x='268.21' y='512.70' text-anchor='middle' style='font-size: 10.11px;fill: #21468D; font-family: "Noto Sans";' textLength='39.27px' lengthAdjust='spacingAndGlyphs'>youtube</text>
-<text x='397.23' y='420.47' text-anchor='middle' style='font-size: 14.30px;fill: #FECF5D; font-family: "Noto Sans";' textLength='192.59px' lengthAdjust='spacingAndGlyphs'>dictionnaire ou encyclopédie</text>
-<text x='530.92' y='486.99' text-anchor='middle' style='font-size: 19.58px;fill: #FECF5D; font-family: "Noto Sans";' textLength='48.51px' lengthAdjust='spacingAndGlyphs'>livres</text>
-<text x='179.12' y='478.02' text-anchor='middle' style='font-size: 7.15px;fill: #FECF5D; font-family: "Noto Sans";' textLength='55.63px' lengthAdjust='spacingAndGlyphs'>matériel scolaire</text>
+<g clip-path='url(#cpNS40OHw4NTguNTJ8MzE2Ljg3fDY0Mi41Mg==)'>
+<rect x='5.48' y='316.87' width='853.04' height='325.65' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+<text x='432.00' y='481.50' text-anchor='middle' style='font-size: 5.05px;fill: #F48337; font-family: "Noto Sans";' textLength='11.27px' lengthAdjust='spacingAndGlyphs'>amis</text>
+<text x='450.73' y='482.22' text-anchor='middle' style='font-size: 5.05px;fill: #F48337; font-family: "Noto Sans";' textLength='16.41px' lengthAdjust='spacingAndGlyphs'>mamie</text>
+<text x='409.34' y='476.79' text-anchor='middle' style='font-size: 7.15px;fill: #F48337; font-family: "Noto Sans";' textLength='25.78px' lengthAdjust='spacingAndGlyphs'>parents</text>
+<text x='416.76' y='492.25' text-anchor='middle' style='font-size: 7.15px;fill: #F48337; font-family: "Noto Sans";' textLength='26.95px' lengthAdjust='spacingAndGlyphs'>proches</text>
+<text x='473.34' y='479.75' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='19.31px' lengthAdjust='spacingAndGlyphs'>Amazon</text>
+<text x='447.63' y='472.15' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='9.98px' lengthAdjust='spacingAndGlyphs'>Arte</text>
+<text x='443.58' y='532.75' text-anchor='middle' style='font-size: 49.52px;fill: #21468D; font-family: "Noto Sans";' textLength='377.40px' lengthAdjust='spacingAndGlyphs'>autres sites web</text>
+<text x='431.73' y='471.38' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='11.76px' lengthAdjust='spacingAndGlyphs'>cairn</text>
+<text x='380.89' y='481.24' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='15.62px' lengthAdjust='spacingAndGlyphs'>CNRTL</text>
+<text x='479.27' y='491.25' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='18.86px' lengthAdjust='spacingAndGlyphs'>dicoado</text>
+<text x='358.97' y='489.71' text-anchor='middle' style='font-size: 8.75px;fill: #21468D; font-family: "Noto Sans";' textLength='32.18px' lengthAdjust='spacingAndGlyphs'>fandom</text>
+<text x='399.62' y='465.76' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='34.71px' lengthAdjust='spacingAndGlyphs'>France Culture</text>
+<text x='518.14' y='487.63' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='36.69px' lengthAdjust='spacingAndGlyphs'>Futura sciences</text>
+<text x='512.03' y='477.59' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='15.66px' lengthAdjust='spacingAndGlyphs'>Gallica</text>
+<text x='482.39' y='468.81' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='22.54px' lengthAdjust='spacingAndGlyphs'>Hérodote</text>
+<text x='445.87' y='458.81' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='35.21px' lengthAdjust='spacingAndGlyphs'>Khan Academy</text>
+<text x='344.90' y='479.90' text-anchor='middle' style='font-size: 11.30px;fill: #21468D; font-family: "Noto Sans";' textLength='47.94px' lengthAdjust='spacingAndGlyphs'>Larousse</text>
+<text x='359.17' y='460.76' text-anchor='middle' style='font-size: 7.15px;fill: #21468D; font-family: "Noto Sans";' textLength='21.09px' lengthAdjust='spacingAndGlyphs'>Lumni</text>
+<text x='482.20' y='447.97' text-anchor='middle' style='font-size: 47.68px;fill: #21468D; font-family: "Noto Sans";' textLength='472.38px' lengthAdjust='spacingAndGlyphs'>moteur de recherche</text>
+<text x='306.99' y='481.02' text-anchor='middle' style='font-size: 8.75px;fill: #21468D; font-family: "Noto Sans";' textLength='27.24px' lengthAdjust='spacingAndGlyphs'>presse</text>
+<text x='551.14' y='471.48' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='35.25px' lengthAdjust='spacingAndGlyphs'>Savant Cogitus</text>
+<text x='295.53' y='468.85' text-anchor='middle' style='font-size: 8.75px;fill: #21468D; font-family: "Noto Sans";' textLength='43.88px' lengthAdjust='spacingAndGlyphs'>universalis</text>
+<text x='549.64' y='500.60' text-anchor='middle' style='font-size: 13.37px;fill: #21468D; font-family: "Noto Sans";' textLength='24.53px' lengthAdjust='spacingAndGlyphs'>wiki</text>
+<text x='569.43' y='484.19' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='24.06px' lengthAdjust='spacingAndGlyphs'>wikimédia</text>
+<text x='619.82' y='485.23' text-anchor='middle' style='font-size: 16.76px;fill: #21468D; font-family: "Noto Sans";' textLength='65.40px' lengthAdjust='spacingAndGlyphs'>wikimini</text>
+<text x='432.00' y='520.32' text-anchor='middle' style='font-size: 113.81px;fill: #21468D; font-family: "Noto Sans";' textLength='506.29px' lengthAdjust='spacingAndGlyphs'>wikipédia</text>
+<text x='540.03' y='462.63' text-anchor='middle' style='font-size: 5.05px;fill: #21468D; font-family: "Noto Sans";' textLength='29.44px' lengthAdjust='spacingAndGlyphs'>wiktionnaire</text>
+<text x='252.80' y='482.64' text-anchor='middle' style='font-size: 10.11px;fill: #21468D; font-family: "Noto Sans";' textLength='39.27px' lengthAdjust='spacingAndGlyphs'>youtube</text>
+<text x='345.35' y='551.25' text-anchor='middle' style='font-size: 14.30px;fill: #FECF5D; font-family: "Noto Sans";' textLength='192.59px' lengthAdjust='spacingAndGlyphs'>dictionnaire ou encyclopédie</text>
+<text x='220.21' y='466.09' text-anchor='middle' style='font-size: 19.58px;fill: #FECF5D; font-family: "Noto Sans";' textLength='48.51px' lengthAdjust='spacingAndGlyphs'>livres</text>
+<text x='612.65' y='459.09' text-anchor='middle' style='font-size: 7.15px;fill: #FECF5D; font-family: "Noto Sans";' textLength='55.63px' lengthAdjust='spacingAndGlyphs'>matériel scolaire</text>
 </g>
-<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw2NDguMDA=)'>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw2NDguMDA=)'>
 <text x='5.48' y='16.19' style='font-size: 15.00px; font-style: italic; font-family: "Arial";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
 <text x='5.48' y='32.39' style='font-size: 15.00px; font-style: italic; font-family: "Arial";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
 <text x='5.48' y='48.59' style='font-size: 15.00px; font-style: italic; font-family: "Arial";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>

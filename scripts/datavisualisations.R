@@ -209,9 +209,12 @@ graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 3.3, xmin = 2, fill 
   theme_void() +
   theme(legend.position = "right",
         text = element_text(family = "Monsterrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21))
+        plot.title = element_text(face = "bold", size = 21),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white"))
 graph
-saving_plot_petit(graph, "1_donut")
+saving_plot_petit(graph, "1_donut_poster")
 
 
 ######---
@@ -351,7 +354,10 @@ graph <- ggraph(mygraph, layout = 'dendrogram') +
   theme(legend.position="none",
         plot.subtitle = element_text(face = "italic", size = 15),
         text = element_text(family = "Montserrat", face = "bold", size = 12),
-        plot.title = element_text(face = "bold", size = 21))
+        plot.title = element_text(face = "bold", size = 21),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white"))
 graph
 saving_plot_custom(graph, "5_dendrogram", 9, 6)
 
@@ -393,7 +399,10 @@ graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 3.3, xmin = 2, fill 
   theme_void() +
   theme(legend.position = "right",
         text = element_text(family = "Monsterrat", size = 12),
-        plot.title = element_text(face = "bold", size = 21))
+        plot.title = element_text(face = "bold", size = 21),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white"))
 graph
 saving_plot_petit(graph, "6_donut_contrib")
 
@@ -735,7 +744,10 @@ graph <- ggplot(word_data, aes(label = word, size = freq)) +
   theme_minimal() +
   theme(text = element_text(family = "Montserrat", size = 12),
         plot.title = element_text(face = "bold", size = 21),
-        plot.subtitle = element_text(face = "italic", size = 15))
+        plot.subtitle = element_text(face = "italic", size = 15),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white"))
 graph
 saving_plot_moyen(graph, "11_wordcloud")
 
@@ -863,7 +875,10 @@ graph <- ggplot(table, aes(fill = `Selon vous, comment Vikidia est-elle perçue 
         plot.subtitle = element_text(face = "italic", size = 15),
         plot.title = element_text(face = "bold", size = 21),
         axis.title.x = element_text(margin = margin(t = 10, r = 0, b = 0, l = 0)),
-        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0))) +
+        axis.title.y = element_text(margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white")) +
   guides(fill = guide_legend(reverse = T, title = "Perception estimée"),
          color = 'none')
 graph
@@ -984,7 +999,10 @@ graph <- ggplot(table, aes(ymax = ymax, ymin = ymin, xmax = 2.8, xmin = 1.5, fil
   theme(legend.position = "right",
         text = element_text(family = "Monsterrat", size = 12),
         plot.subtitle = element_text(face = "italic", size = 15),
-        plot.title = element_text(face = "bold", size = 21)) +
+        plot.title = element_text(face = "bold", size = 21),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white")) +
   guides(fill = guide_legend(title = "Type de ressource"))
 graph
 saving_plot_custom(graph, "17_barplot_alternatives", 11, 5)
@@ -1008,10 +1026,13 @@ graph <- ggplot(table, aes(label = `Petites catégories`, size = n, colour = `Gr
   scale_size_area(max_size = 40) +
   labs(subtitle = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?") +
   theme_minimal() +
-  theme(plot.subtitle = element_text(face = "italic", size = 15))
+  theme(plot.subtitle = element_text(face = "italic", size = 15),
+        plot.background = element_rect(fill = "white", colour="white"),
+        panel.background = element_rect(fill = "white", colour = "white"),
+        legend.background = element_rect(fill = "white", colour = "white"))
 graph
-saving_plot_custom(graph, "17_wordcloud_alternatives", 10, 9)
-
+ggsave(file = glue("dataviz/SVG/17_wordcloud_alternatives.svg"), plot=graph, width=12, height=9)
+ggsave(file = glue("dataviz/PNG/test.png"), plot=graph, width=10, height=9)
 
 
 
