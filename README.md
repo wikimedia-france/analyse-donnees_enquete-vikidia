@@ -17,7 +17,7 @@
 
 **Lister une vingtaine de datavisualisations** envisagées pour analyser les données de l’enquête. Deux types de graphiques sont proposés : _simples_ et _croisés_.
 
-→ ***livrable***
+→ [***livrable***](https://docs.google.com/presentation/d/1g-xIZvVokn7xo5BQ7Ry43Ml_4f0y8ZruU23cwGKnCBM/edit#slide=id.g50a179ce52_0_0)
 
 <br>
 
@@ -25,7 +25,7 @@
 
 **Analyser concrètement les données du questionnaire**, sous R, en deux étapes : _nettoyage des données_ et _réalisation des datavisualisations_.
 
-→ ***livrable***
+→ [***livrable***](https://docs.google.com/presentation/d/18Pm9f9YbwZRwGoEYBiy6NpyoQMZS4gauOP2amv7DNwg/edit#slide=id.g50a179ce52_0_0)
 
 <br>
 
@@ -33,4 +33,4 @@
 
 **Interpréter les graphiques produits** en phase n°2.
 
-→ ***livrable***
+→ [***livrable***](https://datactivist.coop/analyse-donnees_enquete-vikidia/reports/rapport_final.html)
