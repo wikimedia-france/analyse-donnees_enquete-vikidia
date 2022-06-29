@@ -3,7 +3,7 @@ title: "Rapport d'analyse"
 subtitle: "Résultats d’une enquête menée auprès de la communauté vikidienne"
 date: "*29 juin 2022*"
 output: 
-    word_document:
+    #word_document:
     html_document:
         #self_contained: false
         theme: paper
@@ -53,7 +53,7 @@ Avec plus de 30.000 articles et 60.000 utilisateurs, Vikidia est une ressource e
 
 Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association française Wikimédia a été chargée d'organiser une enquête auprès de la communauté vikidienne, que la société coopérative Datactivist analyse dans ce document.
 
-De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.).
+De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.). Le questionnaire en question a été diffusé au travers de posts sur les canaux Discord et les Bavardages, sur Twitter ainsi que via la newsletter hebdomadaire envoyée aux adhérents de la communauté. 
 
 ------------------------------------------------------------------------
 
