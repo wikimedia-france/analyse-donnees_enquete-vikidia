@@ -3,6 +3,7 @@ title: "Rapport d'analyse"
 subtitle: "Résultats d’une enquête menée auprès de la communauté vikidienne"
 date: "*29 juin 2022*"
 output: 
+    word_document:
     html_document:
         #self_contained: false
         theme: paper
