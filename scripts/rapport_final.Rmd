@@ -1,7 +1,7 @@
 ---
 title: "Rapport d'analyse"
 subtitle: "Résultats d’une enquête menée auprès de la communauté vikidienne"
-date: "*28 juin 2022*"
+date: "*29 juin 2022*"
 output: 
     html_document:
         #self_contained: false
@@ -50,7 +50,7 @@ knitr::opts_chunk$set(
 
 Avec plus de 30.000 articles et 60.000 utilisateurs, Vikidia est une ressource en ligne incontournable pour les 8-13 ans. Cette encyclopédie collaborative a connu une croissance importante depuis sa création en 2006.
 
-Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association française Wikimédia a été chargée d'organiser une enquête auprès de la communauté vikidienne.
+Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association française Wikimédia a été chargée d'organiser une enquête auprès de la communauté vikidienne, que la société coopérative Datactivist analyse dans ce document.
 
 De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.).
 
@@ -62,16 +62,16 @@ De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme
 
 <br>
 
-Dans le but d'analyser les résultats de l'enquête, un **nettoyage des données** est nécessaire. Ainsi, les réponses au séquentiel 474 et 475 sont retirées car elles font ***doublons*** avec la réponse 473. De même, certaines réponses ***incohérentes ou peu fiables*** au vu des champs libres complétés, sont supprimées. Cela concerne les réponses 43, 75, 317, 465, 479, 484, 498, 499, 524, 537, 594, 598, 613, 614, 621, 630, 676, 677, 717, 722, 780 et 793. Les données analysées comportent donc les réponses de 774 répondants.
+Dans le but d'analyser les résultats de l'enquête, un **nettoyage des données** a été nécessaire. Ainsi, les réponses au séquentiel 474 et 475 sont retirées car elles font ***doublons*** avec la réponse 473. De même, certaines réponses ***incohérentes ou peu fiables*** au vu des champs libres complétés, sont supprimées. Cela concerne les réponses 43, 75, 317, 465, 479, 484, 498, 499, 524, 537, 594, 598, 613, 614, 621, 630, 676, 677, 717, 722, 780 et 793. Les données analysées comportent donc les réponses de 774 répondants.
 
 Dans un deuxième temps, certaines réponses aux questions suivantes sont traitées :
 
--   **question *"En quelle année avez-vous rejoint la communauté Vikidienne ?"*** : extraction de l'année lorsqu'elle est citée à l'aide d'une fonction, puis traitement à la main des autres types de réponses (exemple : "*il y a 4 ans*") ;
+-   **question *"En quelle année avez-vous rejoint la communauté Vikidienne ?"*** : extraction de l'année lorsqu'elle est citée à l'aide d'une fonction (exemple : "*en 2017*"), puis traitement à la main des autres types de réponses (exemple : "*il y a 4 ans*") ;
 -   **question *"Qu'est ce qui vous a motivé à contribuer pour la première fois ?"*** : regroupement, lemmatisation et harmonisation des réponses à la main ;
 -   **question *"Lorsque vous ne trouvez pas des informations sur Vikidia, où allez-vous en priorité ?"*** : standardisation des réponses (sans accent et en minuscules), extraction des mots-clés / des réponses les plus courantes, puis traitement manuel de ces réponses pour les lemmatiser ;
 -   **questions *"Vous êtes ..."* et *"Veuillez préciser votre niveau d'étude"*** : agrégation des deux champs ; le détail du niveau d'étude est collé à l'activité du répondant (exemple : '*Étudiant/élève*' et '*École primaire (du CP au CM2)*', devient "*Élève en école primaire*").
 
-Enfin, une variable additionnelle est créée dans le but de distinguer les lecteurs des contributeurs, elle est basée sur les réponses à la question "*Quel est votre degré de contribution ?*".
+Enfin, une **variable additionnelle** est créée dans le but de distinguer les lecteurs des contributeurs, elle est basée sur les réponses à la question "*Quel est votre degré de contribution ?*".
 
 <br>
 
@@ -82,7 +82,7 @@ Les parties suivantes présentent l'analyse des réponses à l'enquête, sous 4 
 -   cerner les usages ;
 -   analyser les besoins des utilisateurs.
 
-Le questionnaire est analysé de manière visuelle ; chaque datavisualistion permet de représenter les réponses à une ou plusieurs questions. Pour chaque datavisualisation, une mise en contexte est effectuée avant d'en interpréter les résultats.
+Les réponses au questionnaire sont analysées de manière visuelle ; chaque datavisualistion permet de représenter les réponses à une ou plusieurs questions. Pour chaque datavisualisation, une mise en contexte est effectuée avant d'en interpréter les résultats.
 
 <br>
 
@@ -131,9 +131,7 @@ La visualisation ci-dessus montre la répartition des répondants selon leur gen
 
 ![](../dataviz/PNG/2_pyramid_age.png)
 
-La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre, les pourcentages étant présentés par genre. Chez les filles, la catégorie regroupant le plus de répondants est celle des 14 et 18 ans, qui représente 37% des répondants de genre féminin. Elle est suivie par la tranche des 8 à 13 ans où l'on retrouve 111 filles, soit 29% des répondants féminins. Chez les garçons, ce sont aussi les tranches d'âge entre 8 et 18 ans qui dominent, avec plus de la moitié des répondants masculins (29 et 23%). 
-
-
+La visualisation ci-dessus montre la répartition des répondants selon leur âge et leur genre, les pourcentages étant présentés par genre. Chez les filles, la catégorie regroupant le plus de répondants est celle des 14 et 18 ans, qui représente 37% des répondants de genre féminin. Elle est suivie par la tranche des 8 à 13 ans où l'on retrouve 111 filles, soit 29% des répondants féminins. Chez les garçons, ce sont aussi les tranches d'âge entre 8 et 18 ans qui dominent, avec plus de la moitié des répondants masculins (29 et 23%).
 
 ------------------------------------------------------------------------
 
@@ -150,14 +148,13 @@ La visualisation ci-dessus montre la répartition des répondants selon leur âg
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
     -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
-    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d'emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d'étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
 
 <br>
 
 ![](../dataviz/PNG/3_pyramid_activite.png)
 
-La visualisation ci-dessus montre la répartition des répondants par activité. Pour cela, les questions de l'activité et du niveau d'étude ont été rassemblées. Le niveau d'étude dominant chez les filles est le collège, avec 36% de cette sous-population, suivie par le lycée qui englobe 26% des répondants féminins - ce qui correspond aux constats émis à partir de la visualisation précédente. La répartition des garçons est moins centrée sur le collège et lycée, puisque ces niveaux d'étude regroupent 48% des répondants masculins (contre 62% des répondants féminins). La catégorie "en activité", troisième catégorie où l'on trouve le plus de répondant en proportion, confirme cette hypothèse puisque l'on voit qu'elle regroupe 22% des répondants **masculins** (22%) contre 18% des répondants **féminins** (puisque celles-ci sont en majorité au collège ou lycée).
-
+La visualisation ci-dessus montre la répartition des répondants par activité. Pour cela, les questions de l'activité et du niveau d'étude ont été rassemblées. Le niveau d'étude dominant chez les filles est le collège, avec 36% de cette sous-population, suivie par le lycée qui englobe 26% des répondants féminins - ce qui correspond aux constats émis à partir de la visualisation précédente. La répartition des garçons est moins centrée sur le collège et lycée, puisque ces niveaux d'étude regroupent 48% des répondants masculins (contre 62% des répondants féminins). La catégorie "*en activité*", troisième catégorie où l'on trouve le plus de répondants en proportion, confirme cette hypothèse puisque l'on voit qu'elle regroupe 22% des répondants **masculins** (22%) contre 18% des répondants **féminins** (puisque celles-ci sont en majorité au collège ou lycée).
 
 ------------------------------------------------------------------------
 
@@ -179,9 +176,7 @@ La visualisation ci-dessus montre la répartition des répondants par activité.
 
 ![](../dataviz/PNG/4_barplot_contextes.png)
 
-La visualisation ci-dessus montre dans quels contextes principaux les répondants utilisent l'encyclopédie. On voit que 32% des répondants l'utilisent dans un cadre de travail scolaire à la maison. 24% l'utilisent pour leur culture générale et 18% pour le loisir. Ainsi, 42% (18 + 24%) des répondants ont un usage de Vikidia "*volontaire*", pour apprendre et découvrir des choses, sans chercher une réponse en particulier. 
-
-
+La visualisation ci-dessus montre dans quels contextes principaux les répondants utilisent l'encyclopédie. On voit que 32% des répondants l'utilisent dans un cadre de **travail scolaire à la maison**. 24% l'utilisent pour leur culture générale et 18% pour le loisir. Ainsi, 42% (18 + 24%) des répondants ont un usage de Vikidia "*volontaire*", pour apprendre et découvrir des choses, sans chercher une réponse en particulier.
 
 ------------------------------------------------------------------------
 
@@ -197,23 +192,21 @@ La visualisation ci-dessus montre dans quels contextes principaux les répondant
 
 -   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+    -   "*Quel est votre degré de contribution ?*" : 'C'est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n'ai jamais contribué', 'J'ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
 
 <br>
 
 ![](../dataviz/PNG/5_dendrogram.png)
 
-La visualisation ci-dessus montre le degré de contribution des répondants de l'enquête. À partir de la question "*Quel est votre degré de contribution ?*", a été créée une nouvelle variable indiquant si le répondant contribue à l'encyclopédie, ou s'il est simple lecteur. Les catégories '*C’est la première fois que je consulte Vikidia*' et '*Je consulte Vikidia mais je n’ai jamais contribué*' qui regroupent près de 80% des répondants, permettent d'identifier les **lecteurs.** Il est intéressant de noter que 20% des répondants consultent Vikidia pour la première fois, donc ont peu d'expérience vis-à-vis des sujets à évaluer au cours du questionnaire. 
+La visualisation ci-dessus montre le degré de contribution des répondants de l'enquête. À partir de la question "*Quel est votre degré de contribution ?*", a été créée une nouvelle variable indiquant si le répondant contribue à l'encyclopédie, ou s'il est simple lecteur. Les catégories '*C'est la première fois que je consulte Vikidia*' et '*Je consulte Vikidia mais je n'ai jamais contribué*' qui regroupent près de 80% des répondants, permettent d'identifier les **lecteurs.** Il est intéressant de noter que 20% des répondants consultent Vikidia pour la première fois, donc ont peu d'expérience vis-à-vis des sujets à évaluer au cours du questionnaire.
 
 Les 4 catégories restantes identifient les **contributeurs**, avec différents niveaux de contribution. Parmi les 163 contributeurs (21% des répondants), 72 ont contribué une ou deux fois, 21 contribuent une fois par mois ou moins, 32 contribuent plusieurs fois par mois et 38 contribuent une fois par semaine ou plus.
-
 
 <br>
 
 ------------------------------------------------------------------------
 
 # III - Dresser le profil du contributeur moyen
-
 
 <br>
 
@@ -256,9 +249,7 @@ La visualisation ci-dessus montre la répartition des contributeurs selon leur g
 
 ![](../dataviz/PNG/7_pyramid_age_contrib.png)
 
-La visualisation ci-dessus montre la répartition des contributeurs selon leur âge et leur genre. La tranche d'âge regroupant le plus de contributeurs est celle des 8-13 ans qui regroupe 35% des garçons et 45% des filles, suivie par la tranche des 14-18 ans avec respectivement 26 et 30%. Tandis que les 14-18 ans dominaient la population de tous les répondants, les contributeurs sont principalement agés de 8 à 13 ans.
-
-
+La visualisation ci-dessus montre la répartition des contributeurs selon leur âge et leur genre. La tranche d'âge regroupant le plus de contributeurs est celle des 8-13 ans qui regroupe 35% des garçons et 45% des filles, suivie par la tranche des 14-18 ans avec respectivement 26 et 30%. Tandis que les **14-18 ans** dominaient la population de tous les répondants, les contributeurs sont principalement âgés de **8 à 13 ans**.
 
 ------------------------------------------------------------------------
 
@@ -275,14 +266,13 @@ La visualisation ci-dessus montre la répartition des contributeurs selon leur �
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
     -   "*Êtes vous ...*" : 'Un homme', 'Une femme', 'Autre', 'Je préfère ne pas le dire'
-    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d'emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d'étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
 
 <br>
 
 ![](../dataviz/PNG/8_pyramid_activite_contrib.png)
 
-La visualisation ci-dessus montre la répartition des contributeurs selon leur activité et leur genre. Le constat est le même que celui de la datavisualisation précédente ; la majorité des contributeurs sont au collège, avec 36% des garçons et 47% des filles. Chez les garçons la catégorie qui suit est celle des répondants **en activité** qui regroupe 19% des garçons, tandis que chez les filles la catégorie suivante est celle du lycée, avec 18% des filles.¨
-
+La visualisation ci-dessus montre la répartition des contributeurs selon leur activité et leur genre. Le constat est le même que celui de la datavisualisation précédente ; la majorité des contributeurs sont au collège, avec 36% des garçons et 47% des filles. Chez les garçons, la catégorie qui suit est celle des répondants **en activité** qui regroupe 19% de ces derniers, tandis que chez les filles la catégorie suivante est celle du lycée, avec 18% de ces dernières.
 
 ------------------------------------------------------------------------
 
@@ -304,11 +294,11 @@ La visualisation ci-dessus montre la répartition des contributeurs selon leur a
 
 ![](../dataviz/PNG/9_barplot_contextes_contrib.png)
 
-La visualisation ci-dessus montre dans quels contextes principaux les contributeurs utilisent l'encyclopédie. Il est intéressant de noter que l'utilisation principale de l'outil pour les contributeurs est "le simple loisir" avec 29% des réponses, tandis que pour l'ensemble des répondants c'était "le cadre scolaire à la maison" qui primait avec 32% des réponses. Les contributeurs semblent ainsi contribuer pour le loisir, pour le plaisir.
+La visualisation ci-dessus montre dans quels contextes principaux les contributeurs utilisent l'encyclopédie. Il est intéressant de noter que l'utilisation principale de l'outil pour les contributeurs est "*le simple loisir*" avec 29% des réponses, tandis que pour l'ensemble des répondants c'était "*le cadre scolaire à la maison*" qui primait avec 32% des réponses. Les contributeurs semblent ainsi contribuer pour le loisir, pour le plaisir.
 
 <br>
-------------------------------------------------------------------------
 
+------------------------------------------------------------------------
 
 ## Motivations initiales à la contribution
 
@@ -326,9 +316,7 @@ La visualisation ci-dessus montre dans quels contextes principaux les contribute
 
 ![](../dataviz/PNG/11_wordcloud.png)
 
-La visualisation ci-dessus montre ce qui a motivé les répondants à contribuer pour la première fois à Vikidia. On voit de belles motivations telles que la transmission, l'aide, la création, mais aussi de la correction, de l'amélioration ou du challenge. D'autres répondants contribuent pour la communauté qui existe au sein de l'encyclopédie, ou encore pour sa fiabilité et donc l'envie de l'enrichir davantage. 
-
-
+La visualisation ci-dessus montre ce qui a motivé les répondants à contribuer pour la première fois à Vikidia. On voit de **belles motivations** telles que la transmission, l'aide, la création, mais aussi de la correction, de l'amélioration ou du challenge. D'autres répondants contribuent pour la communauté qui existe au sein de l'encyclopédie, ou encore pour sa fiabilité et donc l'envie de l'enrichir davantage.
 
 ------------------------------------------------------------------------
 
@@ -344,15 +332,13 @@ La visualisation ci-dessus montre ce qui a motivé les répondants à contribuer
 
 -   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Pourquoi continuez-vous à contribuer ?*" : 'Je me plais au sein de la communauté', 'J’ai des responsabilités', 'Les domaines abordés m’intéressent', 'J’aime contribuer au projet Vikidia', 'Autre'
+    -   "*Pourquoi continuez-vous à contribuer ?*" : 'Je me plais au sein de la communauté', 'J'ai des responsabilités', 'Les domaines abordés m'intéressent', 'J'aime contribuer au projet Vikidia', 'Autre'
 
 <br>
 
 ![](../dataviz/PNG/12_bar_motiv-contrib.png)
 
-La visualisation ci-dessus montre ce qui motive les répondants à continuer de contribuer à l'encyclopédie. La principale motivation est celle du contribuer au projet Vikidia avec 35% des réponses des contributeurs, suivie par l'intérêt pour les domaines abordés, à 27%. Les raisons qui poussent les répondants à continuer de contribuer sont ainsi dans la lignée des motivations initiales à la contribution ("communauté", "intérêt", "créer" etc.).
-
-
+La visualisation ci-dessus montre ce qui motive les répondants à continuer de contribuer à l'encyclopédie. La principale motivation est celle de contribuer au **projet Vikidia** avec 35% des réponses des contributeurs, suivie par l'intérêt pour les domaines abordés, à 27%. Les raisons qui poussent les répondants à continuer de contribuer sont ainsi dans la lignée des motivations initiales à la contribution ("communauté", "intérêt", "créer" etc.).
 
 ------------------------------------------------------------------------
 
@@ -368,16 +354,14 @@ La visualisation ci-dessus montre ce qui motive les répondants à continuer de 
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Quels types de contributions faites-vous ?*" : 'De la patrouille', 'Ajouts sur la partie plus technique', 'Corrections orthographiques ou typographiques', 'Travail de catégorisation et d’ajouts de portail', 'Création amélioration d’articles', 'Aide aux nouveaux utilisateurs', 'Autre'
-    -   "*Avez-vous des outils (responsabilités) ?*" : 'Patrouilleur', 'Administrateur', 'Bureaucrate', 'Vérificateur d’IP', 'Nuker', 'Plus maintenant'
+    -   "*Quels types de contributions faites-vous ?*" : 'De la patrouille', 'Ajouts sur la partie plus technique', 'Corrections orthographiques ou typographiques', 'Travail de catégorisation et d'ajouts de portail', 'Création amélioration d'articles', 'Aide aux nouveaux utilisateurs', 'Autre'
+    -   "*Avez-vous des outils (responsabilités) ?*" : 'Patrouilleur', 'Administrateur', 'Bureaucrate', 'Vérificateur d'IP', 'Nuker', 'Plus maintenant'
 
 <br>
 
 ![](../dataviz/PNG/13_grouped_contrib-wrap.png)
 
-La visualisation ci-dessus montre le type de contributions apportées selon les outils utilisés / les reponsabilités. On observe d'emblée que les principales responsabilités sont : '*administrateur*', '*patrouilleur*' et '*anciens responsables*'. On observe aussi une certaine homogénéité de type de contributions chez les bureaucrates, les nukers, les vérificateurs d'IP et les administrateurs, où la répartition des contributeurs varie  entre 13-14 et 20% pour chaque type de contribution. A contrario, on observe une plus grande hétérogénéité chez les patrouilleurs et les anciens responsables. La principale contribution des patrouilleurs à l'encyclopédie est la patrouille (22% des patrouilleurs), suivie par la création ou l'amélioration d'articles (20%), et la correction orthographique ou typographique (19%). Les anciens responsables contribuaient à l'encyclopédie principalement par la création ou l'amélioration d'articles (52%).
-
-
+La visualisation ci-dessus montre le type de contributions apportées selon les outils utilisés / les reponsabilités. On observe d'emblée que les principales responsabilités sont : '*administrateur*', '*patrouilleur*' et '*anciens responsables*'. On observe aussi une certaine **homogénéité de type de contributions** chez les bureaucrates, les nukers, les vérificateurs d'IP et les administrateurs, où la répartition des contributeurs varie entre 13 et 20% pour chaque type de contribution. A contrario, on observe une **plus grande hétérogénéité** chez les patrouilleurs et les anciens responsables. La principale contribution des patrouilleurs à l'encyclopédie est la patrouille (22% des patrouilleurs), suivie par la création ou l'amélioration d'articles (20%), et la correction orthographique ou typographique (19%). Les anciens responsables contribuaient à l'encyclopédie principalement par la création ou l'amélioration d'articles (52%).
 
 ------------------------------------------------------------------------
 
@@ -393,16 +377,14 @@ La visualisation ci-dessus montre le type de contributions apportées selon les 
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*En quelle année avez-vous rejoint la communauté ?*" 
-    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève'
+    -   "*En quelle année avez-vous rejoint la communauté ?*"
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d'emploi', 'Retraité', 'Étudiant, élève'
 
 <br>
 
 ![](../dataviz/PNG/10_timeline1.png)
 
-La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le profil du répondant. On voit que c'est principalement à partir de 2017 que la communauté s'est agrandie d'étudiants et d'élèves, avec 28  nouveaux contributeurs pour les années 2020 et 2021. En 2020, la communauté a accueillie 8 nouveaux contributeurs en activité. 
-
-
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le profil du répondant. On voit que c'est principalement à partir de **2017** que la communauté s'est agrandie d'étudiants et d'élèves, avec 28 nouveaux contributeurs pour les années 2020 et 2021. En 2020, la communauté a accueillie 8 nouveaux contributeurs en activité.
 
 ------------------------------------------------------------------------
 
@@ -418,16 +400,14 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*En quelle année avez-vous rejoint la communauté ?*" 
-    -   "*Veuillez préciser le niveau d’étude :*" : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures'
+    -   "*En quelle année avez-vous rejoint la communauté ?*"
+    -   "*Veuillez préciser le niveau d'étude :*" : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures'
 
 <br>
 
 ![](../dataviz/PNG/10_timeline2.png)
 
-La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, zoomé sur les contributeurs scolaires uniquement, ce qui permet de décomposer la masse des étudiants / élèves visible sur le graphique précédent. On observe ainsi que les nouveaux arrivants à partir de 2017 étaient pour la plupart au collège ou lycée.
-
-
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, zoomé sur les contributeurs scolaires uniquement, ce qui permet de décomposer la masse des étudiants / élèves visible sur le graphique précédent. On observe ainsi que les nouveaux arrivants à partir de 2017 étaient pour la plupart au **collège**.
 
 ------------------------------------------------------------------------
 
@@ -443,15 +423,14 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*En quelle année avez-vous rejoint la communauté ?*" 
-    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+    -   "*En quelle année avez-vous rejoint la communauté ?*"
+    -   "*Quel est votre degré de contribution ?*" : 'C'est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n'ai jamais contribué', 'J'ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
 
 <br>
 
 ![](../dataviz/PNG/10_timeline3.png)
 
-La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le degré de contribution. On observe ici encore de nombreux contributeurs ayant rejoint la communauté à partir de 2017. 
-
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le degré de contribution. On observe ici encore de nombreux contributeurs ayant rejoint la communauté à partir de 2017, contribuant une ou deux fois.
 
 <br>
 
@@ -459,9 +438,7 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 # IV - Cerner les usages
 
-
 <br>
-
 
 ## Canaux par lesquels les répondants ont connu Vikidia
 
@@ -479,9 +456,7 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 ![](../dataviz/PNG/14_bar_connu-outil.png)
 
-La visualisation ci-dessus montre par quel canal les répondants ont connu Vikidia. On voit ainsi que près de la moitié des répondants ont entendu parlé de l'outil sur internet, par hasard, 22% en ont entendu parlé grâce à leur milieu scolaire (ce qui rejoint les usages où l'on voyait que 32% des répondants utilisent l'encyclopédie dans un cadre scolaire, à la maison). On observe aussi que près de 2 personnes sur 10 ont entendu parlé de Vikidia par Wikipédia. Enfin, bien qu'il y ait au total 18% de répondants en activité, seuls 3% des répondants ont connu l'outil par le milieu professionnel.
-
-
+La visualisation ci-dessus montre par quel canal les répondants ont connu Vikidia. On voit ainsi que près de la moitié des répondants ont entendu parler de l'outil **sur internet / par hasard**, 22% en ont entendu parlé grâce à leur milieu scolaire (ce qui rejoint les usages où l'on voyait que 32% des répondants utilisent l'encyclopédie dans un cadre scolaire, à la maison). On observe aussi que près de 2 personnes sur 10 ont entendu parlé de Vikidia par Wikipédia. Enfin, bien qu'il y ait au total 18% de répondants en activité, seuls 3% des répondants ont connu l'outil par le milieu professionnel.
 
 ------------------------------------------------------------------------
 
@@ -498,15 +473,13 @@ La visualisation ci-dessus montre par quel canal les répondants ont connu Vikid
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
     -   "*Quel est le niveau de popularité de Vikidia dans le grand public selon vous ?*" : 'Personne ne connaît Vikidia en dehors de la communauté', 'Vikidia est peu connue, et le grand public en est méfiant', 'Vikidia devrait gagner à être mieux connue', 'Vikidia est de plus en plus connue et elle gagne en confiance', 'Tout le monde connaît Vikidia !', 'Autre'
-    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d'emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d'étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
 
 <br>
 
 ![](../dataviz/PNG/15_waffle.png)
 
-La visualisation ci-dessus montre le niveau de popularité de Vikidia estimé par le répondant, selon son activité. On observe d'emblée que les répondants pensent que pour le grand public, Vikidia devrait gagner en popularité. Ce sont les répondants de l'enseignement primaire, qui estiment le plus que pour le grand public Vikidia est de plus en plus connue et gagne en confiance (à 35%), contre 25% des répondants en enseignement secondaire, ou encore 15% des personnes en recherche d'emploi. Seuls de 2 à 5% des répondants par activité pensent que pour le grand public l'encyclopédie est connue par tous. En revanche, entre 8 et 30% des répondants par activité pensent que pour la grand public, l'encyclopédie est eu connue et avec une certaine méfiance, avec 8% des répondants en enseignement primaire, et 30% des retraités. 
-
-
+La visualisation ci-dessus montre le niveau de popularité de Vikidia estimé par le répondant, selon son activité. On observe d'emblée que les répondants pensent que pour le grand public, Vikidia devrait **gagner en popularité**. Ce sont les répondants de l'enseignement primaire qui estiment le plus que pour le grand public, Vikidia est de plus en plus connue et gagne en confiance (à 35%), contre 25% des répondants en enseignement secondaire, ou encore 15% des personnes en recherche d'emploi. Seuls de 2 à 5% des répondants par activité pensent que pour le grand public l'encyclopédie est connue par tous. En revanche, entre 8 et 30% des répondants par activité pensent que pour le grand public, l'encyclopédie est peu connue et avec une certaine méfiance, avec 8% des répondants en enseignement primaire, et 30% des retraités.
 
 ------------------------------------------------------------------------
 
@@ -522,16 +495,14 @@ La visualisation ci-dessus montre le niveau de popularité de Vikidia estimé pa
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Pourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?*" : 'Les articles y sont plus faciles à comprendre', 'Vikidia est plus adaptée à mon niveau/âge', 'Je préfère l’ambiance au sein de la communauté vikidienne', 'La communauté vikidienne est de plus petite taille', 'Je préfère Wikipédia', 'Autre'
-    -   "*"*Quel âge avez-vous ?*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
+    -   "*Pourquoi consultez vous plutôt les articles sur Vikidia plutôt que Wikipédia ?*" : 'Les articles y sont plus faciles à comprendre', 'Vikidia est plus adaptée à mon niveau/âge', 'Je préfère l'ambiance au sein de la communauté vikidienne', 'La communauté vikidienne est de plus petite taille', 'Je préfère Wikipédia', 'Autre'
+    -   "*"*Quel âge avez-vous ?\*" : 'Moins de 8 ans', 'Entre 8 et 13 ans', 'Entre 14 et 18 ans', 'Entre 19 et 25 ans', 'Entre 26 et 35 ans', 'Entre 36 et 50 ans', 'Entre 51 et 60 ans', 'Plus de 60 ans', 'Je préfère ne pas le dire'
 
 <br>
 
-![](../dataviz/PNG/16_ballonplot1.png) 
+![](../dataviz/PNG/16_ballonplot1.png)
 
-La visualisation ci-dessus montre les raisons à l'utilisation de Vikidia plutôt que Wikipédia, en fonction de l'âge du répondant (les tranches d'âges ont été regroupées pour certaines). Il apparaît d'emblée que la simplicité des articles et le fait que l'outil soit adapté à l'âge, sont les principales raisons de l'utilisation de Vikidia. 48% des répondants âgés de 14 à 18 ans utilisent Vikidia pour la simplicité des articles. Cette part est de 46% chez les 19-35 ans, 53% chez les 36-60 ans et 32% chez les plus de 60 ans. La part des répondants utilisant Vikida pour l'ambiance favorable qu'ils y trouvent oscille entre 6 et 9% pour chaque tranche d'âge. L'étendue est plus importante pour la part des répondants ayant une préférence pour Wikipédia : cela concerne 9% des moins de 14 ans, 14 à 15% des 14-18 ans ou 36-60 ans, et 19 à 21% des plus de 60 ans et des 19-35 ans. 
-
-
+La visualisation ci-dessus montre les raisons à l'utilisation de Vikidia plutôt que Wikipédia, en fonction de l'âge du répondant (certaines tranches d'âges ont été regroupées, par souci de lisibilité). Il apparaît d'emblée que la **simplicité des articles** et le fait que **l'outil soit adapté à l'âge**, sont les principales raisons de l'utilisation de Vikidia. 48% des répondants âgés de 14 à 18 ans utilisent Vikidia pour la simplicité des articles. Cette part est de 46% chez les 19-35 ans, 53% chez les 36-60 ans et 32% chez les plus de 60 ans. La part des répondants utilisant Vikida pour l'ambiance favorable qu'ils y trouvent oscille entre 6 et 9% pour chaque tranche d'âge. L'étendue est plus importante pour la part des répondants ayant une préférence pour Wikipédia : cela concerne 9% des moins de 14 ans, 14 à 15% des 14-18 ans ou 36-60 ans, et 19 à 21% des plus de 60 ans et des 19-35 ans.
 
 ------------------------------------------------------------------------
 
@@ -554,10 +525,7 @@ La visualisation ci-dessus montre les raisons à l'utilisation de Vikidia plutô
 
 ![](../dataviz/PNG/16_ballonplot2.png)
 
-La visualisation ci-dessus décompose par âge et par genre les répondants utilisant Vikidia pour l'ambiance favorable ou la taille de la communauté. Cette datavisualisation distinguée par genre permet de constater que les filles utilisent davantage l'outil pour l'ambiance favorable qu'elles y trouvent, tandis que cette part est plus faible chez les garçons où le nombre de réponses "*pour la communauté plus petite*" est en proportion plus élevé. Cet écart est particulièrement visible chez les moins de 14 ans où 87% des filles utilisent Vikidia pour l'ambiance favorable (donc 13% l'utilisent pour la taille de la communauté), tandis que ce pourcentage est seulement de 75% chez les garçons.
-En revanche, cet écart est très faible pour les répondants âgés de 14 à 18 ans, où 89 et 87% des filles et garçons utilisent Vikidia pour l'ambiance favorable. 
-
-
+La visualisation ci-dessus décompose par âge et par genre les répondants utilisant Vikidia pour l'ambiance favorable ou la taille de la communauté. Cette datavisualisation distinguée par genre, permet de constater que les filles utilisent davantage l'outil pour **l'ambiance favorable qu'elles y trouvent**, tandis que cette part est plus faible chez les garçons, où le nombre de réponses "*pour la communauté plus petite*" est en proportion plus élevé. Cet écart est particulièrement visible chez les moins de 14 ans, où 87% des filles utilisent Vikidia pour l'ambiance favorable (donc 13% l'utilisent pour la taille de la communauté), tandis que ce pourcentage est seulement de 75% chez les garçons. En revanche, cet écart est très faible pour les répondants âgés de 14 à 18 ans, où 89 et 87% des filles et garçons utilisent Vikidia pour l'ambiance favorable.
 
 ------------------------------------------------------------------------
 
@@ -577,11 +545,9 @@ En revanche, cet écart est très faible pour les répondants âgés de 14 à 18
 
 <br>
 
-![](../dataviz/PNG/17_barplot_alternatives.png)
-![](../dataviz/PNG/17_wordcloud_alternatives.png)
+![](../dataviz/PNG/17_barplot_alternatives.png) ![](../dataviz/PNG/17_wordcloud_alternatives.png)
 
-Les visualisations ci-dessus montrent les ressources utilisées comme alternatives à Vikidia. On voit sur la première datavisualisation que ce sont majoritairement des ressources numériques qui sont utilisées (à 96%), seuls 4% des répondants utilisent des ressources physiques telles que livres, dictionnaires ou encyclopédie, ou bien demandent à leurs proches (amis, famille). Au sein des alternatives numériques, on trouve principalement '*Wikipédia*', et de manière plus globale tous les '***wikis***', tels que wikimédia, wikimini et wiktionnaire. 
-
+Les visualisations ci-dessus montrent les ressources utilisées comme alternatives à Vikidia. On voit sur la première datavisualisation que ce sont majoritairement des **ressources numériques** qui sont utilisées (à 96%), seuls 4% des répondants utilisent des ressources physiques telles que livres, dictionnaires ou encyclopédie, ou bien demandent à leurs proches (amis, famille). Au sein des alternatives numériques, on trouve principalement '*Wikipédia*', et de manière plus globale tous les '***wikis***', tels que wikimédia, wikimini et wiktionnaire.
 
 <br>
 
@@ -589,10 +555,7 @@ Les visualisations ci-dessus montrent les ressources utilisées comme alternativ
 
 # V - Analyser les besoins des utilisateurs
 
-
 <br>
-
-
 
 ## Évaluation de l'accessibilité des articles selon l'âge
 
@@ -611,9 +574,7 @@ Les visualisations ci-dessus montrent les ressources utilisées comme alternativ
 
 ![](../dataviz/PNG/18_stacked_accessibilite.png)
 
-La visualisation ci-dessus montre à quel point les répondants trouvent les articles de Vikidia accessibles selon leur âge, les résultats sont présentés en pourcentages. On voit ainsi que la tranche d'âge 36-60 ans est celle qui a la plus grande part de personnes estimant que les articles sont très accessibles, avec 52% des répondants de cette catégorie d'âge. A contrario, ce sont chez les 19-35 ans que cette part est la plus faible (42%). Aussi, pour chaque tranche d'âge, environ 4 répondants sur 10 estiment que les articles sont plutôt accessibles (accessibilité "correcte"). La part des répondants estimant que l'accessibilité des articles est insuffisante est la plus élevée chez les moins de 14 ans, puisqu'elle s'élève à 5%, tandis qu'elle oscille entre 1 et 2% dans les autres tranches d'âge. 
-
-
+La visualisation ci-dessus montre à quel point les répondants trouvent les articles de Vikidia accessibles selon leur âge, les résultats sont présentés en pourcentages. On voit ainsi que la tranche d'âge **36-60 ans** est celle qui a la plus grande part de personnes estimant que **les articles sont très accessibles**, avec 52% des répondants de cette catégorie. A contrario, ce sont chez les 19-35 ans que cette part est la plus faible (42%). Aussi, pour chaque tranche d'âge, environ 4 répondants sur 10 estiment que les articles sont plutôt accessibles (accessibilité "*correcte*"). La part des répondants estimant que l'accessibilité des articles est **insuffisante** est la plus élevée chez les moins de 14 ans, puisqu'elle s'élève à 5%, tandis qu'elle oscille entre 1 et 2% dans les autres tranches d'âge.
 
 ------------------------------------------------------------------------
 
@@ -629,16 +590,14 @@ La visualisation ci-dessus montre à quel point les répondants trouvent les art
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n’y ai jamais participé', 'J’ai déjà écrit un ou deux messages', 'Il m’arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
-    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n'y ai jamais participé', 'J'ai déjà écrit un ou deux messages', 'Il m'arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
+    -   "*Quel est votre degré de contribution ?*" : 'C'est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n'ai jamais contribué', 'J'ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
 
 <br>
 
 ![](../dataviz/PNG/19_pie1.png)
 
-La visualisation ci-dessus montre la participation aux canaux de discussion des lecteurs et des contributeurs. On voit d'emblée que les répondants ne contribuant pas à l'encyclopédie ("lecteurs") n'ont, en grande majorité, pas connaissance de l'existence de ces canaux (73% des lecteurs), ou alors en ont connaissance mais n'y participent pas (23%). Chez les contributeurs en revanche, près de la moitié participent aux canaux (44%), dont 21% sont réellement actifs sur ces derniers.
-
-
+La visualisation ci-dessus montre la participation aux canaux de discussion des lecteurs et des contributeurs. On voit d'emblée que les répondants ne contribuant pas à l'encyclopédie ("***lecteurs***") n'ont, en grande majorité, pas connaissance de l'existence de ces canaux (73% des lecteurs), ou alors en ont connaissance mais n'y participent pas (23%). Chez les contributeurs en revanche, près de la moitié participent aux canaux (44%), dont 21% sont réellement actifs sur ces derniers.
 
 ------------------------------------------------------------------------
 
@@ -654,16 +613,14 @@ La visualisation ci-dessus montre la participation aux canaux de discussion des 
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Que pensez-vous des pages d'aide ?*" : 'Je n’en ai jamais eu besoin', 'Elles sont suffisamment claires', 'Je ne les trouve pas utiles', 'Elles sont trop complexes', 'Il existe des pages d’aide ???', 'Je pense qu’elles pourraient être améliorées'
-    -   "*Quel est votre degré de contribution ?*" : 'C’est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n’ai jamais contribué', 'J’ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
+    -   "*Que pensez-vous des pages d'aide ?*" : 'Je n'en ai jamais eu besoin', 'Elles sont suffisamment claires', 'Je ne les trouve pas utiles', 'Elles sont trop complexes', 'Il existe des pages d'aide ???', 'Je pense qu'elles pourraient être améliorées'
+    -   "*Quel est votre degré de contribution ?*" : 'C'est la première fois que je consulte Vikidia', 'Je consulte Vikidia mais je n'ai jamais contribué', 'J'ai déjà contribué une fois ou deux', 'Je contribue de temps en temps (environ une fois par mois, ou moins)', 'Je contribue régulièrement (plusieurs fois par mois)', 'Je contribue très souvent (une fois par semaine ou plus)'
 
 <br>
 
 ![](../dataviz/PNG/19_pie2.png)
 
-La visualisation ci-dessus montre l'avis sur les pages d'aide des lecteurs et des contributeurs.Ici encore, on constate que près de 6 lecteurs sur 10 n'ont pas connaissance des pages d'aide, tandis que seuls 28% des contributeurs sont dans ce même cas. Cela peut être expliqué par le fait que 20% des répondants de l'enquête consultaient Vikidia pour la première fois (voir la datavisualisation sur le degré de contribution des répondants). On note aussi que 33% des lecteurs et 31% des contributeurs ont connaissance des pages d'aide mais n'en ont pas besoin. Aussi, un quart des contributeurs trouvent les pages d'aide claire, et 17% pensent qu'elles pourraient être améliorées. 
-
-
+La visualisation ci-dessus montre l'avis sur les pages d'aide des lecteurs et des contributeurs. Ici encore, on constate que près de **6 lecteurs sur 10 n'ont pas connaissance des pages d'aide**, tandis que seuls **28% des contributeurs** sont dans ce même cas. Cela peut être expliqué par le fait que 20% des répondants de l'enquête consultaient Vikidia pour la première fois (voir la datavisualisation sur le degré de contribution des répondants). On note aussi que 33% des lecteurs et 31% des contributeurs ont connaissance des pages d'aide mais n'en ont pas besoin. Aussi, un quart des contributeurs trouvent les pages d'aide claires, et 17% pensent qu'elles pourraient être améliorées.
 
 ------------------------------------------------------------------------
 
@@ -679,15 +636,14 @@ La visualisation ci-dessus montre l'avis sur les pages d'aide des lecteurs et de
 
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
-    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n’y ai jamais participé', 'J’ai déjà écrit un ou deux messages', 'Il m’arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
-    -   "*Que pensez-vous des pages d'aide ?*" : 'Je n’en ai jamais eu besoin', 'Elles sont suffisamment claires', 'Je ne les trouve pas utiles', 'Elles sont trop complexes', 'Il existe des pages d’aide ???', 'Je pense qu’elles pourraient être améliorées'
+    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n'y ai jamais participé', 'J'ai déjà écrit un ou deux messages', 'Il m'arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
+    -   "*Que pensez-vous des pages d'aide ?*" : 'Je n'en ai jamais eu besoin', 'Elles sont suffisamment claires', 'Je ne les trouve pas utiles', 'Elles sont trop complexes', 'Il existe des pages d'aide ???', 'Je pense qu'elles pourraient être améliorées'
 
 <br>
 
 ![](../dataviz/PNG/20_ballonplot.png)
 
-La visualisation ci-dessus croise la participation aux canaux de discussion, à l'avis sur les pages d'aide, des répondants lecteurs et contributeurs. On observe d'emblée que les lecteurs qui n'ont pas connaissance des canaux de discussion n'ont pas non plus connaissance des pages d'aide à 66% ou n'en ont pas besoin à 30%. Pour les lecteurs qui ont connaissances des canaux sans y participer, 43% n'ont pas besoin des pages d'aide, 39% n'en a pas connaissance et seulement 15% en ont connaissance et les trouvent claires. De l'autre côté, 40% des contributeurs actifs sur les canaux trouvent les pages d'aide claires, 31% pensent qu'elles pourraient être améliorées et 20% n'en ont pas besoin. Les avis sur les pages d'aide des contributeurs participant de temps à autre aux canaux de discussion sont plutôt hétérogènes ; 31% les trouvent claires, 29% pensent qu'elles pourraient être améliorées, 24% n'en a pas besoin et 16% n'en a pas connaissance. Ici encore, la majorité des contributeurs n'ayant pas connaissance des canaux n'a pas non plus connaissance des pages d'aide (54%), 36% n'en a pas besoin.
-
+La visualisation ci-dessus croise la participation aux canaux de discussion, à l'avis sur les pages d'aide, des répondants lecteurs et contributeurs. On observe d'emblée que les lecteurs qui n'ont pas connaissance des canaux de discussion n'ont pas non plus connaissance des pages d'aide, à 66%, ou n'en ont pas besoin, à 30%. Pour les **lecteurs qui ont connaissances des canaux sans y participer**, 43% n'ont pas besoin des pages d'aide, 39% n'en ont pas connaissance et seulement 15% en ont connaissance et les trouvent claires. De l'autre côté, 40% des **contributeurs actifs sur les canaux** trouvent les pages d'aide claires, 31% pensent qu'elles pourraient être améliorées et 20% n'en ont pas besoin. Les avis sur les pages d'aide des contributeurs participant de temps à autre aux canaux de discussion sont plutôt hétérogènes ; 31% les trouvent claires, 29% pensent qu'elles pourraient être améliorées, 24% n'en ont pas besoin et 16% n'en ont pas connaissance. Ici encore, la majorité des contributeurs n'ayant pas connaissance des canaux n'a pas non plus connaissance des pages d'aide (54%), et 36% n'en a pas besoin.
 
 ------------------------------------------------------------------------
 
@@ -709,10 +665,7 @@ La visualisation ci-dessus croise la participation aux canaux de discussion, à 
 
 ![](../dataviz/PNG/21_gauge_integration.png)
 
-La visualisation ci-dessus montre le pourcentage de répondants se sentant intégrés à la communauté, qu'ils soient lecteurs ou contributeurs. Sur les 611 lecteurs, 414 se sentent intégrés à la communauté, soit 68%, tandis que sur les 163 contributeurs, 134 se sentent intégrés, soit 82%. Le sentiment d'intégration est ainsi davantage présent chez les contributeurs qui prennent part à la communauté en participant aux canaux de discussion, en consultant les pages d'aide (comme nous venons de le voir), créant ainsi un sentiment d'appartenance à une communauté. Comme analysé précédemment, le fait de se plaire dans la communauté explique à 18% pourquoi les Vikidiens continuent de contribuer. 
-
-
-
+La visualisation ci-dessus montre le pourcentage de répondants se sentant intégrés à la communauté, qu'ils soient lecteurs ou contributeurs. Sur les 611 lecteurs, 414 se sentent intégrés à la communauté, soit 68%, tandis que sur les 163 contributeurs, 134 se sentent intégrés, soit 82%. Le **sentiment d'intégration** est ainsi davantage présent chez les contributeurs qui prennent part à la communauté en participant aux canaux de discussion, en consultant les pages d'aide (comme nous venons de le voir), créant ainsi un sentiment d'appartenance à la communauté. Comme analysé précédemment, le fait de se plaire dans la communauté explique à 18% pourquoi les Vikidiens continuent de contribuer.
 
 ------------------------------------------------------------------------
 
@@ -734,9 +687,7 @@ La visualisation ci-dessus montre le pourcentage de répondants se sentant inté
 
 ![](../dataviz/PNG/22_bar_accessibilite.png)
 
-La visualisation ci-dessus montre l'accessibilité des articles évaluée par les 414 lecteurs se sentant intégrés à la communauté. Plus de la moitié trouvent les articles de Vikidia très accessibles, près de 4 répondants sur 20 les trouvent plutôt accessibles et seuls 37 répondants soit 9% pensent que l'accessibilité est moyenne, insuffisante ou inexistante. 
-
-
+La visualisation ci-dessus montre l'accessibilité des articles évaluée par les 414 lecteurs se sentant intégrés à la communauté. **Plus de la moitié** trouvent les articles de Vikidia très accessibles, près de 4 répondants sur 20 les trouvent plutôt accessibles et seuls 37 répondants soit 9% pensent que l'accessibilité est moyenne, insuffisante ou inexistante.
 
 ------------------------------------------------------------------------
 
@@ -752,15 +703,13 @@ La visualisation ci-dessus montre l'accessibilité des articles évaluée par le
 
 -   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n’y ai jamais participé', 'J’ai déjà écrit un ou deux messages', 'Il m’arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
+    -   "*Comment évaluez vous votre participation aux canaux de discussion ?*" : 'Quels canaux de discussion ?', 'Je les connais mais je n'y ai jamais participé', 'J'ai déjà écrit un ou deux messages', 'Il m'arrive de répondre aux messages', 'Je suis plutôt actif.ve sur les canaux', 'Je suis très actif.ve sur les canaux'
 
 <br>
 
 ![](../dataviz/PNG/22_bar_canaux.png)
 
-La visualisation ci-dessus montre la participation aux canaux de discussion des 134 contributeurs se sentant intégrés à la communauté. Les résultats sont sensiblement identiques à la datavisualisation représentant la participation aux canaux de discussion des lecteurs et des contributeurs, à 1 ou 2 points de pourcentage de différence. Cela s'explique par le fait que la population utilisée est quasiment identique, puisque seuls 29 des 163 contributeurs ne se sentent pas intégrés à la communauté. 
-
-
+La visualisation ci-dessus montre la participation aux canaux de discussion des 134 contributeurs se sentant intégrés à la communauté. Les résultats sont **sensiblement identiques** à la datavisualisation représentant la participation aux canaux de discussion des lecteurs et des contributeurs, à 1 ou 2 points de pourcentage de différence. Cela s'explique par le fait que la population utilisée est quasiment identique, puisque seuls 29 des 163 contributeurs ne se sentent pas intégrés à la communauté.
 
 ------------------------------------------------------------------------
 
@@ -782,9 +731,7 @@ La visualisation ci-dessus montre la participation aux canaux de discussion des 
 
 ![](../dataviz/PNG/23_bar_accueil.png)
 
-La visualisation ci-dessus montre comment les répondants jugent de l'accueil qu'ils ont reçu sur Vikidia, selon leur genre. Chez les garçons, on observe que 32% d'eux ont jugé leur accueil "excellent" et 52% l'ont jugé "bon". Chez les filles, la proportion de répondants ayant jugé leur accueil "excellent" est inférieur à celle des garçons (24%), elles sont ainsi davantage à avoir ressenti un "bon" accueil (59%). Seuls 3% de ces dernières pensent que l'accueil laisse à désirer, tandis que 5% des garçons ont cet opinion. 
-
-
+La visualisation ci-dessus montre comment les répondants évaluent l'accueil qu'ils ont reçu sur Vikidia, selon leur genre. Chez les garçons, on observe que 32% ont jugé leur accueil "***excellent***", et 52% l'ont jugé "*bon*". Chez les filles, la proportion de répondants ayant jugé leur accueil "*excellent*" est inférieur à celle des garçons (24%), elles sont ainsi davantage à avoir ressenti un "bon" accueil (59%). Seuls 3% de ces dernières pensent que l'accueil laisse à désirer, tandis que 5% des garçons ont cet opinion.
 
 ------------------------------------------------------------------------
 
@@ -794,7 +741,7 @@ La visualisation ci-dessus montre comment les répondants jugent de l'accueil qu
 
 <br>
 
--   **population** : les répondants ayant précisé leur âge (suppression de la catégorie “Préfère ne pas le dire”) et participant aux canaux de discussion
+-   **population** : les répondants ayant précisé leur âge (suppression de la catégorie "Préfère ne pas le dire") et participant aux canaux de discussion
 
 -   **nombre de répondants** : 639
 
@@ -807,9 +754,7 @@ La visualisation ci-dessus montre comment les répondants jugent de l'accueil qu
 
 ![](../dataviz/PNG/24_grouped_canaux.png)
 
-La visualisation ci-dessus montre les canaux sur lesquels les répondants sont actifs, selon l'âge et le genre. Pour cette datavisualisation, un premier traitement a été réalisé dans le but de retirer toutes les réponses "*Autre*" qui signifiaient que le répondant **ne participe pas** aux canaux de discussion (cela était précisé par la suite dans un champ libre). Pour les réponses restantes, on voit d'emblée que le principal canal de discussion sur lequel les répondants sont actifs est "Discord", suivi par les pages de discussion puis les Bavardages. Le canal "Discord" est davantage utilisé par les répondants de 14 à 18 ans, avec 45% des filles et 35% des garçons. Il apparaît aussi que les femmes de 36 à 60 ans, ainsi que les hommes de 19 à 35 ans sont actifs sur les pages de discussion. On trouve en proportion bien plus de 14-18 ans actifs sur "les Bavardages" chez les filles (47%) que chez les garçons (17%).
-
-
+La visualisation ci-dessus montre les canaux sur lesquels les répondants sont actifs, selon l'âge et le genre. Pour cette datavisualisation, un premier traitement a été réalisé dans le but de retirer toutes les réponses "*Autre*" qui signifiaient que le répondant **ne participe pas** aux canaux de discussion (cela était précisé par la suite dans un champ libre). Pour les réponses restantes, on voit d'emblée que le principal canal de discussion sur lequel les répondants sont actifs est "***Discord***", suivi par les pages de discussion puis les Bavardages. Le canal "Discord" est davantage utilisé par les répondants de 14 à 18 ans, avec 45% des filles et 35% des garçons. Il apparaît aussi que les femmes de 36 à 60 ans, ainsi que les hommes de 19 à 35 ans sont actifs sur les pages de discussion. On trouve en proportion bien plus de 14-18 ans actifs sur "les Bavardages" chez les filles (47%) que chez les garçons (17%).
 
 ------------------------------------------------------------------------
 
@@ -825,15 +770,15 @@ La visualisation ci-dessus montre les canaux sur lesquels les répondants sont a
 
 -   **question représentée et ses réponses issues du questionnaire** :
 
-    -   "*Veuillez noter votre satisfaction sur les sujets suivants*" : 'la qualité des articles', 'l’accessibilité des sujets traités', 'la qualité et la pertinence des illustrations', 'la diversité des sujets traités', 'la qualité syntaxique et typographique', 'Le projet Vikidia en général'
+    -   "*Veuillez noter votre satisfaction sur les sujets suivants*" : 'la qualité des articles', 'l'accessibilité des sujets traités', 'la qualité et la pertinence des illustrations', 'la diversité des sujets traités', 'la qualité syntaxique et typographique', 'Le projet Vikidia en général'
 
 <br>
 
 ![](../dataviz/PNG/25_radar_eval.png)
 
-La visualisation ci-dessus montre la note moyenne attribuée par les répondants lecteurs aux sujets présentés. Il est à préciser que les notes varient très peu d'un groupe à l'autre (lecteurs / contributeurs, selon la classe d'âge, l'activité etc.). On voit alors que le sujet ayant la moyenne la plus basse est celui de la *qualité et la pertinence des illustrations* avec une note moyenne de 3.94/5, suivie par la *qualité syntaxique et typographique* avec une note de 3.95/5. Ce constat est cohérent avec les conclusions précédentes, puisque l'on voyait que de nombreuses contributions portaient sur la correction orthographique ou l'amélioration d'articles existants. A contrario, les sujets récoltants les notes moyennes les plus élevées sont le *projet Vikidia en général* avec 4.4/5, suivie par l'*accessibilité des sujets traités* où la moyenne est de 4.2/5. Les notes moyennes des 2 sujets restants sont, quant à elles, très proches (4.06 et 4.08/5).
+La visualisation ci-dessus montre la note moyenne attribuée par les répondants lecteurs aux sujets présentés. Il est à préciser que les notes varient très peu d'un groupe à l'autre (lecteurs / contributeurs, selon la classe d'âge, l'activité etc.).
 
-
+On voit alors que le sujet ayant la moyenne la plus basse est celui de la *qualité et la pertinence des illustrations* avec une note moyenne de 3.94**/5**, suivie par la *qualité syntaxique et typographique* avec une note de 3.95**/5**. Ce constat est cohérent avec les conclusions précédentes, puisque l'on voyait que de nombreuses contributions portent sur la **correction orthographique** ou **l'amélioration d'articles existants**. A contrario, les sujets récoltants les notes moyennes les plus élevées sont le *projet Vikidia en général* avec 4.4**/5**, suivie par l'*accessibilité des sujets traités* où la moyenne est de 4.2**/5**. Les notes moyennes des 2 sujets restants sont, quant à elles, très proches (4.06 et 4.08**/5**).
 
 ------------------------------------------------------------------------
 
@@ -855,9 +800,7 @@ La visualisation ci-dessus montre la note moyenne attribuée par les répondants
 
 ![](../dataviz/PNG/27_grouped_fiabilite.png)
 
-La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles. On observe que près de 6 répondants sur 10 trouvent les articles de Vikidia plutôt fiables, 21% les trouvent tout à fait fiables. Un peu plus d'un répondant sur 10 pense que les articles de Vikdia sont à prendre avec précaution, voire qu'il faut se méfier du contenu.  
-
-
+La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles. On observe que près de 6 répondants sur 10 trouvent les articles de Vikidia plutôt fiables, 21% les trouvent tout à fait fiables. Un peu plus d'un répondant sur 10 pense que les articles de Vikdia sont à prendre avec précaution, voire qu'il faut se méfier du contenu.
 
 ------------------------------------------------------------------------
 
@@ -874,15 +817,13 @@ La visualisation ci-dessus montre comment les répondants évaluent la fiabilit�
 -   **questions représentées et leurs réponses issues du questionnaire** :
 
     -   "*Quel est votre niveau de confiance en ce qui concerne la fiabilité des articles de Vikidia ?*" : 'Je me méfie des informations que je trouve sur Vikidia', 'Les articles de Vikidia sont plutôt fiables', 'Les articles de Vikidia sont tout à fait fiables', 'Les informations trouvées sur Vikidia ne sont pas toujours fiables', 'Les informations trouvées sur Vikidia sont à prendre avec précaution'
-    -   "*Vous êtes ...*" : 'En activité', 'En recherche d’emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d’étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
+    -   "*Vous êtes ...*" : 'En activité', 'En recherche d'emploi', 'Retraité', 'Étudiant, élève' ('*Veuillez préciser le niveau d'étude :*' : 'École primaire (du CP au CM2)', 'Collège', 'Lycée', 'Études supérieures')
 
 <br>
 
 ![](../dataviz/PNG/26_lollipop1.png)
 
-La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles, selon leur activité. Pour cette datavisualisation les réponses textuelles ont été remplacées par une évaluation de 1 à 5 où '1' correspond à *'Je me méfie des informations que je trouve sur Vikidia'* et '5' correspond à *'Les articles de Vikidia sont tout à fait fiables'*. Les moyennes sur 5 sont ensuite présentées par activité du répondant. On observe ainsi certaines disparités dans l'évaluation moyenne : les élèves en école primaire ont tendance à "sur-noter" la fiabilité des articles, puisqu'en moyenne ils l'évaluent à 4.1/5, tandis que la moyenne toutes activités confondues est de 3.75/5. En revanche, ce sont les répondant en recherche d'emploi ou les étudiants qui estiment en moyenne la fiabilité la plus faible : respectivement 3.5 et 3.4/5.
-
-
+La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles, selon leur activité. Pour cette datavisualisation, les réponses textuelles ont été remplacées par une évaluation de 1 à 5 où '1' correspond à *'Je me méfie des informations que je trouve sur Vikidia'* et '5' correspond à *'Les articles de Vikidia sont tout à fait fiables'*. Les moyennes sur 5 sont ensuite présentées par activité du répondant. On observe ainsi certaines **disparités** dans l'évaluation moyenne : les élèves en école primaire ont tendance à "sur-noter" la fiabilité des articles, puisqu'en moyenne ils l'évaluent à 4.1**/5**, tandis que la moyenne 'toutes activités confondues' est de 3.75**/5**. En revanche, ce sont les répondant en recherche d'emploi ou les étudiants qui estiment en moyenne la fiabilité la plus faible : respectivement 3.5 et 3.4**/5**.
 
 ------------------------------------------------------------------------
 
@@ -905,27 +846,31 @@ La visualisation ci-dessus montre comment les répondants évaluent la fiabilit�
 
 ![](../dataviz/PNG/26_lollipop2.png)
 
-La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles, selon leur âge. Cette visualisation vient confirmer les constats émis à partir de la représentation précédente, à savoir que les moins de 14 ans pensent les articles de Vikidia plus fiables en moyenne que les 19-35 ans, qui sont ceux qui estiment que les articles sont les moins fiables, en moyenne.
-
-------------------------------------------------------------------------
-
-------------------------------------------------------------------------
+La visualisation ci-dessus montre comment les répondants évaluent la fiabilité des articles, selon leur âge. Cette visualisation vient confirmer les constats émis à partir de la représentation précédente, à savoir que les **moins de 14 ans** pensent les articles de Vikidia plus fiables en moyenne que les 19-35 ans, qui sont ceux qui estiment que les articles sont les moins fiables, en moyenne.
 
 <br>
 
-**Pour conclure**, au vu des réponses au questionnaire diffusé entre juin et octobre 2021, nous pouvons dire que les vikidiens ont des profils, des usages et des avis divers. Nous avons cependant pu observer des tendances, que la liste ci-dessous résume dans les grandes lignes : 
+------------------------------------------------------------------------
 
-- le répondant moyen est une fille, âgée de 14 à 18 ans, étant au collège et utilisant Vikidia dans un cadre scolaire à la maison, sans y contribuer ; 
-- le contributeur moyen est un garçon âgé de 8 à 13 ans, étant au collège et utilisant Vikidia pour le simple loisir, en ayant contribué 1 ou 2 fois ;
-- les contributeurs contribuent pour améliorer et transmettre, sont motivés par l'idée de contribuer au projet Vikidia et sont principalement administrateurs ou patrouilleurs ;
-- il y a eu une hausse du nombre de nouveaux contributeurs à partir de 2017 ;
-- les répondants ont connu Vikidia par hasard sur internet, la majorité pense que pour le grand public l'encylopédie devrait gagner en popularité, ils l'utilisent plutôt que Wikipédia pour la simplicité des articles, mais n'hésitent pas à utiliser *Wikipédia* lorsqu'ils ne trouvent pas les informations cherchées sur Vikidia ; 
-- la majorité des lecteurs n'a pas connaissance des canaux de discussion ni des pages d'aide, mais les contributeurs les connaissent et les utilisent davantage ; 
-- les contributeurs se sentent plus intégrés à la communauté vikidienne que les lecteurs ;
-- les répondants trouvent l'accessibilité des articles élevée ou correcte, jugent leur accueil sur Vikidia bon et sont principalement actifs sur Discord ; 
-- les répondants trouvent la fiabilité des articles correcte de manière générale, mais les étudiants l'évaluent à la baisse, tandis que les élèves en école primaire l'évaluent à la hausse. 
+
+
+
+# Conclusion
 
 <br>
 
+**Pour conclure**, au vu des réponses au questionnaire diffusé entre juin et octobre 2021, nous pouvons dire que les vikidiens ont des profils, des usages et des avis divers. Nous avons cependant pu observer des tendances, que la liste ci-dessous résume dans les grandes lignes :
 
-<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
+-   le répondant moyen est une fille, âgée de 14 à 18 ans, étant au collège et utilisant Vikidia dans un cadre scolaire à la maison, sans y contribuer ;
+-   le contributeur moyen est un garçon âgé de 8 à 13 ans, étant au collège et utilisant Vikidia pour le simple loisir, en ayant contribué 1 ou 2 fois ;
+-   les contributeurs contribuent pour améliorer et transmettre, sont motivés par l'idée de contribuer au projet Vikidia et sont principalement administrateurs ou patrouilleurs ;
+-   il y a eu une hausse du nombre de nouveaux contributeurs à partir de 2017 ;
+-   les répondants ont connu Vikidia par hasard sur internet, la majorité pense que pour le grand public l'encylopédie devrait gagner en popularité, ils l'utilisent plutôt que Wikipédia pour la simplicité des articles, mais n'hésitent pas à utiliser *Wikipédia* lorsqu'ils ne trouvent pas les informations cherchées sur Vikidia ;
+-   la majorité des lecteurs n'a pas connaissance des canaux de discussion ni des pages d'aide, mais les contributeurs les connaissent et les utilisent davantage ;
+-   les contributeurs se sentent plus intégrés à la communauté vikidienne que les lecteurs ;
+-   les répondants trouvent l'accessibilité des articles élevée ou correcte, jugent leur accueil sur Vikidia bon et sont principalement actifs sur Discord ;
+-   les répondants trouvent la fiabilité des articles correcte de manière générale, mais les étudiants l'évaluent à la baisse, tandis que les élèves en école primaire l'évaluent à la hausse.
+
+
+::: {.tocify-extend-page data-unique="tocify-extend-page" style="height: 0;"}
+:::
