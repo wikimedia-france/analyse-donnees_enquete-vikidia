@@ -51,7 +51,7 @@ knitr::opts_chunk$set(
 
 Avec plus de 30.000 articles et 60.000 utilisateurs, Vikidia est une ressource en ligne incontournable pour les 8-13 ans. Cette encyclopédie collaborative a connu une croissance importante depuis sa création en 2006.
 
-Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association française Wikimédia a été chargée d'organiser une enquête auprès de la communauté vikidienne, que la société coopérative Datactivist analyse dans ce document.
+Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association partenaire Wikimédia a organisé une enquête auprès de la communauté vikidienne, que la société coopérative Datactivist analyse dans ce document.
 
 De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.). Le questionnaire en question a été diffusé au travers de posts sur les canaux Discord et les Bavardages, sur Twitter ainsi que via la newsletter hebdomadaire envoyée aux adhérents de la communauté. 
 
@@ -177,7 +177,9 @@ La visualisation ci-dessus montre la répartition des répondants par activité.
 
 ![](../dataviz/PNG/4_barplot_contextes.png)
 
-La visualisation ci-dessus montre dans quels contextes principaux les répondants utilisent l'encyclopédie. On voit que 32% des répondants l'utilisent dans un cadre de **travail scolaire à la maison**. 24% l'utilisent pour leur culture générale et 18% pour le loisir. Ainsi, 42% (18 + 24%) des répondants ont un usage de Vikidia "*volontaire*", pour apprendre et découvrir des choses, sans chercher une réponse en particulier.
+La visualisation ci-dessus montre dans quels contextes principaux les répondants utilisent l'encyclopédie. On voit que 32% des répondants l'utilisent dans un cadre de **travail scolaire à la maison**. 24% l'utilisent pour leur culture générale et 18% pour le loisir. Ainsi, 42% (18 + 24%) des répondants ont un usage de Vikidia "*volontaire*", pour apprendre et découvrir des choses, sans chercher une réponse en particulier. Parmi les réponses "Autre", on trouve notamment des répondants consultant Vikidia pour améliorer les articles, rechercher des informations, ou encore dans un cadre associatif. Quelques réponses "Autre" inspirantes peuvent être citées : "*Pour me tenir au courant des nouveautés*", "*Pour répondre aux questions des enfants de manière simple et claire*", "*Avant d'utiliser Wikipedia, j'utilise Vikidia pour aborder une nouvelle notion pour une première approche*", ou encore "*répondre simplement aux questions complexes de mes enfants de 5 et 8 ans*".
+
+
 
 ------------------------------------------------------------------------
 
@@ -457,7 +459,7 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 ![](../dataviz/PNG/14_bar_connu-outil.png)
 
-La visualisation ci-dessus montre par quel canal les répondants ont connu Vikidia. On voit ainsi que près de la moitié des répondants ont entendu parler de l'outil **sur internet / par hasard**, 22% en ont entendu parlé grâce à leur milieu scolaire (ce qui rejoint les usages où l'on voyait que 32% des répondants utilisent l'encyclopédie dans un cadre scolaire, à la maison). On observe aussi que près de 2 personnes sur 10 ont entendu parlé de Vikidia par Wikipédia. Enfin, bien qu'il y ait au total 18% de répondants en activité, seuls 3% des répondants ont connu l'outil par le milieu professionnel.
+La visualisation ci-dessus montre par quel canal les répondants ont connu Vikidia. On voit ainsi que près de la moitié des répondants ont entendu parler de l'outil **sur internet / par hasard**, 22% en ont entendu parlé grâce à leur milieu scolaire (ce qui rejoint les usages où l'on voyait que 32% des répondants utilisent l'encyclopédie dans un cadre scolaire, à la maison). On observe aussi que près de 2 personnes sur 10 ont entendu parler de Vikidia sur Wikipédia. Enfin, bien qu'il y ait au total 18% de répondants en activité, seuls 3% des répondants ont connu l'outil par le milieu professionnel.
 
 ------------------------------------------------------------------------
 
@@ -503,7 +505,7 @@ La visualisation ci-dessus montre le niveau de popularité de Vikidia estimé pa
 
 ![](../dataviz/PNG/16_ballonplot1.png)
 
-La visualisation ci-dessus montre les raisons à l'utilisation de Vikidia plutôt que Wikipédia, en fonction de l'âge du répondant (certaines tranches d'âges ont été regroupées, par souci de lisibilité). Il apparaît d'emblée que la **simplicité des articles** et le fait que **l'outil soit adapté à l'âge**, sont les principales raisons de l'utilisation de Vikidia. 48% des répondants âgés de 14 à 18 ans utilisent Vikidia pour la simplicité des articles. Cette part est de 46% chez les 19-35 ans, 53% chez les 36-60 ans et 32% chez les plus de 60 ans. La part des répondants utilisant Vikida pour l'ambiance favorable qu'ils y trouvent oscille entre 6 et 9% pour chaque tranche d'âge. L'étendue est plus importante pour la part des répondants ayant une préférence pour Wikipédia : cela concerne 9% des moins de 14 ans, 14 à 15% des 14-18 ans ou 36-60 ans, et 19 à 21% des plus de 60 ans et des 19-35 ans.
+La visualisation ci-dessus montre les raisons de l'utilisation de Vikidia plutôt que Wikipédia, en fonction de l'âge du répondant (certaines tranches d'âges ont été regroupées, par souci de lisibilité). Il apparaît d'emblée que la **simplicité des articles** et le fait que **l'outil soit adapté à l'âge**, sont les principales raisons de l'utilisation de Vikidia. 48% des répondants âgés de 14 à 18 ans utilisent Vikidia pour la simplicité des articles. Cette part est de 46% chez les 19-35 ans, 53% chez les 36-60 ans et 32% chez les plus de 60 ans. La part des répondants utilisant Vikida pour l'ambiance favorable qu'ils y trouvent oscille entre 6 et 9% pour chaque tranche d'âge. L'étendue est plus importante pour la part des répondants ayant une préférence pour Wikipédia : cela concerne 9% des moins de 14 ans, 14 à 15% des 14-18 ans ou 36-60 ans, et 19 à 21% des plus de 60 ans et des 19-35 ans.
 
 ------------------------------------------------------------------------
 
@@ -598,7 +600,7 @@ La visualisation ci-dessus montre à quel point les répondants trouvent les art
 
 ![](../dataviz/PNG/19_pie1.png)
 
-La visualisation ci-dessus montre la participation aux canaux de discussion des lecteurs et des contributeurs. On voit d'emblée que les répondants ne contribuant pas à l'encyclopédie ("***lecteurs***") n'ont, en grande majorité, pas connaissance de l'existence de ces canaux (73% des lecteurs), ou alors en ont connaissance mais n'y participent pas (23%). Chez les contributeurs en revanche, près de la moitié participent aux canaux (44%), dont 21% sont réellement actifs sur ces derniers.
+La visualisation ci-dessus montre la participation aux canaux de discussion des lecteurs et des contributeurs. Les canaux de discussions de Vikidia sont principalement les [Discord](https://fr.vikidia.org/wiki/Vikidia:Discord), et [IRC](https://fr.vikidia.org/wiki/Vikidia:IRC) dédiés, ainsi que ["Les Bavardages"](https://fr.vikidia.org/wiki/Vikidia:Bavardages) et les pages de discussion, qui sont des espaces de communication sur l'encyclopédie. On voit d'emblée que les répondants ne contribuant pas à l'encyclopédie ("***lecteurs***") n'ont, en grande majorité, pas connaissance de l'existence de ces canaux (73% des lecteurs), ou alors en ont connaissance mais n'y participent pas (23%). Chez les contributeurs en revanche, près de la moitié participent aux canaux (44%), dont 21% sont réellement actifs sur ces derniers.
 
 ------------------------------------------------------------------------
 
@@ -621,7 +623,7 @@ La visualisation ci-dessus montre la participation aux canaux de discussion des 
 
 ![](../dataviz/PNG/19_pie2.png)
 
-La visualisation ci-dessus montre l'avis sur les pages d'aide des lecteurs et des contributeurs. Ici encore, on constate que près de **6 lecteurs sur 10 n'ont pas connaissance des pages d'aide**, tandis que seuls **28% des contributeurs** sont dans ce même cas. Cela peut être expliqué par le fait que 20% des répondants de l'enquête consultaient Vikidia pour la première fois (voir la datavisualisation sur le degré de contribution des répondants). On note aussi que 33% des lecteurs et 31% des contributeurs ont connaissance des pages d'aide mais n'en ont pas besoin. Aussi, un quart des contributeurs trouvent les pages d'aide claires, et 17% pensent qu'elles pourraient être améliorées.
+La visualisation ci-dessus montre l'avis qu'ont les lecteurs et contributeurs sur les [pages d’aide](https://fr.vikidia.org/wiki/Aide:Accueil). Ici encore, on constate que près de **6 lecteurs sur 10 n'ont pas connaissance des pages d'aide**, tandis que seuls **28% des contributeurs** sont dans ce même cas. Cela peut être expliqué par le fait que 20% des répondants de l'enquête consultaient Vikidia pour la première fois (voir la datavisualisation sur le degré de contribution des répondants). On note aussi que 33% des lecteurs et 31% des contributeurs ont connaissance des pages d'aide mais n'en ont pas besoin. Aussi, un quart des contributeurs trouvent les pages d'aide claires, et 17% pensent qu'elles pourraient être améliorées.
 
 ------------------------------------------------------------------------
 
@@ -644,7 +646,7 @@ La visualisation ci-dessus montre l'avis sur les pages d'aide des lecteurs et de
 
 ![](../dataviz/PNG/20_ballonplot.png)
 
-La visualisation ci-dessus croise la participation aux canaux de discussion, à l'avis sur les pages d'aide, des répondants lecteurs et contributeurs. On observe d'emblée que les lecteurs qui n'ont pas connaissance des canaux de discussion n'ont pas non plus connaissance des pages d'aide, à 66%, ou n'en ont pas besoin, à 30%. Pour les **lecteurs qui ont connaissances des canaux sans y participer**, 43% n'ont pas besoin des pages d'aide, 39% n'en ont pas connaissance et seulement 15% en ont connaissance et les trouvent claires. De l'autre côté, 40% des **contributeurs actifs sur les canaux** trouvent les pages d'aide claires, 31% pensent qu'elles pourraient être améliorées et 20% n'en ont pas besoin. Les avis sur les pages d'aide des contributeurs participant de temps à autre aux canaux de discussion sont plutôt hétérogènes ; 31% les trouvent claires, 29% pensent qu'elles pourraient être améliorées, 24% n'en ont pas besoin et 16% n'en ont pas connaissance. Ici encore, la majorité des contributeurs n'ayant pas connaissance des canaux n'a pas non plus connaissance des pages d'aide (54%), et 36% n'en a pas besoin.
+La visualisation ci-dessus croise la participation aux canaux de discussion, à l'avis sur les pages d'aide, des répondants lecteurs et contributeurs. On observe d'emblée que les lecteurs qui n'ont pas connaissance des canaux de discussion n'ont pas non plus connaissance des pages d'aide, à 66%, ou n'en ont pas besoin, à 30%. Pour les **lecteurs qui ont connaissance des canaux sans y participer**, 43% n'ont pas besoin des pages d'aide, 39% n'en ont pas connaissance et seulement 15% en ont connaissance et les trouvent claires. De l'autre côté, 40% des **contributeurs actifs sur les canaux** trouvent les pages d'aide claires, 31% pensent qu'elles pourraient être améliorées et 20% n'en ont pas besoin. Les avis sur les pages d'aide des contributeurs participant de temps à autre aux canaux de discussion sont plutôt hétérogènes ; 31% les trouvent claires, 29% pensent qu'elles pourraient être améliorées, 24% n'en ont pas besoin et 16% n'en ont pas connaissance. Ici encore, la majorité des contributeurs n'ayant pas connaissance des canaux n'a pas non plus connaissance des pages d'aide (54%), et 36% n'en a pas besoin.
 
 ------------------------------------------------------------------------
 
@@ -710,7 +712,7 @@ La visualisation ci-dessus montre l'accessibilité des articles évaluée par le
 
 ![](../dataviz/PNG/22_bar_canaux.png)
 
-La visualisation ci-dessus montre la participation aux canaux de discussion des 134 contributeurs se sentant intégrés à la communauté. Les résultats sont **sensiblement identiques** à la datavisualisation représentant la participation aux canaux de discussion des lecteurs et des contributeurs, à 1 ou 2 points de pourcentage de différence. Cela s'explique par le fait que la population utilisée est quasiment identique, puisque seuls 29 des 163 contributeurs ne se sentent pas intégrés à la communauté.
+La visualisation ci-dessus montre la participation aux canaux de discussion des 134 contributeurs se sentant intégrés à la communauté. Les résultats sont **sensiblement identiques** à la datavisualisation représentant la participation aux canaux de discussion des lecteurs et des contributeurs, à 1 ou 2 points de pourcentage de différence. Cela s'explique par le fait que la population étudiée est quasiment identique, puisque seuls 29 des 163 contributeurs ne se sentent pas intégrés à la communauté.
 
 ------------------------------------------------------------------------
 
@@ -863,7 +865,7 @@ La visualisation ci-dessus montre comment les répondants évaluent la fiabilit�
 **Pour conclure**, au vu des réponses au questionnaire diffusé entre juin et octobre 2021, nous pouvons dire que les vikidiens ont des profils, des usages et des avis divers. Nous avons cependant pu observer des tendances, que la liste ci-dessous résume dans les grandes lignes :
 
 -   le répondant moyen est une fille, âgée de 14 à 18 ans, étant au collège et utilisant Vikidia dans un cadre scolaire à la maison, sans y contribuer ;
--   le contributeur moyen est un garçon âgé de 8 à 13 ans, étant au collège et utilisant Vikidia pour le simple loisir, en ayant contribué 1 ou 2 fois ;
+-   le contributeur moyen est un garçon âgé de 8 à 13 ans, étant au collège et utilisant Vikidia pour le simple loisir, en ayant contribué 1 ou 2 fois sur le site ;
 -   les contributeurs contribuent pour améliorer et transmettre, sont motivés par l'idée de contribuer au projet Vikidia et sont principalement administrateurs ou patrouilleurs ;
 -   il y a eu une hausse du nombre de nouveaux contributeurs à partir de 2017 ;
 -   les répondants ont connu Vikidia par hasard sur internet, la majorité pense que pour le grand public l'encylopédie devrait gagner en popularité, ils l'utilisent plutôt que Wikipédia pour la simplicité des articles, mais n'hésitent pas à utiliser *Wikipédia* lorsqu'ils ne trouvent pas les informations cherchées sur Vikidia ;
