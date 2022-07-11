@@ -875,4 +875,4 @@ La visualisation ci-dessus montre comment les répondants évaluent la fiabilit�
 -   les répondants trouvent la fiabilité des articles correcte de manière générale, mais les étudiants l'évaluent à la baisse, tandis que les élèves en école primaire l'évaluent à la hausse.
 
 
-{.tocify-extend-page data-unique="tocify-extend-page" style="height: 0;"}
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
