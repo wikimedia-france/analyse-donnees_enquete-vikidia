@@ -4,7 +4,7 @@
 
 - Avec plus de 30.000 articles et 60.000 utilisateurs, **Vikidia** est une ressource en ligne incontournable pour les 8-13 ans. Cette encyclopédie collaborative a connu une croissance importante depuis sa création en 2006. 
 - Dans ce contexte où l’utilisation de Vikidia est de plus en plus importante, l’association partenaire **Wikimédia France** a organisé une enquête auprès de la communauté vikidienne. 
-- De juin à octobre 2021 **799 réponses** ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.).
+- De juin à octobre 2021 **799 réponses** ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.). Le questionnaire en question a été diffusé au travers de posts sur les canaux Discord et les Bavardages, sur Twitter ainsi que via la newsletter hebdomadaire envoyée aux adhérents de Wikimédia France.
 
 ---
 
