@@ -51,9 +51,9 @@ knitr::opts_chunk$set(
 
 Avec plus de 30.000 articles et 60.000 utilisateurs, Vikidia est une ressource en ligne incontournable pour les 8-13 ans. Cette encyclopédie collaborative a connu une croissance importante depuis sa création en 2006.
 
-Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association partenaire Wikimédia a organisé une enquête auprès de la communauté vikidienne, que la société coopérative Datactivist analyse dans ce document.
+Dans ce contexte où l'utilisation de Vikidia est de plus en plus importante, l'association partenaire Wikimédia France a organisé une enquête auprès de la communauté vikidienne, que la société coopérative Datactivist analyse dans ce document.
 
-De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.). Le questionnaire en question a été diffusé au travers de posts sur les canaux Discord et les Bavardages, sur Twitter ainsi que via la newsletter hebdomadaire envoyée aux adhérents de la communauté. 
+De juin à octobre 2021 798 réponses ont été collectées, quantitatives comme qualitatives, dans le but de connaître mieux la communauté (contributeurs, lecteurs etc.). Le questionnaire en question a été diffusé au travers de posts sur les canaux Discord et les Bavardages, sur Twitter ainsi que via la newsletter hebdomadaire envoyée aux adhérents de Wikimédia France. 
 
 ------------------------------------------------------------------------
 
@@ -319,7 +319,7 @@ La visualisation ci-dessus montre dans quels contextes principaux les contribute
 
 ![](../dataviz/PNG/11_wordcloud.png)
 
-La visualisation ci-dessus montre ce qui a motivé les répondants à contribuer pour la première fois à Vikidia. On voit de **belles motivations** telles que la transmission, l'aide, la création, mais aussi de la correction, de l'amélioration ou du challenge. D'autres répondants contribuent pour la communauté qui existe au sein de l'encyclopédie, ou encore pour sa fiabilité et donc l'envie de l'enrichir davantage.
+La visualisation ci-dessus montre ce qui a motivé les répondants à contribuer pour la première fois à Vikidia. On voit des **motivations** en accord avec la philosophie wikimedienne telles que la transmission, l'aide, la création, mais aussi de la correction, de l'amélioration ou du challenge. D'autres répondants contribuent pour la communauté qui existe au sein de l'encyclopédie, ou encore pour sa fiabilité et donc l'envie de l'enrichir davantage.
 
 ------------------------------------------------------------------------
 
@@ -387,7 +387,7 @@ La visualisation ci-dessus montre le type de contributions apportées selon les 
 
 ![](../dataviz/PNG/10_timeline1.png)
 
-La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le profil du répondant. On voit que c'est principalement à partir de **2017** que la communauté s'est agrandie d'étudiants et d'élèves, avec 28 nouveaux contributeurs pour les années 2020 et 2021. En 2020, la communauté a accueillie 8 nouveaux contributeurs en activité.
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le profil du répondant. On voit que c'est principalement à partir de **2017** que la communauté s'est agrandie d'étudiants et d'élèves, avec 28 nouveaux contributeurs pour les années 2020 et 2021. En 2020, la communauté a accueilli 8 nouveaux contributeurs en activité.
 
 ------------------------------------------------------------------------
 
@@ -433,7 +433,7 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 ![](../dataviz/PNG/10_timeline3.png)
 
-La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le degré de contribution. On observe ici encore de nombreux contributeurs ayant rejoint la communauté à partir de 2017, contribuant une ou deux fois.
+La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année, selon le degré de contribution. On observe ici encore de nombreux contributeurs ayant rejoint la communauté à partir de 2017, qui ont contribué une ou deux fois seulement.
 
 <br>
 
@@ -459,7 +459,7 @@ La visualisation ci-dessus montre le nombre de nouveaux contributeurs par année
 
 ![](../dataviz/PNG/14_bar_connu-outil.png)
 
-La visualisation ci-dessus montre par quel canal les répondants ont connu Vikidia. On voit ainsi que près de la moitié des répondants ont entendu parler de l'outil **sur internet / par hasard**, 22% en ont entendu parlé grâce à leur milieu scolaire (ce qui rejoint les usages où l'on voyait que 32% des répondants utilisent l'encyclopédie dans un cadre scolaire, à la maison). On observe aussi que près de 2 personnes sur 10 ont entendu parler de Vikidia sur Wikipédia. Enfin, bien qu'il y ait au total 18% de répondants en activité, seuls 3% des répondants ont connu l'outil par le milieu professionnel.
+La visualisation ci-dessus montre par quel canal les répondants ont connu Vikidia. On voit ainsi que près de la moitié des répondants ont entendu parler de l'outil **sur internet / par hasard**, 22% en ont entendu parler grâce à leur milieu scolaire (ce qui rejoint les usages où l'on voyait que 32% des répondants utilisent l'encyclopédie dans un cadre scolaire, à la maison). On observe aussi que près de 2 personnes sur 10 ont entendu parler de Vikidia sur Wikipédia. Enfin, bien qu'il y ait au total 18% de répondants en activité, seuls 3% des répondants ont connu l'outil par le milieu professionnel.
 
 ------------------------------------------------------------------------
 
@@ -550,7 +550,7 @@ La visualisation ci-dessus décompose par âge et par genre les répondants util
 
 ![](../dataviz/PNG/17_barplot_alternatives.png) ![](../dataviz/PNG/17_wordcloud_alternatives.png)
 
-Les visualisations ci-dessus montrent les ressources utilisées comme alternatives à Vikidia. On voit sur la première datavisualisation que ce sont majoritairement des **ressources numériques** qui sont utilisées (à 96%), seuls 4% des répondants utilisent des ressources physiques telles que livres, dictionnaires ou encyclopédie, ou bien demandent à leurs proches (amis, famille). Au sein des alternatives numériques, on trouve principalement '*Wikipédia*', et de manière plus globale tous les '***wikis***', tels que wikimédia, wikimini et wiktionnaire.
+Les visualisations ci-dessus montrent les ressources utilisées comme alternatives à Vikidia. On voit sur la première datavisualisation que ce sont majoritairement des **ressources numériques** qui sont utilisées (à 96%), seuls 4% des répondants utilisent des ressources physiques telles que livres, dictionnaires ou encyclopédie, ou bien demandent à leurs proches (amis, famille). Au sein des alternatives numériques, on trouve principalement '*Wikipédia*', et de manière plus globale tous les '***wikis***', tels que Wikimédia commons, Wikimini et le Wiktionnaire.
 
 <br>
 
@@ -869,11 +869,10 @@ La visualisation ci-dessus montre comment les répondants évaluent la fiabilit�
 -   les contributeurs contribuent pour améliorer et transmettre, sont motivés par l'idée de contribuer au projet Vikidia et sont principalement administrateurs ou patrouilleurs ;
 -   il y a eu une hausse du nombre de nouveaux contributeurs à partir de 2017 ;
 -   les répondants ont connu Vikidia par hasard sur internet, la majorité pense que pour le grand public l'encylopédie devrait gagner en popularité, ils l'utilisent plutôt que Wikipédia pour la simplicité des articles, mais n'hésitent pas à utiliser *Wikipédia* lorsqu'ils ne trouvent pas les informations cherchées sur Vikidia ;
--   la majorité des lecteurs n'a pas connaissance des canaux de discussion ni des pages d'aide, mais les contributeurs les connaissent et les utilisent davantage ;
+-   la majorité des lecteurs n'a pas connaissance des canaux de discussion ni des pages d'aide, tandis que les contributeurs les connaissent et les utilisent davantage ;
 -   les contributeurs se sentent plus intégrés à la communauté vikidienne que les lecteurs ;
 -   les répondants trouvent l'accessibilité des articles élevée ou correcte, jugent leur accueil sur Vikidia bon et sont principalement actifs sur Discord ;
 -   les répondants trouvent la fiabilité des articles correcte de manière générale, mais les étudiants l'évaluent à la baisse, tandis que les élèves en école primaire l'évaluent à la hausse.
 
 
-::: {.tocify-extend-page data-unique="tocify-extend-page" style="height: 0;"}
-:::
+{.tocify-extend-page data-unique="tocify-extend-page" style="height: 0;"}
