@@ -33,4 +33,4 @@
 
 **Interpréter les graphiques produits** en phase n°2.
 
-→ [***livrable***](https://datactivist.coop/analyse-donnees_enquete-vikidia/reports/rapport_final.html)
+→ [***livrable***](https://wikimedia-france.github.io/analyse-donnees_enquete-vikidia/reports/rapport_final.html)
